@@ -1,18 +1,7 @@
 import os
 import json
-from pymongo import MongoClient
 
-# MongoDB connection setup
-MONGO_URI = "mongodb://localhost:27017"  # Change if needed
-DATABASE_NAME = "ReactElementsGenerator"  # Change to your database name
-COLLECTION_NAME = "elements"  # Collection to store elements data
-
-def connect_mongodb():
-    """Connect to MongoDB and return the collection."""
-    client = MongoClient(MONGO_URI)
-    db = client[DATABASE_NAME]
-    collection = db[COLLECTION_NAME]
-    return collection
+from mongoClient import mongoClientCollection
 
 def read_json_files(root_folder):
     """Read all output.json files in subdirectories of root_folder."""
@@ -39,7 +28,7 @@ def insert_into_mongodb(collection, documents):
     """Insert documents into MongoDB."""
     if documents:
         collection.insert_many(documents)
-        print(f"Inserted {len(documents)} documents into MongoDB collection '{COLLECTION_NAME}'")
+        print(f"Inserted {len(documents)} documents into MongoDB collection '{"elements"}'")
     else:
         print("No documents to insert.")
 
@@ -47,7 +36,9 @@ def main():
     elements_directory = "elements"  # Root folder containing component subfolders
     
     # Connect to MongoDB
-    collection = connect_mongodb()
+    collection = mongoClientCollection(
+        collectionName="elements"
+    )
     
     # Read JSON files
     documents = read_json_files(elements_directory)
