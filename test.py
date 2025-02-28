@@ -3,7 +3,7 @@ import logging
 from agent_graph.graph import create_graph, compile_workflow
 from states.state import AgentGraphState
 
-from utils.helper_functions import load_config
+from config.config import load_config
 
 logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 
