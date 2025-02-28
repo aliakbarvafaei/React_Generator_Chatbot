@@ -1,0 +1,22 @@
+{
+  "elementType": "ICON_BUTTON",
+  "component": "KdpaIconButton",
+  "description": "The IconButton component is mui button with icon, this component is simple and user can be use it in the application. the icon of this component is from react-icons library and Icon element. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "icon",
+      "type": "ICON element like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library",
+      "possibleValues": "ICON element like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

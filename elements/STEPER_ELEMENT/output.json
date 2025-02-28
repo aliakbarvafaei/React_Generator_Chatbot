@@ -1,0 +1,15 @@
+{
+  "elementType": "STEPER_ELEMENT",
+  "component": "KdStepperElement",
+  "description": "The StepperElement component is a customizable stepper element built on top of MUI's Step component, this component is for each step in the StepperContainer component. ",
+  "selfClosing": false,
+  "childrenElementTypes": "ALL",
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": []
+}

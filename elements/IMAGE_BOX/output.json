@@ -1,0 +1,43 @@
+{
+  "elementType": "IMAGE_BOX",
+  "component": "KdImageBox",
+  "description": "The ImageBox component is a simple customizable image box, this component used instead of <img></img> tag in the application. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "modal",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "alt",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "quality",
+      "type": "string",
+      "possibleValues": ["LOW", "HIGH"],
+      "description": ""
+    },
+    {
+      "name": "loading",
+      "type": "string",
+      "possibleValues": ["lazy", "eager"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "src",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "elementType": "DATE_PANEL",
+  "component": "KdpaDatePicker",
+  "description": "The DataPaned is a date picker component built on top of Mui/x-data-grid's DatePicker component, and use for date jalaali or ... date picker. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "helperText",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "variant",
+      "type": "string",
+      "possibleValues": ["filled", "outlined", "standard"],
+      "description": ""
+    },
+    {
+      "name": "changeLocale",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "locale",
+      "type": "string",
+      "possibleValues": ["fa", "en"],
+      "description": ""
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "possibleValues": ["YYYY/MM/DD", "YYYY-MM-DD"],
+      "description": ""
+    },
+    {
+      "name": "views",
+      "type": "string[]",
+      "possibleValues": ["year", "month", "date"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

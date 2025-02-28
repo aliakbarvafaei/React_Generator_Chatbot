@@ -1,0 +1,65 @@
+{
+  "elementType": "TIME_PICKER",
+  "component": "KdpaTimePicker",
+  "description": "The TimePicker component is a customizable time picker built on top of @mui/x-date-pickers's TimePicker component, it can be used for select time in the application. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "helperText",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "variant",
+      "type": "string",
+      "possibleValues": ["filled", "outlined", "standard"],
+      "description": ""
+    },
+    {
+      "name": "ampm",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "locale",
+      "type": "string",
+      "possibleValues": ["fa", "en"],
+      "description": ""
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "possibleValues": ["HH:mm", "hh:mm a"],
+      "description": ""
+    },
+    {
+      "name": "views",
+      "type": "string[]",
+      "possibleValues": ["hours", "minutes", "seconds"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

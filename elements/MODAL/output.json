@@ -1,0 +1,32 @@
+{
+  "elementType": "MODAL",
+  "component": "KdModal",
+  "description": "The Modal component is a customizable modal built on top of MUI's Dialog component, it can be use to show a modal in the page. ",
+  "selfClosing": false,
+  "childrenElementTypes": "ALL",
+  "static_attrs": [
+    {
+      "name": "fullScreen",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "fullWidth",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "maxWidth",
+      "type": "string",
+      "possibleValues": ["xs", "sm", "md", "lg", "xl"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "open",
+      "type": "boolean",
+      "description": ""
+    }
+  ]
+}

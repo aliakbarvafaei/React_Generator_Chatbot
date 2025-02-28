@@ -1,0 +1,26 @@
+{
+  "elementType": "HEADER_FIELD",
+  "component": "KdSegment",
+  "description": "The HeaderField component is a customizable header field, this component is wrapper of section element with title and can be seprate content in many segment. ",
+  "selfClosing": false,
+  "childrenElementTypes": "ALL",
+  "static_attrs": [
+    {
+      "name": "expandable",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

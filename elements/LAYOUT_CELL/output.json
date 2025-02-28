@@ -1,0 +1,30 @@
+{
+  "elementType": "LAYOUT_CELL",
+  "component": "KdpaGrid",
+  "description": "The LayoutCell component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes.attr item, default is true and can not be change ",
+  "selfClosing": false,
+  "childrenElementTypes": "ALL",
+  "static_attrs": [
+    {
+      "name": "xs",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "sm",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "md",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "lg",
+      "type": "number",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": []
+}

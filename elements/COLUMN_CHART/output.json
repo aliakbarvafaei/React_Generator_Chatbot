@@ -1,0 +1,58 @@
+{
+  "elementType": "COLUMN_CHART",
+  "component": "KdChart3D",
+  "description": "The Column Chart component is a customizable 3D chart built on top of ApexCharts, this chart in 3D and can use it to show data in 3D. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "titleText",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "xaxisTitle",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "yaxisTitle",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "possibleValues": ["bar", "area", "line", "scatter", "heatmap", "radar"],
+      "description": ""
+    },
+    {
+      "name": "barHorizontal",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "toolbar",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "stacked",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "stackType",
+      "type": "string",
+      "possibleValues": ["normal", "100%"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "data",
+      "type": "list of { group: string, series: string, value: string}",
+      "description": ""
+    }
+  ]
+}

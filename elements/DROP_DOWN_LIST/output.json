@@ -1,0 +1,83 @@
+{
+  "elementType": "DROP_DOWN_LIST",
+  "component": "KdDropDownList",
+  "description": "The DropDownList component is a customizable dropdown built on top of MUI's AutoComplete component, it can be use to select one item from a list of items. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "helperText",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "variant",
+      "type": "string",
+      "possibleValues": ["filled", "outlined", "standard"],
+      "description": ""
+    },
+    {
+      "name": "size",
+      "type": "string",
+      "possibleValues": ["small", "medium"],
+      "description": ""
+    },
+    {
+      "name": "multiple",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "limitTags",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "noOptionsText",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "disableCloseOnSelect",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "disableClearable",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "disableSearchable",
+      "type": "boolean",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "{id:string , label: string}",
+      "description": ""
+    },
+    {
+      "name": "options",
+      "type": "list of {id:string , label: string}",
+      "description": ""
+    }
+  ]
+}

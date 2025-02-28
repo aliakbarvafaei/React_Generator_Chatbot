@@ -1,0 +1,85 @@
+{
+  "elementType": "TEXT_BOX",
+  "component": "KdpaInput",
+  "description": "The TextBox component is a customizable text box built on top of MUI's TextField component, it can be used for input text in the form. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "helperText",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "variant",
+      "type": "string",
+      "possibleValues": ["filled", "outlined", "standard"],
+      "description": ""
+    },
+    {
+      "name": "size",
+      "type": "string",
+      "possibleValues": ["small", "medium"],
+      "description": ""
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "possibleValues": ["text", "password", "email", "number", "price"],
+      "description": ""
+    },
+    {
+      "name": "dir",
+      "type": "string",
+      "possibleValues": ["rtl", "ltr"],
+      "description": ""
+    },
+    {
+      "name": "multiline",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "rows",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "autoFocus",
+      "type": "boolean",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "readOnly",
+      "type": "boolean",
+      "description": ""
+    }
+  ]
+}

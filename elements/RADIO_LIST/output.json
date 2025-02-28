@@ -1,0 +1,31 @@
+{
+  "elementType": "RADIO_LIST",
+  "component": "KdpaRadioList",
+  "description": "The RadioList component is a customizable radio list built on top of MUI's RadioGroup component, it can be use to select one item from a list of items. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "{id:string , label: string}",
+      "description": ""
+    },
+    {
+      "name": "options",
+      "type": "list of {id:string , label: string}",
+      "description": ""
+    }
+  ]
+}

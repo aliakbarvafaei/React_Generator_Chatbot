@@ -1,0 +1,26 @@
+{
+  "elementType": "SWITCH",
+  "component": "KdpaSwitch",
+  "description": "The Switch component is a customizable switch built on top of MUI's Switch component, it can be used for toggle on/off the switch. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "boolean",
+      "description": ""
+    }
+  ]
+}

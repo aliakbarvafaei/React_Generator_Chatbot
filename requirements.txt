@@ -103,3 +103,4 @@ pandas
 sentence_transformers
 ollama
 ipywidgets
+pymongo

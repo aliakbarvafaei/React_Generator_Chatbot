@@ -1,0 +1,9 @@
+{
+  "elementType": "LAYOUT_ROW",
+  "component": "KdpaGrid",
+  "description": "The LayoutRow component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutCell in children.attr container and item, default is true and can not be change. always xs is 12",
+  "selfClosing": false,
+  "childrenElementTypes": ["LAYOUT_CELL"],
+  "static_attrs": [],
+  "dynamic_attrs": []
+}

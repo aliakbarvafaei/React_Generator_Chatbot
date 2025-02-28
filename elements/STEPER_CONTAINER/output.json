@@ -1,0 +1,9 @@
+{
+  "elementType": "STEPER_CONTAINER",
+  "component": "KdStepperContainer",
+  "description": "The StepperContainer component is a customizable stepper container built on top of MUI's Stepper component, it can be use to show a stepper in the page. and only can used StepperElement component as children.",
+  "selfClosing": false,
+  "childrenElementTypes": ["STEPER_ELEMENT"],
+  "static_attrs": [],
+  "dynamic_attrs": []
+}

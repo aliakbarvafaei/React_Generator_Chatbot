@@ -1,0 +1,27 @@
+{
+  "elementType": "ALERT",
+  "component": "KdAlert",
+  "description": "The Alert component is a customizable alert component built on top of MUI's Alert component, and use from Alert component of MUI. It maintains a consistent appearance with a contained variant and customizable styles via props. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "severity",
+      "type": "string",
+      "possibleValues": ["error", "info", "success", "warning"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "children",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

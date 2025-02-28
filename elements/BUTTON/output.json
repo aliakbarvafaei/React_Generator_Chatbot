@@ -1,0 +1,32 @@
+{
+  "elementType": "BUTTON",
+  "component": "KdpaPrimaryButton",
+  "description": "The Button component is a customizable button built on top of MUI's Button component, designed for use throughout the application. It maintains a consistent appearance with a contained variant and customizable styles via props, making it a versatile and reusable button component. This component used instead of button tag in the application. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "variant",
+      "type": "string",
+      "possibleValues": ["contained", "outlined", "text"],
+      "description": ""
+    },
+    {
+      "name": "children",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "description": ""
+    }
+  ]
+}

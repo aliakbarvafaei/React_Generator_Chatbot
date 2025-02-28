@@ -1,0 +1,21 @@
+{
+  "elementType": "HTML_EDITOR",
+  "component": "KdHtmlEditor",
+  "description": "The HtmlEditor component is Box input that user can be write html code in it. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "placeholder",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "elementType": "HYPER_LINK",
+  "component": "Link",
+  "description": "The HyperLink component is a simple customizable hyperlink, this component used instead of <a></a> or any Link tag in the application. ",
+  "selfClosing": false,
+  "childrenElementTypes": "ALL",
+  "static_attrs": [
+    {
+      "name": "target",
+      "type": "string",
+      "possibleValues": ["default", "_blank"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "href",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

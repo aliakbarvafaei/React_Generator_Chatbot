@@ -1,0 +1,26 @@
+{
+  "elementType": "ICON",
+  "component": "like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library",
+  "description": "The Icon is component can used only for icon react-icons library. and anywhere user want to use icon in the application only need to use this component and icons in react-icons library. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "color",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

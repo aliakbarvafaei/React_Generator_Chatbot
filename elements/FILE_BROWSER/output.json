@@ -1,0 +1,32 @@
+{
+  "elementType": "FILE_BROWSER",
+  "component": "KdFileBrowser",
+  "description": "The FileBrowser component is a simple customizable file browser, this component is simple and user can be upload one file. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "fileSizeLimit",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "accept",
+      "type": "string[]",
+      "possibleValues": ["image", "video", "text", "compress"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

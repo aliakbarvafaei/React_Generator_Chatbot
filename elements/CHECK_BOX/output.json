@@ -1,0 +1,26 @@
+{
+  "elementType": "CHECK_BOX",
+  "component": "KdpaCheckBox",
+  "description": "The CheckBox component is a customizable checkbox built on top of MUI's Checkbox component, designed for use throughout the application. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "boolean",
+      "description": ""
+    }
+  ]
+}

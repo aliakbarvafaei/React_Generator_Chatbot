@@ -1,0 +1,37 @@
+{
+  "elementType": "MULTI_FILE_BROWSER",
+  "component": "KdAdvanceFileBrowser",
+  "description": "The MultiFileBrowser component is a advance customizable file browser , and user can upload multiple files and drag and drop files in the file browser. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "fileSizeLimit",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "accept",
+      "type": "string",
+      "possibleValues": ["image", "video", "text", "compress"],
+      "description": ""
+    },
+    {
+      "name": "multiple",
+      "type": "boolean",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "description": ""
+    }
+  ]
+}

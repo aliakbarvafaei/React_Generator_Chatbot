@@ -1,0 +1,16 @@
+{
+  "elementType": "DIVIDER",
+  "component": "KdDivider",
+  "description": "The Divider component is a customizable divider built on top of MUI's Divider component, it can be use separate content in the page. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "orientation",
+      "type": "string",
+      "possibleValues": ["horizontal", "vertical"],
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": []
+}

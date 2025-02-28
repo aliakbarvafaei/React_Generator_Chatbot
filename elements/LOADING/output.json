@@ -1,0 +1,46 @@
+{
+  "elementType": "LOADING",
+  "component": "KdLoading",
+  "description": "The Loading component is a customizable loading built on top of MUI's CircularProgress component, it can be use to show loading in the page. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "type",
+      "type": "string",
+      "possibleValues": [
+        "ClipLoader",
+        "BarLoader",
+        "BeatLoader",
+        "CircleLoader",
+        "DotLoader",
+        "MoonLoader",
+        "PulseLoader",
+        "PuffLoader",
+        "RingLoader",
+        "ScaleLoader",
+        "SyncLoader",
+        "FadeLoader"
+      ],
+      "description": ""
+    },
+    {
+      "name": "size",
+      "type": "number",
+      "description": ""
+    },
+    {
+      "name": "width",
+      "type": "string",
+      "possibleValues": "string (like 10px)",
+      "description": ""
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "possibleValues": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": []
+}

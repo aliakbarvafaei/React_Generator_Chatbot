@@ -1,0 +1,15 @@
+{
+  "elementType": "TAB_ELEMENT",
+  "component": "KdTabElement",
+  "description": "The TabElement component is a customizable tab element built on top of @radix-ui/react-tabs's Tab component, this component is for each tab in the TabContainer component. ",
+  "selfClosing": false,
+  "childrenElementTypes": "ALL",
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": []
+}

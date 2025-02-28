@@ -1,0 +1,58 @@
+{
+  "elementType": "TAG_BOX_INPUT",
+  "component": "KdTagBoxInput",
+  "description": "The TagBoxInput component is a customizable tag box input built on top of MUI's AutoComplete component, this component is like of DropDown Element and used AutoComplete but in this component user can be select from a list or type a new tag and add it to the list of tags. ",
+  "selfClosing": true,
+  "childrenElementTypes": [],
+  "static_attrs": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "helperText",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "variant",
+      "type": "string",
+      "possibleValues": ["filled", "outlined", "standard"],
+      "description": ""
+    },
+    {
+      "name": "size",
+      "type": "string",
+      "possibleValues": ["small", "medium"],
+      "description": ""
+    },
+    {
+      "name": "limitTags",
+      "type": "number",
+      "description": ""
+    }
+  ],
+  "dynamic_attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "type": "string",
+      "description": ""
+    },
+    {
+      "name": "options",
+      "type": "list of string",
+      "description": ""
+    }
+  ]
+}
