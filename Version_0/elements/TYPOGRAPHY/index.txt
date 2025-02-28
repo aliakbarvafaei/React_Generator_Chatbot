@@ -1,0 +1,20 @@
+{
+  elementType: "KdTypography",
+  children: [],
+  parentId: "",
+  style: {
+    minHeight: { type: "static", content: "10px" },
+  },
+  attrs: {
+    variant: { type: "static", content: "body1" },
+    type: { type: "static", content: "string" },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

@@ -1,0 +1,22 @@
+The DropDownList component is a customizable dropdown built on top of MUI's AutoComplete component,
+it can be use to select one item from a list of items.
+Name Tag : KdDropDownList
+children element: not have children element and self closing element
+
+static attrs:
+1- label: string
+2- placeholder: string
+3- helperText: string
+4- variant: filled | outlined | standard
+5- size: small | medium
+6- multiple: boolean
+7- limitTags: number
+8- noOptionsText: string
+9- disableCloseOnSelect: boolean
+10- disableClearable: boolean
+11- disableSearchable: boolean
+
+dynamic attrs:
+1- title: string
+2- defaultValue: {id:string , label: string}
+3- options: list of {id:string , label: string}

@@ -1,0 +1,5 @@
+The TabConatiner component is a customizable tab container built on top of @radix-ui/react-tabs's TabConatiner component,
+it can be use to show a tab in the page.
+and only can used TabElement component as children.
+Name Tag : KdTabConatiner
+children element: TabElement

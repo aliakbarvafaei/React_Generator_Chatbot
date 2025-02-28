@@ -1,0 +1,21 @@
+{
+  elementType: "KdImageBox",
+  children: [],
+  parentId: "",
+  style: {
+    height: { type: "static", content: "70px" },
+    width: { type: "static", content: "70px" },
+  },
+  attrs: {
+    modal: { type: "static", content: false },
+  },
+  selfClosing: true,
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

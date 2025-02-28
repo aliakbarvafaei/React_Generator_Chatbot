@@ -1,0 +1,252 @@
+{
+    "query": "I want a form for register user:\n                                have a input for username, email, password and repeat password.\n                                also have a button for submit form.",
+    "is_relevant": true,
+    "tasks": [
+        {
+            "title": "Create a form element",
+            "result_task": {
+                "title": "Custom Form",
+                "description": "A form with various inputs and buttons.",
+                "states": [
+                    {
+                        "name": "loading",
+                        "defaultValue": false,
+                        "type": "BOOLEAN"
+                    }
+                ],
+                "props": [
+                    {
+                        "name": "title",
+                        "type": "STRING"
+                    }
+                ],
+                "functions": [
+                    {
+                        "name": "handleSubmit",
+                        "inputParams": [
+                            "event"
+                        ],
+                        "code": "event.preventDefault(); console.log('Form submitted');"
+                    }
+                ],
+                "jsx_code": "<KdFormLoader errorMode=\"onSubmit\" loading={loading}>\n  <KdpaInput label=\"Name\" placeholder=\"Enter your name\" helperText=\"Required\" variant=\"outlined\" size=\"medium\" type=\"text\" />\n  <KdpaInput label=\"Email\" placeholder=\"Enter your email\" helperText=\"Required\" variant=\"outlined\" size=\"medium\" type=\"email\" />\n  <KdpaSwitch label=\"Subscribe to newsletter\" defaultValue={false} title=\"Subscribe\" />\n  <KdpaPrimaryButton variant=\"contained\" title=\"Submit\" loading={loading} onClick={handleSubmit} />\n</KdFormLoader>",
+                "component_code": "import React, { useState } from 'react';\nimport { KdFormLoader, KdpaInput, KdpaSwitch, KdpaPrimaryButton } from 'your-component-library';\n\nconst CustomForm = ({ title }) => {\n  const [loading, setLoading] = useState(false);\n\n  const handleSubmit = (event) => {\n    event.preventDefault();\n    console.log('Form submitted');\n  };\n\n  return (\n    <KdFormLoader errorMode=\"onSubmit\" loading={loading}>\n      <KdpaInput label=\"Name\" placeholder=\"Enter your name\" helperText=\"Required\" variant=\"outlined\" size=\"medium\" type=\"text\" />\n      <KdpaInput label=\"Email\" placeholder=\"Enter your email\" helperText=\"Required\" variant=\"outlined\" size=\"medium\" type=\"email\" />\n      <KdpaSwitch label=\"Subscribe to newsletter\" defaultValue={false} title=\"Subscribe\" />\n      <KdpaPrimaryButton variant=\"contained\" title=\"Submit\" loading={loading} onClick={handleSubmit} />\n    </KdFormLoader>\n  );\n};\n\nexport default CustomForm;",
+                "elementTypes": [
+                    "KdFormLoader",
+                    "KdpaInput",
+                    "KdpaSwitch",
+                    "KdpaPrimaryButton"
+                ]
+            }
+        },
+        {
+            "title": "Add input for username with appropriate attributes and styles",
+            "result_task": {
+                "title": "Username Input",
+                "description": "A component that allows the user to input their username with validation and a submit button.",
+                "states": [
+                    {
+                        "name": "username",
+                        "defaultValue": "",
+                        "type": "STRING"
+                    }
+                ],
+                "props": [
+                    {
+                        "name": "onSubmit",
+                        "type": "FUNCTION"
+                    }
+                ],
+                "functions": [
+                    {
+                        "name": "handleSubmit",
+                        "inputParams": [
+                            "event"
+                        ],
+                        "code": "event.preventDefault();\nif (username) {\n  onSubmit(username);\n} else {\n  alert('Username is required.');\n}"
+                    }
+                ],
+                "jsx_code": "<KdpaGrid>\n  <KdpaInput \n    label=\"Username\" \n    placeholder=\"Enter your username\" \n    variant=\"outlined\" \n    size=\"medium\" \n    type=\"text\" \n    value={username} \n    onChange={(e) => setUsername(e.target.value)} \n  />\n  <KdpaPrimaryButton \n    variant=\"contained\" \n    title=\"Submit\" \n    onClick={handleSubmit}\n  />\n</KdpaGrid>",
+                "component_code": "import React, { useState } from 'react';\n\nconst UsernameInput = ({ onSubmit }) => {\n  const [username, setUsername] = useState('');\n\n  const handleSubmit = (event) => {\n    event.preventDefault();\n    if (username) {\n      onSubmit(username);\n    } else {\n      alert('Username is required.');\n    }\n  };\n\n  return (\n    <KdpaGrid>\n      <KdpaInput \n        label=\"Username\" \n        placeholder=\"Enter your username\" \n        variant=\"outlined\" \n        size=\"medium\" \n        type=\"text\" \n        value={username} \n        onChange={(e) => setUsername(e.target.value)} \n      />\n      <KdpaPrimaryButton \n        variant=\"contained\" \n        title=\"Submit\" \n        onClick={handleSubmit}\n      />\n    </KdpaGrid>\n  );\n};\n\nexport default UsernameInput;",
+                "elementTypes": [
+                    "KdpaGrid",
+                    "KdpaInput",
+                    "KdpaPrimaryButton"
+                ]
+            }
+        },
+        {
+            "title": "Add input for email with appropriate attributes and styles",
+            "result_task": {
+                "title": "Email Input Component",
+                "description": "A component for an email input with alert notifications.",
+                "states": [
+                    {
+                        "name": "email",
+                        "defaultValue": "",
+                        "type": "STRING"
+                    }
+                ],
+                "props": [
+                    {
+                        "name": "alertTitle",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "alertSeverity",
+                        "type": "STRING"
+                    }
+                ],
+                "functions": [
+                    {
+                        "name": "handleEmailChange",
+                        "inputParams": [
+                            "event"
+                        ],
+                        "code": "setEmail(event.target.value);"
+                    }
+                ],
+                "jsx_code": "<KdpaInput label=\"Email\" placeholder=\"Enter your email\" variant=\"outlined\" type=\"email\" onChange={handleEmailChange} />\n<KdAlert severity={alertSeverity} title={alertTitle} />",
+                "component_code": "const EmailInput = ({ alertTitle, alertSeverity }) => {\n  const [email, setEmail] = useState('');\n\n  const handleEmailChange = (event) => {\n    setEmail(event.target.value);\n  };\n\n  return (\n    <div>\n      <KdpaInput label=\"Email\" placeholder=\"Enter your email\" variant=\"outlined\" type=\"email\" onChange={handleEmailChange} />\n      <KdAlert severity={alertSeverity} title={alertTitle} />\n    </div>\n  );\n};",
+                "elementTypes": [
+                    "KdpaInput",
+                    "KdAlert"
+                ]
+            }
+        },
+        {
+            "title": "Add input for password with appropriate attributes and styles",
+            "result_task": {
+                "title": "Password Input",
+                "description": "A component to input passwords with a customizable alert and button for submission.",
+                "states": [
+                    {
+                        "name": "password",
+                        "defaultValue": "",
+                        "type": "STRING"
+                    }
+                ],
+                "props": [
+                    {
+                        "name": "alertSeverity",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "buttonTitle",
+                        "type": "STRING"
+                    }
+                ],
+                "functions": [
+                    {
+                        "name": "handlePasswordChange",
+                        "inputParams": [
+                            "e"
+                        ],
+                        "code": "setPassword(e.target.value);"
+                    }
+                ],
+                "jsx_code": "<KdpaInput label=\"Password\" placeholder=\"Enter your password\" helperText=\"Please enter a secure password\" variant=\"outlined\" size=\"medium\" type=\"password\" onChange={handlePasswordChange} />\n<KdAlert severity={alertSeverity} title=\"Password Alert\" />\n<KdpaPrimaryButton variant=\"contained\" title={buttonTitle} loading={false} />",
+                "component_code": "import React, { useState } from 'react';\n\nconst PasswordInput = ({ alertSeverity, buttonTitle }) => {\n    const [password, setPassword] = useState('');\n\n    const handlePasswordChange = (e) => {\n        setPassword(e.target.value);\n    };\n\n    return (\n        <>  \n            <KdpaInput \n                label=\"Password\" \n                placeholder=\"Enter your password\" \n                helperText=\"Please enter a secure password\" \n                variant=\"outlined\" \n                size=\"medium\" \n                type=\"password\" \n                onChange={handlePasswordChange} \n            />\n            <KdAlert severity={alertSeverity} title=\"Password Alert\" />\n            <KdpaPrimaryButton variant=\"contained\" title={buttonTitle} loading={false} />\n        </>\n    );\n};\n\nexport default PasswordInput;",
+                "elementTypes": [
+                    "KdpaInput",
+                    "KdAlert",
+                    "KdpaPrimaryButton"
+                ]
+            }
+        },
+        {
+            "title": "Add input for repeat password with appropriate attributes and styles",
+            "result_task": {
+                "title": "Password Input",
+                "description": "Component for password input with repeat password field",
+                "states": [
+                    {
+                        "name": "repeatPassword",
+                        "defaultValue": "",
+                        "type": "STRING"
+                    }
+                ],
+                "props": [
+                    {
+                        "name": "onPasswordMatch",
+                        "type": "FUNCTION"
+                    }
+                ],
+                "functions": [],
+                "jsx_code": "<KdpaInput label=\"Password\" placeholder=\"Enter your password\" helperText=\"Must be at least 8 characters\" variant=\"outlined\" type=\"password\" dir=\"ltr\" />\n<KdpaInput label=\"Repeat Password\" placeholder=\"Repeat your password\" helperText=\"Please repeat your password\" variant=\"outlined\" type=\"password\" dir=\"ltr\" onBlur={(e) => { onPasswordMatch(e.target.value); }} />",
+                "component_code": "const PasswordInput = ({ onPasswordMatch }) => {\n    const [repeatPassword, setRepeatPassword] = useState('');\n\n    return (\n        <div>\n            <KdpaInput label=\"Password\" placeholder=\"Enter your password\" helperText=\"Must be at least 8 characters\" variant=\"outlined\" type=\"password\" dir=\"ltr\" />\n            <KdpaInput label=\"Repeat Password\" placeholder=\"Repeat your password\" helperText=\"Please repeat your password\" variant=\"outlined\" type=\"password\" dir=\"ltr\" onBlur={(e) => { onPasswordMatch(e.target.value); }} />\n        </div>\n    );\n};",
+                "elementTypes": [
+                    "KdpaInput"
+                ]
+            }
+        },
+        {
+            "title": "Add a submit button with appropriate attributes and styles",
+            "result_task": {
+                "title": "Submit Button Component",
+                "description": "A component that renders a submit button and an alert message.",
+                "states": [
+                    {
+                        "name": "loading",
+                        "defaultValue": false,
+                        "type": "BOOLEAN"
+                    }
+                ],
+                "props": [
+                    {
+                        "name": "alertTitle",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "alertSeverity",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "buttonTitle",
+                        "type": "STRING"
+                    }
+                ],
+                "functions": [],
+                "jsx_code": "<KdpaPrimaryButton variant=\"contained\" title={buttonTitle} loading={loading} />\n<KdAlert severity={alertSeverity} title={alertTitle} />",
+                "component_code": "const SubmitButton = ({ alertTitle, alertSeverity, buttonTitle }) => {\n    const [loading, setLoading] = useState(false);\n\n    const handleSubmit = () => {\n        setLoading(true);\n        // simulate a submit action\n        setTimeout(() => {\n            setLoading(false);\n        }, 2000);\n    };\n\n    return (\n        <div>\n            <KdpaPrimaryButton variant=\"contained\" title={buttonTitle} loading={loading} onClick={handleSubmit} />\n            <KdAlert severity={alertSeverity} title={alertTitle} />\n        </div>\n    );\n};",
+                "elementTypes": [
+                    "KdAlert",
+                    "KdpaPrimaryButton"
+                ]
+            }
+        }
+    ],
+    "final_result": {
+        "title": "User Registration Form",
+        "description": "A form for registering a user with username, email, password, and repeat password fields.",
+        "states": [
+            {
+                "name": "loading",
+                "defaultValue": false,
+                "type": "BOOLEAN"
+            }
+        ],
+        "props": [
+            {
+                "name": "onSubmit",
+                "type": "FUNCTION"
+            }
+        ],
+        "functions": [
+            {
+                "name": "handleSubmit",
+                "inputParams": [
+                    "event"
+                ],
+                "code": "event.preventDefault(); console.log('Form submitted');"
+            }
+        ],
+        "jsx_code": "<KdFormLoader errorMode=\"onSubmit\" loading={loading}>\n  <KdpaInput label=\"Username\" placeholder=\"Enter your username\" variant=\"outlined\" size=\"medium\" type=\"text\" />\n  <KdpaInput label=\"Email\" placeholder=\"Enter your email\" variant=\"outlined\" size=\"medium\" type=\"email\" />\n  <KdpaInput label=\"Password\" placeholder=\"Enter your password\" helperText=\"Please enter a secure password\" variant=\"outlined\" size=\"medium\" type=\"password\" />\n  <KdpaInput label=\"Repeat Password\" placeholder=\"Repeat your password\" helperText=\"Please repeat your password\" variant=\"outlined\" size=\"medium\" type=\"password\" />\n  <KdpaPrimaryButton variant=\"contained\" title=\"Submit\" loading={loading} onClick={handleSubmit} />\n</KdFormLoader>",
+        "component_code": "import React, { useState } from 'react';\nimport { KdFormLoader, KdpaInput, KdpaPrimaryButton } from 'your-component-library';\n\nconst UserRegistrationForm = ({ onSubmit }) => {\n  const [loading, setLoading] = useState(false);\n\n  const handleSubmit = (event) => {\n    event.preventDefault();\n    console.log('Form submitted');\n    // You can add more logic here to handle form submission, validations, etc.\n  };\n\n  return (\n    <KdFormLoader errorMode=\"onSubmit\" loading={loading}>\n      <KdpaInput label=\"Username\" placeholder=\"Enter your username\" variant=\"outlined\" size=\"medium\" type=\"text\" />\n      <KdpaInput label=\"Email\" placeholder=\"Enter your email\" variant=\"outlined\" size=\"medium\" type=\"email\" />\n      <KdpaInput label=\"Password\" placeholder=\"Enter your password\" helperText=\"Please enter a secure password\" variant=\"outlined\" size=\"medium\" type=\"password\" />\n      <KdpaInput label=\"Repeat Password\" placeholder=\"Repeat your password\" helperText=\"Please repeat your password\" variant=\"outlined\" size=\"medium\" type=\"password\" />\n      <KdpaPrimaryButton variant=\"contained\" title=\"Submit\" loading={loading} onClick={handleSubmit} />\n    </KdFormLoader>\n  );\n};\n\nexport default UserRegistrationForm;",
+        "elementTypes": [
+            "KdFormLoader",
+            "KdpaInput",
+            "KdpaPrimaryButton"
+        ]
+    }
+}

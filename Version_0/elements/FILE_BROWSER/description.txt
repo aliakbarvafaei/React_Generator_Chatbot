@@ -1,0 +1,12 @@
+The FileBrowser component is a simple customizable file browser,
+this component is simple and user can be upload one file.
+Name Tag : KdFileBrowser
+children element: not have children element and self closing element
+
+static attrs:
+1- label: string
+2- fileSizeLimit: number
+3- accept: list of (image | video | text | compress)
+
+dynamic attrs:
+1- defaultValue: string

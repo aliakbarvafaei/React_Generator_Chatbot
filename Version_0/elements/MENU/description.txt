@@ -1,0 +1,8 @@
+The Menu component is a customizable menu built on top of @radix-ui/react-menubar's Menu component,
+it can be use to show menu in the page.
+and data is attibute not children element.
+Name Tag : KdMenubar
+children element: not have children element and self closing element
+
+dynamic attrs:
+1- data: list of { label: string, value: string, parent: string } 

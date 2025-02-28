@@ -1,0 +1,16 @@
+{
+  elementType: "KdChart3D",
+  children: [],
+  parentId: "",
+  style: {},
+  attrs: {
+    type: { type: "static", content: "bar" },
+  },
+  selfClosing: true,
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: { namedImport: true },
+  },
+}

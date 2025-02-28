@@ -1,0 +1,28 @@
+{
+  elementType: "KdStyledComponent",
+  selfClosing: true,
+  style: {},
+  attrs: {
+    Component: {
+      type: "import",
+      content: {
+        id: "FiPlus",
+        type: "package",
+        version: "latest",
+        path: `react-icons/fi`,
+        meta: {
+          namedImport: true,
+        },
+      },
+    },
+    size: { type: "static", content: "40" },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

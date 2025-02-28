@@ -1,0 +1,34 @@
+{
+  elementType: "KdFormField",
+  children: [],
+  parentId: "",
+  style: {
+    width: { type: "static", content: "100%" },
+  },
+  attrs: {
+    variant: { type: "static", content: "outlined" },
+    label: { type: "static", content: "input1" },
+    placeholder: { type: "static", content: "placeholder" },
+    Component: {
+      type: "import",
+      content: {
+        id: "KdpaInput",
+        type: "package",
+        version: "latest",
+        path: "kdpa-components",
+        meta: {
+          namedImport: true,
+        },
+      },
+    },
+  },
+  selfClosing: true,
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

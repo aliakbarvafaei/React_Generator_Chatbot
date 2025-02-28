@@ -1,0 +1,17 @@
+{
+  elementType: "KdpaGrid",
+  children: [],
+  parentId: "",
+  style: {
+    padding: { type: "static", content: "6px" },
+  },
+  attrs: {},
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

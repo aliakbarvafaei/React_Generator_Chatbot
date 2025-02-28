@@ -1,0 +1,7 @@
+The Divider component is a customizable divider built on top of MUI's Divider component,
+it can be use separate content in the page.
+Name Tag : KdDivider
+children element: not have children element and self closing element
+
+static attrs:
+1- orientation: horizontal | vertical

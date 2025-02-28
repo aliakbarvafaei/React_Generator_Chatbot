@@ -1,0 +1,12 @@
+The Alert component is a customizable alert component built on top of MUI's Alert component,
+and use from Alert component of MUI.
+It maintains a consistent appearance with a contained variant and customizable styles via props.
+Name Tag : KdAlert
+children element: not have children element and self closing element
+
+static attrs:
+1- severity: success | info | warning | error
+
+dynamic attrs:
+1- title: string
+2- children: string

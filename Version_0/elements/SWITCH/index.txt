@@ -1,0 +1,68 @@
+{
+  elementType: "KdFormField",
+  children: [],
+  parentId: "",
+  style: {},
+  selfClosing: true,
+  attrs: {
+    defaultChecked: { type: "static", content: true },
+    label: { type: "static", content: "label" },
+    Component: {
+      type: "functionalElement",
+      content: {
+        type: "element",
+        content: {
+          elementType: "KdpaFormControlLabel",
+          children: [],
+          parentId: "",
+          style: {},
+          attrs: {
+            control: {
+              type: "element",
+              content: {
+                elementType: "KdpaSwitch",
+                children: [],
+                parentId: "",
+                style: {},
+                attrs: {},
+                selfClosing: true,
+                dependency: {
+                  type: "package",
+                  version: "latest",
+                  path: "kdpa-components",
+                  meta: {
+                    namedImport: true,
+                  },
+                },
+              },
+            },
+            checked: {
+              type: "codeBlock",
+              code: "$args[0]?.value",
+            },
+            "$args[0]": {
+              type: "spread",
+            },
+          },
+          selfClosing: true,
+          dependency: {
+            type: "package",
+            version: "latest",
+            path: "kdpa-components",
+            meta: {
+              namedImport: true,
+            },
+          },
+        },
+      },
+    },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

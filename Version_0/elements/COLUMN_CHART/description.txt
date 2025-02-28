@@ -1,0 +1,17 @@
+The Column Chart component is a customizable 3D chart built on top of ApexCharts,
+this chart in 3D and can use it to show data in 3D.
+Name Tag : KdChart3D
+children element: not have children element and self closing element
+
+static attrs:
+1- titleText: string
+2- xaxisTitle: string
+3- yaxisTitle: string
+4- type: bar | area | line | scatter | heatmap | radar
+5- barHorizontal: boolean
+6- toolbar: boolean
+7- stacked: boolean
+8- stackType: normal | 100%
+
+dynamic attrs:
+1- data: list of { group: string, series: string, value: string}

@@ -1,0 +1,16 @@
+{
+  elementType: "KdChart2D",
+  children: [],
+  parentId: "",
+  style: {},
+  attrs: {
+    type: { type: "static", content: "donut" },
+  },
+  selfClosing: true,
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: { namedImport: true },
+  },
+}

@@ -1,0 +1,19 @@
+{
+  elementType: "KdFormContainer",
+  children: [],
+  parentId: "",
+  style: {
+    backgroundColor: { type: "static", content: "white" },
+  },
+  attrs: {
+    errorMode: { type: "static", content: "onSubmit" },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

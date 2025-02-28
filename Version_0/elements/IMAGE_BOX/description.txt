@@ -1,0 +1,14 @@
+The ImageBox component is a simple customizable image box,
+this component used instead of <img></img> tag in the application.
+Name Tag : KdImageBox
+children element: not have children element and self closing element
+
+static attrs:
+1- modal: boolean
+2- alt: string
+3- quality: LOW | HIGH
+4- loading: lazy | eager
+
+dynamic attrs:
+1- title: string
+2- src: string

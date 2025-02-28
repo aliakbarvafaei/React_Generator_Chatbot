@@ -1,0 +1,7 @@
+The StepperElement component is a customizable stepper element built on top of MUI's Step component,
+this component is for each step in the StepperContainer component.
+Name Tag : KdStepperElement
+children element: any element
+
+static attrs: 
+1- label: string

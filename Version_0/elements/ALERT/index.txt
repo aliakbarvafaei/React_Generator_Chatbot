@@ -1,0 +1,19 @@
+{
+  elementType: "KdAlert",
+  children: [],
+  parentId: "",
+  style: {},
+  attrs: {
+    children: { type: "static", content: "مقدار" },
+    title: { type: "static", content: "توجه" },
+    severity: { type: "static", content: "success" },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

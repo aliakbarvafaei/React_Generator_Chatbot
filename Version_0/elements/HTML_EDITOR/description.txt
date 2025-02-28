@@ -1,0 +1,9 @@
+The HtmlEditor component is Box input that user can be write html code in it.
+Name Tag : KdHtmlEditor
+children element: not have children element and self closing element
+
+static attrs:
+1- placeholder: string
+
+dynamic attrs:
+1- defaultValue: string

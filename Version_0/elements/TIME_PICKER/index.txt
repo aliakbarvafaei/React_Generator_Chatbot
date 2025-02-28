@@ -1,0 +1,31 @@
+{
+  elementType: "KdFormField",
+  children: [],
+  parentId: "",
+  style: {
+    width: { type: "static", content: "100%" },
+  },
+  attrs: {
+    Component: {
+      type: "import",
+      content: {
+        id: "KdpaTimePicker",
+        type: "package",
+        version: "latest",
+        path: "kdpa-components",
+        meta: {
+          namedImport: true,
+        },
+      },
+    },
+  },
+  selfClosing: true,
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

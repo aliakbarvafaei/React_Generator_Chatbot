@@ -1,0 +1,16 @@
+{
+  elementType: "KdLoading",
+  children: [],
+  parentId: "",
+  selfClosing: true,
+  style: {},
+  attrs: {},
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

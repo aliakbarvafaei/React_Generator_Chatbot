@@ -1,0 +1,12 @@
+The Typography component is a customizable text component built on top of MUI's Typography component,
+this component used for any text in the application.
+Name Tag : KdTypography
+children element:  not have children element and self closing element
+
+static attrs: 
+1- variant: body1 | body2 | h1 | h2 | ...
+2- type: string | number | date | time | date-time | html
+
+dynamic attrs:
+1- title: string
+2- data: string | number | ...

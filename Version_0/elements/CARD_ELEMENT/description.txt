@@ -1,0 +1,9 @@
+The card element is component for map in any list of data and show it in card view.
+in the provider is Grid component from material-ui and in the children is the data that we want to show in card view.
+children element: any element
+
+static attrs:
+1- noOptionsText: string
+
+dynamic attrs:
+1- data: list of objects

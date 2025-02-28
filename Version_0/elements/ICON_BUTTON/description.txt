@@ -1,0 +1,10 @@
+The IconButton component is mui button with icon, this component is simple and user can be use it in the application.
+the icon of this component is from react-icons library and Icon element.
+Name Tag : KdpaIconButton
+children element: not have children element and self closing element
+
+static attrs:
+1- icon: ICON element like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library 
+
+dynamic attrs:
+1- title: string

@@ -1,0 +1,51 @@
+{
+  elementType: "KdpaIconButton",
+  children: [],
+  parentId: "",
+  style: {
+    width: { type: "static", content: "50px" },
+    height: { type: "static", content: "50px" },
+  },
+  attrs: {},
+  innerChildren: [
+    {
+      type: "element",
+      content: {
+        elementType: "KdStyledComponent",
+        selfClosing: true,
+        style: {},
+        attrs: {
+          Component: {
+            type: "import",
+            content: {
+              id: "FiPlus",
+              type: "package",
+              version: "latest",
+              path: `react-icons/fi`,
+              meta: {
+                namedImport: true,
+              },
+            },
+          },
+          size: { type: "static", content: "40" },
+        },
+        dependency: {
+          type: "package",
+          version: "latest",
+          path: "kdpa-components",
+          meta: {
+            namedImport: true,
+          },
+        },
+      },
+    },
+  ],
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

@@ -1,0 +1,32 @@
+{
+  elementType: "KdFormField",
+  children: [],
+  parentId: "",
+  style: {},
+  attrs: {
+    accept: {
+      type: "static",
+      content: { image: "ALL", text: "ALL", compress: "ALL", video: "ALL" },
+    },
+    Component: {
+      type: "import",
+      content: {
+        id: "KdAdvanceFileUploader",
+        type: "package",
+        version: "latest",
+        path: "kdpa-components",
+        meta: {
+          namedImport: true,
+        },
+      },
+    },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

@@ -1,0 +1,22 @@
+{
+  elementType: "KdTagBoxInput",
+  children: [],
+  parentId: "",
+  style: {
+    width: { type: "static", content: "100%" },
+  },
+  selfClosing: true,
+  attrs: {
+    split: { type: "static", content: "@" },
+    variant: { type: "static", content: "outlined" },
+    noOptionsText: { type: "static", content: "بدون مقدار" },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

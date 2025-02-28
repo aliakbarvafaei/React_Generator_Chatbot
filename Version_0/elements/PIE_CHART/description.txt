@@ -1,0 +1,13 @@
+The PiChart component is a customizable 2D chart built on top of ApexCharts,
+this chart in 2D and can use it to show data in 2D.
+Name Tag : KdChart2D
+children element: not have children element and self closing element
+
+static attrs:
+1- titleText: string
+2- xaxisTitle: string
+3- yaxisTitle: string
+4- type: donut | radialBar | pie | polarArea
+
+dynamic attrs:
+1- data: list of { group: string, value: string}

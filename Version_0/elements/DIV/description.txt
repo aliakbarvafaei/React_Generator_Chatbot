@@ -1,0 +1,5 @@
+The Div component is a customizable div built on top of HTML's div element,
+this use Grid system from MUI and can use it to show data in div.
+and use instead of div or span or ui or li or ... in your project.
+Name Tag : KdpaGrid
+children element: any element

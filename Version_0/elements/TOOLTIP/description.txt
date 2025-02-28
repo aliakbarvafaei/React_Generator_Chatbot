@@ -1,0 +1,7 @@
+The Tooltip component is a customizable tooltip built on top of MUI's Tooltip component,
+it can be used to show a tooltip when the user hovers over the element.
+Name Tag : KdTooltip
+children element: any element
+
+dynamic attrs:
+1- title: string

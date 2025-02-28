@@ -1,0 +1,19 @@
+{
+  elementType: "KdpaSegment",
+  children: [],
+  parentId: "",
+  style: {
+    padding: { type: "static", content: "10px" },
+  },
+  attrs: {
+    label: { type: "static", content: "عنوان" },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

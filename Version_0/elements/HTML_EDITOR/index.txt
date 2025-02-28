@@ -1,0 +1,29 @@
+{
+  elementType: "KdFormField",
+  children: [],
+  parentId: "",
+  style: {},
+  attrs: {
+    placeholder: { type: "static", content: "بنویسید..." },
+    Component: {
+      type: "import",
+      content: {
+        id: "KdHtmlEditor",
+        type: "package",
+        version: "latest",
+        path: "kdpa-components",
+        meta: {
+          namedImport: true,
+        },
+      },
+    },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

@@ -1,0 +1,17 @@
+{
+  elementType: "KdTabsRoot",
+  children: [],
+  parentId: "",
+  style: {
+    backgroundColor: { type: "static", content: "#ffffff" },
+  },
+  attrs: {},
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

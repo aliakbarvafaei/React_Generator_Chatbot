@@ -1,0 +1,25 @@
+{
+  elementType: "KdpaPrimaryButton",
+  children: [],
+  parentId: "",
+  style: {
+    minWidth: { type: "static", content: "80px" },
+    // minHeight: { type: "static", content: "50px" },
+    borderRadius: { type: "static", content: "8px" },
+    fontSize: { type: "static", content: "14px" },
+    // fontWeight: { type: "static", content: "600" },
+    display: { type: "static", content: "flex" },
+    flexDirection: { type: "static", content: "row" },
+    gap: { type: "static", content: "10px" },
+  },
+  attrs: {},
+  innerChildren: [{ type: "static", content: "button" }],
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

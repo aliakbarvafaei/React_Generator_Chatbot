@@ -1,0 +1,6 @@
+The Layout component is a simple customizable layout,
+it used Grid component from MUI to create a layout in the application.
+and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes.
+and only used Element LayoutRow in children. attr container, default is true and can not be change
+Name Tag : KdpaGrid
+children element: layout row

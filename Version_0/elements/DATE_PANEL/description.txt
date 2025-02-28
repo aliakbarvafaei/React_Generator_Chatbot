@@ -1,0 +1,18 @@
+The DataPaned is a date picker component built on top of Mui/x-data-grid's DatePicker component,
+and use for date jalaali or ... date picker.
+Name Tag : KdpaDatePicker
+children element: not have children element and self closing element
+
+static attrs:
+1- label: string
+2- placeholder: string
+3- helperText: string
+4- variant: filled | outlined | standard
+5- changeLocale: boolean
+6- locale: fa | en
+7- format: "dd-MM-yyyy" | "MM-dd-yyyy" | ...
+8- views: list of (day | month | year)
+
+dynamic attrs:
+1- title: string
+2- defaultValue: string

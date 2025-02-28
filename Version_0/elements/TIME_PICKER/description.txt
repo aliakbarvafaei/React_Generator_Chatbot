@@ -1,0 +1,18 @@
+The TimePicker component is a customizable time picker built on top of @mui/x-date-pickers's TimePicker component,
+it can be used for select time in the application.
+Name Tag : KdpaTimePicker
+children element: not have children element and self closing element
+
+static attrs:
+1- label: string
+2- placeholder: string
+3- helperText: string
+4- variant: filled | outlined | standard
+5- ampm: boolean
+6- locale: fa | en
+7- format: "hh:mm" | ...
+8- views: list of (seconds | minutes | hours)
+
+dynamic attrs:
+1- title: string
+2- defaultValue: string

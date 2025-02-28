@@ -1,0 +1,11 @@
+The CheckBox component is a customizable checkbox built on top of MUI's Checkbox component,
+designed for use throughout the application.
+Name Tag : KdpaCheckBox
+children element: not have children element and self closing element
+
+static attrs:
+1- label: string
+
+dynamic attrs:
+1- title: string
+2- defaultValue: boolean

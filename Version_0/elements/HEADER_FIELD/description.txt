@@ -1,0 +1,11 @@
+The HeaderField component is a customizable header field,
+this component is wrapper of section element with title and can be seprate content in many segment.
+Name Tag : KdSegment
+children element: any element
+
+static attrs:
+1- expandable: boolean
+2- defaultOpen: boolean
+
+dynamic attrs:
+1- label: string

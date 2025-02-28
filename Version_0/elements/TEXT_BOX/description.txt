@@ -1,0 +1,22 @@
+The TextBox component is a customizable text box built on top of MUI's TextField component,
+it can be used for input text in the form.
+Name Tag : KdpaInput
+children element: not have children element and self closing element
+
+static attrs:
+1- label: string
+2- placeholder: string
+3- helperText: string
+4- variant: filled | outlined | standard
+5- size: small | medium
+6- type: text | number | price | email | password
+7- dir: rtl | ltr
+8- multiline: boolean
+9- rows: number
+10- autoFocus: boolean
+
+dynamic attrs:
+1- title: string
+2- defaultValue: string
+3- loading: boolean
+4- readOnly: boolean

@@ -1,0 +1,15 @@
+{
+  elementType: "KdModal",
+  children: [],
+  parentId: "",
+  style: {},
+  attrs: {},
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

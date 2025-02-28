@@ -1,0 +1,10 @@
+The FormLoader is a component of form provider of package react-hook-form,
+and used in wrapper of any form in my application.
+Name Tag : KdFormLoader
+children element: any element
+
+static attrs:
+1- errorMode: onSubmit | onChange
+
+dynamic attrs:
+1- loading: boolean

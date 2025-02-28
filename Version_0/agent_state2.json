@@ -1,0 +1,50 @@
+{
+    "query": "I want a form for register user:\n                                have a input for username, email, password and repeat password.\n                                also have a button for submit form.",
+    "is_relevant": true,
+    "tasks": [],
+    "final_result": {
+        "title": "User Registration Form",
+        "description": "A form for registering a new user with inputs for username, email, password, and repeat password, along with a submit button.",
+        "states": [
+            {
+                "name": "username",
+                "defaultValue": "",
+                "type": "STRING"
+            },
+            {
+                "name": "email",
+                "defaultValue": "",
+                "type": "STRING"
+            },
+            {
+                "name": "password",
+                "defaultValue": "",
+                "type": "STRING"
+            },
+            {
+                "name": "repeatPassword",
+                "defaultValue": "",
+                "type": "STRING"
+            },
+            {
+                "name": "loading",
+                "defaultValue": false,
+                "type": "BOOLEAN"
+            }
+        ],
+        "props": [
+            {
+                "name": "onSubmit",
+                "type": "FUNCTION"
+            }
+        ],
+        "functions": [],
+        "jsx_code": "<KdFormLoader loading={loading} errorMode='onSubmit'>\n  <KdpaInput\n    label='Username'\n    placeholder='Enter your username'\n    variant='outlined'\n    type='text'\n    defaultValue={username}\n    title='username'\n  />\n  <KdpaInput\n    label='Email'\n    placeholder='Enter your email'\n    variant='outlined'\n    type='email'\n    defaultValue={email}\n    title='email'\n  />\n  <KdpaInput\n    label='Password'\n    placeholder='Enter your password'\n    variant='outlined'\n    type='password'\n    defaultValue={password}\n    title='password'\n  />\n  <KdpaInput\n    label='Repeat Password'\n    placeholder='Repeat your password'\n    variant='outlined'\n    type='password'\n    defaultValue={repeatPassword}\n    title='repeatPassword'\n  />\n  <KdpaPrimaryButton\n    variant='contained'\n    loading={loading}\n    title='Submit'\n  />\n</KdFormLoader>",
+        "component_code": "const UserRegistrationForm = (props) => {\n  const [username, setUsername] = useState('');\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [repeatPassword, setRepeatPassword] = useState('');\n  const [loading, setLoading] = useState(false);\n\n  const handleSubmit = () => {\n    setLoading(true);\n    // Add form submission logic here\n    props.onSubmit({ username, email, password });\n    setLoading(false);\n  };\n\n  return (\n    <KdFormLoader loading={loading} errorMode='onSubmit'>\n      <KdpaInput\n        label='Username'\n        placeholder='Enter your username'\n        variant='outlined'\n        type='text'\n        defaultValue={username}\n        title='username'\n      />\n      <KdpaInput\n        label='Email'\n        placeholder='Enter your email'\n        variant='outlined'\n        type='email'\n        defaultValue={email}\n        title='email'\n      />\n      <KdpaInput\n        label='Password'\n        placeholder='Enter your password'\n        variant='outlined'\n        type='password'\n        defaultValue={password}\n        title='password'\n      />\n      <KdpaInput\n        label='Repeat Password'\n        placeholder='Repeat your password'\n        variant='outlined'\n        type='password'\n        defaultValue={repeatPassword}\n        title='repeatPassword'\n      />\n      <KdpaPrimaryButton\n        variant='contained'\n        loading={loading}\n        title='Submit'\n        onClick={handleSubmit}\n      />\n    </KdFormLoader>\n  );\n};\n\nexport default UserRegistrationForm;",
+        "elementTypes": [
+            "FORM_LOADER",
+            "TEXT_BOX",
+            "BUTTON"
+        ]
+    }
+}

@@ -1,0 +1,43 @@
+{
+  elementType: "KdFormField",
+  children: [],
+  parentId: "",
+  style: {},
+  selfClosing: true,
+  attrs: {
+    label: { type: "static", content: "label" },
+    Component: {
+      type: "functionalElement",
+      content: {
+        type: "element",
+        content: {
+          elementType: "KdpaRadioGroup",
+          children: [],
+          parentId: "",
+          style: {},
+          attrs: {
+            "$args[0]": {
+              type: "spread",
+            },
+          },
+          dependency: {
+            type: "package",
+            version: "latest",
+            path: "kdpa-components",
+            meta: {
+              namedImport: true,
+            },
+          },
+        },
+      },
+    },
+  },
+  dependency: {
+    type: "package",
+    version: "latest",
+    path: "kdpa-components",
+    meta: {
+      namedImport: true,
+    },
+  },
+}

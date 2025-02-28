@@ -1,0 +1,11 @@
+The Icon is component can used only for icon react-icons library.
+and anywhere user want to use icon in the application only need to use this component and icons in react-icons library.
+Name Tag : like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library
+children element: not have children element and self closing element
+
+static attrs:
+1- color: string
+2- size: number
+
+dynamic attrs:
+1- title: string

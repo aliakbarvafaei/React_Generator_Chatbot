@@ -1,0 +1,12 @@
+The Modal component is a customizable modal built on top of MUI's Dialog component,
+it can be use to show a modal in the page.
+Name Tag : KdModal
+children element: any element
+
+static attrs:
+1- fullScreen: boolean
+2- fullWidth: boolean
+3- maxWidth: xs | sm | md | lg | xl
+
+dynamic attrs:
+1- open: boolean
