@@ -1,8 +1,13 @@
-from agent_graph.graph import create_graph, compile_workflow
-from states.state import AgentGraphState
 import logging
 
+from agent_graph.graph import create_graph, compile_workflow
+from states.state import AgentGraphState
+
+from utils.helper_functions import load_config
+
 logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
+
+load_config()
 
 # server = 'ollama'
 # model = 'llama3.2:latest'

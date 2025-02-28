@@ -5,7 +5,7 @@
     "tasks": [],
     "final_result": {
         "title": "Header Component",
-        "description": "A responsive header component with links, icons, and a logo.",
+        "description": "A responsive header component with navigation links and a logo.",
         "states": [],
         "props": [
             {
@@ -17,21 +17,13 @@
                 "type": "STRING"
             },
             {
-                "name": "shopLink",
-                "type": "STRING"
-            },
-            {
-                "name": "aboutLink",
-                "type": "STRING"
-            },
-            {
-                "name": "contactLink",
+                "name": "title",
                 "type": "STRING"
             }
         ],
         "functions": [],
-        "jsx_code": "import React from 'react';\nimport { KdImageBox } from 'your-image-box-library'; // Adjust the import based on your project structure\nimport { Link } from 'your-hyperlink-library'; // Adjust the import based on your project structure\nimport { MdOutlineHomeIcon, FiInfo, FiMail } from 'react-icons'; // Import your desired icons\nimport { KdpaPrimaryButton } from 'your-button-library'; // Adjust the import based on your project structure\nimport { KdTypography } from 'your-typography-library'; // Adjust the import based on your project structure\n\nconst Header = ({ logoSrc, logoAlt, shopLink, aboutLink, contactLink }) => {\n  return (\n    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', backgroundColor: '#f8f9fa' }}>\n      {/* Left Side: Links with Icons */}\n      <div style={{ display: 'flex', alignItems: 'center' }}>\n        <Link href={shopLink} title=\"Shop\">\n          <MdOutlineHomeIcon />\n          <KdTypography variant=\"body1\" data=\"Link to Shop Page\" />\n        </Link>\n        <Link href={aboutLink} title=\"About Us\" style={{ marginLeft: '20px' }}>\n          <FiInfo />\n          <KdTypography variant=\"body1\" data=\"Link to About Us Page\" />\n        </Link>\n        <Link href={contactLink} title=\"Contact Us\" style={{ marginLeft: '20px' }}>\n          <FiMail />\n          <KdTypography variant=\"body1\" data=\"Link to Contact Us Page\" />\n        </Link>\n        <KdpaPrimaryButton variant=\"contained\" title=\"Login\" style={{ marginLeft: '20px' }}>\n          Login\n        </KdpaPrimaryButton>\n      </div>\n\n      {/* Right Side: Logo and Title */}\n      <div style={{ display: 'flex', alignItems: 'center' }}>\n        <KdImageBox \n          src={logoSrc} \n          alt={logoAlt} \n          title=\"Website Logo\" \n          quality=\"HIGH\" \n          loading=\"lazy\" \n        />\n        <KdTypography variant=\"h4\" data=\"Website Title\" style={{ marginLeft: '10px' }} />\n      </div>\n    </div>\n  );\n};\n\nexport default Header;",
-        "component_code": "import React from 'react';\nimport { KdImageBox } from 'your-image-box-library'; // Adjust the import based on your project structure\nimport { Link } from 'your-hyperlink-library'; // Adjust the import based on your project structure\nimport { MdOutlineHomeIcon, FiInfo, FiMail } from 'react-icons'; // Import your desired icons\nimport { KdpaPrimaryButton } from 'your-button-library'; // Adjust the import based on your project structure\nimport { KdTypography } from 'your-typography-library'; // Adjust the import based on your project structure\n\nconst Header = ({ logoSrc, logoAlt, shopLink, aboutLink, contactLink }) => {\n  return (\n    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', backgroundColor: '#f8f9fa' }}>\n      {/* Left Side: Links with Icons */}\n      <div style={{ display: 'flex', alignItems: 'center' }}>\n        <Link href={shopLink} title=\"Shop\">\n          <MdOutlineHomeIcon />\n          <KdTypography variant=\"body1\" data=\"Link to Shop Page\" />\n        </Link>\n        <Link href={aboutLink} title=\"About Us\" style={{ marginLeft: '20px' }}>\n          <FiInfo />\n          <KdTypography variant=\"body1\" data=\"Link to About Us Page\" />\n        </Link>\n        <Link href={contactLink} title=\"Contact Us\" style={{ marginLeft: '20px' }}>\n          <FiMail />\n          <KdTypography variant=\"body1\" data=\"Link to Contact Us Page\" />\n        </Link>\n        <KdpaPrimaryButton variant=\"contained\" title=\"Login\" style={{ marginLeft: '20px' }}>\n          Login\n        </KdpaPrimaryButton>\n      </div>\n\n      {/* Right Side: Logo and Title */}\n      <div style={{ display: 'flex', alignItems: 'center' }}>\n        <KdImageBox \n          src={logoSrc} \n          alt={logoAlt} \n          title=\"Website Logo\" \n          quality=\"HIGH\" \n          loading=\"lazy\" \n        />\n        <KdTypography variant=\"h4\" data=\"Website Title\" style={{ marginLeft: '10px' }} />\n      </div>\n    </div>\n  );\n};\n\nexport default Header;",
+        "jsx_code": "import React from 'react';\nimport { KdImageBox, Link, KdpaIconButton, KdpaGrid } from 'your-component-library'; // Adjust the import based on your component library\n\nconst Header = ({ logoSrc, logoAlt, title }) => {\n  return (\n    <KdpaGrid container>\n      {/* Left Side: Navigation Links */}\n      <KdpaGrid item xs={8}>\n        <KdpaGrid container spacing={2}>\n          <KdpaGrid item>\n            <Link href=\"/shop\" title=\"Shop\">\n              <KdpaIconButton icon={<MdOutlineHomeIcon />} title=\"Shop\" />\n              Shop\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/about\" title=\"About Us\">\n              <KdpaIconButton icon={<MdOutlineInfoIcon />} title=\"About Us\" />\n              About Us\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/contact\" title=\"Contact Us\">\n              <KdpaIconButton icon={<MdOutlineContactMailIcon />} title=\"Contact Us\" />\n              Contact Us\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/login\" title=\"Login\">\n              <KdpaIconButton icon={<MdOutlineLoginIcon />} title=\"Login\" />\n              Login\n            </Link>\n          </KdpaGrid>\n        </KdpaGrid>\n      </KdpaGrid>\n\n      {/* Right Side: Logo and Title */}\n      <KdpaGrid item xs={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>\n        <KdImageBox src={logoSrc} alt={logoAlt} title={title} />\n        <h1 style={{ marginLeft: '10px' }}>{title}</h1>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;",
+        "component_code": "import React from 'react';\nimport { KdImageBox, Link, KdpaIconButton, KdpaGrid } from 'your-component-library'; // Adjust the import based on your component library\n\nconst Header = ({ logoSrc, logoAlt, title }) => {\n  return (\n    <KdpaGrid container>\n      {/* Left Side: Navigation Links */}\n      <KdpaGrid item xs={8}>\n        <KdpaGrid container spacing={2}>\n          <KdpaGrid item>\n            <Link href=\"/shop\" title=\"Shop\">\n              <KdpaIconButton icon={<MdOutlineHomeIcon />} title=\"Shop\" />\n              Shop\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/about\" title=\"About Us\">\n              <KdpaIconButton icon={<MdOutlineInfoIcon />} title=\"About Us\" />\n              About Us\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/contact\" title=\"Contact Us\">\n              <KdpaIconButton icon={<MdOutlineContactMailIcon />} title=\"Contact Us\" />\n              Contact Us\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/login\" title=\"Login\">\n              <KdpaIconButton icon={<MdOutlineLoginIcon />} title=\"Login\" />\n              Login\n            </Link>\n          </KdpaGrid>\n        </KdpaGrid>\n      </KdpaGrid>\n\n      {/* Right Side: Logo and Title */}\n      <KdpaGrid item xs={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>\n        <KdImageBox src={logoSrc} alt={logoAlt} title={title} />\n        <h1 style={{ marginLeft: '10px' }}>{title}</h1>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;",
         "elementTypes": []
     },
     "messages": [
@@ -40,9 +32,49 @@
             "additional_kwargs": {
                 "tool_calls": [
                     {
-                        "id": "call_q7yjkDpNIwgPRSRZ4ykhApX0",
+                        "id": "call_1JZtZP5QqNyoZOT7Xs8pG7d1",
                         "function": {
-                            "arguments": "{\"elementType\":\"IMAGE_BOX\"}",
+                            "arguments": "{\"elementType\": \"IMAGE_BOX\"}",
+                            "name": "node_elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_pvwDhN5tS8K4jIX4qN0Ukysf",
+                        "function": {
+                            "arguments": "{\"elementType\": \"HYPER_LINK\"}",
+                            "name": "node_elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_ncTwHacBJnmqWHXlPo7CiiU9",
+                        "function": {
+                            "arguments": "{\"elementType\": \"ICON_BUTTON\"}",
+                            "name": "node_elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_SQ5zoiHZQ6NWJuRItfR0QNYG",
+                        "function": {
+                            "arguments": "{\"elementType\": \"LAYOUT\"}",
+                            "name": "node_elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_SEnSIYcgP7fmRwOI80UOsPsG",
+                        "function": {
+                            "arguments": "{\"elementType\": \"LAYOUT_ROW\"}",
+                            "name": "node_elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_zHcMn4a43cWqoFLHDrdCU2e6",
+                        "function": {
+                            "arguments": "{\"elementType\": \"LAYOUT_CELL\"}",
                             "name": "node_elementType_attribute"
                         },
                         "type": "function"
@@ -52,9 +84,9 @@
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 18,
+                    "completion_tokens": 128,
                     "prompt_tokens": 2124,
-                    "total_tokens": 2142,
+                    "total_tokens": 2252,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -73,7 +105,7 @@
             },
             "type": "ai",
             "name": null,
-            "id": "run-44dc70b0-1776-4829-9f8d-fe996473b5e7-0",
+            "id": "run-48f16a66-9ce8-4256-8457-b62bdb7a326f-0",
             "example": false,
             "tool_calls": [
                 {
@@ -81,15 +113,55 @@
                     "args": {
                         "elementType": "IMAGE_BOX"
                     },
-                    "id": "call_q7yjkDpNIwgPRSRZ4ykhApX0",
+                    "id": "call_1JZtZP5QqNyoZOT7Xs8pG7d1",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "node_elementType_attribute",
+                    "args": {
+                        "elementType": "HYPER_LINK"
+                    },
+                    "id": "call_pvwDhN5tS8K4jIX4qN0Ukysf",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "node_elementType_attribute",
+                    "args": {
+                        "elementType": "ICON_BUTTON"
+                    },
+                    "id": "call_ncTwHacBJnmqWHXlPo7CiiU9",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "node_elementType_attribute",
+                    "args": {
+                        "elementType": "LAYOUT"
+                    },
+                    "id": "call_SQ5zoiHZQ6NWJuRItfR0QNYG",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "node_elementType_attribute",
+                    "args": {
+                        "elementType": "LAYOUT_ROW"
+                    },
+                    "id": "call_SEnSIYcgP7fmRwOI80UOsPsG",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "node_elementType_attribute",
+                    "args": {
+                        "elementType": "LAYOUT_CELL"
+                    },
+                    "id": "call_zHcMn4a43cWqoFLHDrdCU2e6",
                     "type": "tool_call"
                 }
             ],
             "invalid_tool_calls": [],
             "usage_metadata": {
                 "input_tokens": 2124,
-                "output_tokens": 18,
-                "total_tokens": 2142,
+                "output_tokens": 128,
+                "total_tokens": 2252,
                 "input_token_details": {
                     "audio": 0,
                     "cache_read": 0
@@ -106,123 +178,10 @@
             "response_metadata": {},
             "type": "tool",
             "name": "node_elementType_attribute",
-            "id": "9681e789-f37c-4d91-9782-291fd24841ba",
-            "tool_call_id": "call_q7yjkDpNIwgPRSRZ4ykhApX0",
+            "id": "160070d8-a3a3-4e50-86f6-7c3767df0d47",
+            "tool_call_id": "call_1JZtZP5QqNyoZOT7Xs8pG7d1",
             "artifact": null,
             "status": "success"
-        },
-        {
-            "content": "",
-            "additional_kwargs": {
-                "tool_calls": [
-                    {
-                        "id": "call_izELxFDkt7lbOBnsKJWGQQjp",
-                        "function": {
-                            "arguments": "{\"elementType\": \"HYPER_LINK\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_rrxe2GYSSeQV0t5LaxKjP5Mg",
-                        "function": {
-                            "arguments": "{\"elementType\": \"ICON\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_Qsx5dOeh4kDt0JaENN2TORaw",
-                        "function": {
-                            "arguments": "{\"elementType\": \"BUTTON\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_yhy5CNr9vgAzg7PuDa5LmP4Y",
-                        "function": {
-                            "arguments": "{\"elementType\": \"TYPOGRAPHY\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    }
-                ],
-                "refusal": null
-            },
-            "response_metadata": {
-                "token_usage": {
-                    "completion_tokens": 89,
-                    "prompt_tokens": 2292,
-                    "total_tokens": 2381,
-                    "completion_tokens_details": {
-                        "accepted_prediction_tokens": 0,
-                        "audio_tokens": 0,
-                        "reasoning_tokens": 0,
-                        "rejected_prediction_tokens": 0
-                    },
-                    "prompt_tokens_details": {
-                        "audio_tokens": 0,
-                        "cached_tokens": 0
-                    }
-                },
-                "model_name": "gpt-4o-mini-2024-07-18",
-                "system_fingerprint": "fp_b705f0c291",
-                "finish_reason": "tool_calls",
-                "logprobs": null
-            },
-            "type": "ai",
-            "name": null,
-            "id": "run-0c4af1f4-9c27-470e-a338-6fe3d7d631f4-0",
-            "example": false,
-            "tool_calls": [
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "HYPER_LINK"
-                    },
-                    "id": "call_izELxFDkt7lbOBnsKJWGQQjp",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "ICON"
-                    },
-                    "id": "call_rrxe2GYSSeQV0t5LaxKjP5Mg",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "BUTTON"
-                    },
-                    "id": "call_Qsx5dOeh4kDt0JaENN2TORaw",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "TYPOGRAPHY"
-                    },
-                    "id": "call_yhy5CNr9vgAzg7PuDa5LmP4Y",
-                    "type": "tool_call"
-                }
-            ],
-            "invalid_tool_calls": [],
-            "usage_metadata": {
-                "input_tokens": 2292,
-                "output_tokens": 89,
-                "total_tokens": 2381,
-                "input_token_details": {
-                    "audio": 0,
-                    "cache_read": 0
-                },
-                "output_token_details": {
-                    "audio": 0,
-                    "reasoning": 0
-                }
-            }
         },
         {
             "content": "{\"static_attrs\": [{\"name\": \"target\", \"type\": \"string\", \"possibleValues\": [\"default\", \"_blank\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"href\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"Link\"}",
@@ -230,54 +189,65 @@
             "response_metadata": {},
             "type": "tool",
             "name": "node_elementType_attribute",
-            "id": "577ade56-19ba-4ccd-af1f-e7ccac4eeb8c",
-            "tool_call_id": "call_izELxFDkt7lbOBnsKJWGQQjp",
+            "id": "cddd1d15-1b7d-415d-9820-255c73138752",
+            "tool_call_id": "call_pvwDhN5tS8K4jIX4qN0Ukysf",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"color\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"size\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library\"}",
+            "content": "{\"static_attrs\": [{\"name\": \"icon\", \"type\": \"ICON element like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library\", \"possibleValues\": \"ICON element like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"KdpaIconButton\"}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "node_elementType_attribute",
-            "id": "e5b08ee8-4b4f-4e9c-8d71-e1bc7bc00ac5",
-            "tool_call_id": "call_rrxe2GYSSeQV0t5LaxKjP5Mg",
+            "id": "47165b11-51d3-4528-932f-f8642dcaa9b2",
+            "tool_call_id": "call_ncTwHacBJnmqWHXlPo7CiiU9",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"contained\", \"outlined\", \"text\"], \"description\": \"\"}, {\"name\": \"children\", \"type\": \"string\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"boolean\", \"description\": \"\"}], \"tagName\": \"KdpaPrimaryButton\"}",
+            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "node_elementType_attribute",
-            "id": "d5fe537f-4835-4ba3-a906-69e952ce20d5",
-            "tool_call_id": "call_Qsx5dOeh4kDt0JaENN2TORaw",
+            "id": "6523c51a-53fb-4285-b0a9-e50c31f20077",
+            "tool_call_id": "call_SQ5zoiHZQ6NWJuRItfR0QNYG",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"subtitle1\", \"subtitle2\", \"body1\", \"body2\", \"caption\", \"button\", \"overline\", \"srOnly\", \"inherit\"], \"description\": \"\"}, {\"name\": \"type\", \"type\": \"string\", \"possibleValues\": [\"string\", \"number\", \"date\", \"time\", \"date-time\", \"html\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"data\", \"type\": \"string | number | ...\", \"description\": \"\"}], \"tagName\": \"KdTypography\"}",
+            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "node_elementType_attribute",
-            "id": "e3855b8e-fdee-4788-9364-929915ea0fb1",
-            "tool_call_id": "call_yhy5CNr9vgAzg7PuDa5LmP4Y",
+            "id": "b011c799-25d2-430d-9a5c-b5abee0cb0ce",
+            "tool_call_id": "call_SEnSIYcgP7fmRwOI80UOsPsG",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "Here is the JSX code for the beautifully designed header component based on your requirements:\n\n```jsx\nimport React from 'react';\nimport { KdImageBox } from 'your-image-box-library'; // Adjust the import based on your project structure\nimport { Link } from 'your-hyperlink-library'; // Adjust the import based on your project structure\nimport { MdOutlineHomeIcon, FiInfo, FiMail } from 'react-icons'; // Import your desired icons\nimport { KdpaPrimaryButton } from 'your-button-library'; // Adjust the import based on your project structure\nimport { KdTypography } from 'your-typography-library'; // Adjust the import based on your project structure\n\nconst Header = () => {\n  return (\n    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', backgroundColor: '#f8f9fa' }}>\n      {/* Left Side: Links with Icons */}\n      <div style={{ display: 'flex', alignItems: 'center' }}>\n        <Link href=\"/shop\" title=\"Shop\">\n          <MdOutlineHomeIcon />\n          <KdTypography variant=\"body1\" data=\"Link to Shop Page\" />\n        </Link>\n        <Link href=\"/about\" title=\"About Us\" style={{ marginLeft: '20px' }}>\n          <FiInfo />\n          <KdTypography variant=\"body1\" data=\"Link to About Us Page\" />\n        </Link>\n        <Link href=\"/contact\" title=\"Contact Us\" style={{ marginLeft: '20px' }}>\n          <FiMail />\n          <KdTypography variant=\"body1\" data=\"Link to Contact Us Page\" />\n        </Link>\n        <KdpaPrimaryButton variant=\"contained\" title=\"Login\" style={{ marginLeft: '20px' }}>\n          Login\n        </KdpaPrimaryButton>\n      </div>\n\n      {/* Right Side: Logo and Title */}\n      <div style={{ display: 'flex', alignItems: 'center' }}>\n        <KdImageBox \n          src=\"path/to/logo.png\" \n          alt=\"Website Logo\" \n          title=\"Website Logo\" \n          quality=\"HIGH\" \n          loading=\"lazy\" \n        />\n        <KdTypography variant=\"h4\" data=\"Website Title\" style={{ marginLeft: '10px' }} />\n      </div>\n    </div>\n  );\n};\n\nexport default Header;\n```\n\n### Explanation:\n- The header is structured using a flexbox layout to align items properly.\n- The left side contains links with icons and a login button.\n- The right side contains an image box for the logo and a title.\n- The `KdImageBox`, `Link`, `KdpaPrimaryButton`, and `KdTypography` components are used as per the specifications provided.\n- Icons are imported from the `react-icons` library. You can replace them with any other icons as needed.",
+            "content": "{\"static_attrs\": [{\"name\": \"xs\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"sm\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"md\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"lg\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "node_elementType_attribute",
+            "id": "86ec33b9-c9a9-4b38-ab35-cb375755e5b8",
+            "tool_call_id": "call_zHcMn4a43cWqoFLHDrdCU2e6",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "Here is the JSX code for a beautifully structured header component based on your requirements:\n\n```jsx\nimport React from 'react';\nimport { KdImageBox, Link, KdpaIconButton, KdpaGrid } from 'your-component-library'; // Adjust the import based on your component library\n\nconst Header = () => {\n  return (\n    <KdpaGrid container>\n      {/* Left Side: Navigation Links */}\n      <KdpaGrid item xs={8}>\n        <KdpaGrid container spacing={2}>\n          <KdpaGrid item>\n            <Link href=\"/shop\" title=\"Shop\">\n              <KdpaIconButton icon={<MdOutlineHomeIcon />} title=\"Shop\" />\n              Shop\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/about\" title=\"About Us\">\n              <KdpaIconButton icon={<MdOutlineInfoIcon />} title=\"About Us\" />\n              About Us\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/contact\" title=\"Contact Us\">\n              <KdpaIconButton icon={<MdOutlineContactMailIcon />} title=\"Contact Us\" />\n              Contact Us\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/login\" title=\"Login\">\n              <KdpaIconButton icon={<MdOutlineLoginIcon />} title=\"Login\" />\n              Login\n            </Link>\n          </KdpaGrid>\n        </KdpaGrid>\n      </KdpaGrid>\n\n      {/* Right Side: Logo and Title */}\n      <KdpaGrid item xs={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>\n        <KdImageBox src=\"path/to/logo.png\" alt=\"Website Logo\" title=\"Website Title\" />\n        <h1 style={{ marginLeft: '10px' }}>Website Title</h1>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;\n```\n\n### Explanation:\n- **Layout**: The header is structured using a grid layout (`KdpaGrid`), with the left side containing navigation links and the right side containing the logo and title.\n- **Links**: Each link is wrapped in a `Link` component, which includes an icon button (`KdpaIconButton`) and text.\n- **Logo**: The logo is displayed using the `KdImageBox` component, and the website title is shown next to it.\n- **Styling**: Inline styles are used to align the logo and title properly.\n\nMake sure to replace the icon imports and the logo path with the actual paths and icons you are using in your project.",
             "additional_kwargs": {
                 "refusal": null
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 604,
-                    "prompt_tokens": 2823,
-                    "total_tokens": 3427,
+                    "completion_tokens": 564,
+                    "prompt_tokens": 2701,
+                    "total_tokens": 3265,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -296,14 +266,14 @@
             },
             "type": "ai",
             "name": null,
-            "id": "run-94ca6d42-7b17-48c7-91a0-ba30a6a89c6e-0",
+            "id": "run-44dba56d-de51-4633-a3d6-8f98696a6352-0",
             "example": false,
             "tool_calls": [],
             "invalid_tool_calls": [],
             "usage_metadata": {
-                "input_tokens": 2823,
-                "output_tokens": 604,
-                "total_tokens": 3427,
+                "input_tokens": 2701,
+                "output_tokens": 564,
+                "total_tokens": 3265,
                 "input_token_details": {
                     "audio": 0,
                     "cache_read": 0

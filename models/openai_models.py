@@ -1,9 +1,4 @@
 from langchain_openai import ChatOpenAI
-from utils.helper_functions import load_config
-import os
-
-config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')
-load_config(config_path)
 
 azure_base_url = "https://models.inference.ai.azure.com"
 

@@ -1,13 +1,10 @@
 import requests
 import json
 import os
-from utils.helper_functions import load_config
 from langchain_core.messages.human import HumanMessage
 
 class ClaudJSONModel:
     def __init__(self, temperature=0, model=None):
-        config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')
-        load_config(config_path)
         self.api_key = os.environ.get("CLAUD_API_KEY")
         self.headers = {
             'Content-Type': 'application/json', 
@@ -69,8 +66,6 @@ class ClaudJSONModel:
 
 class ClaudModel:
     def __init__(self, temperature=0, model=None):
-        config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')
-        load_config(config_path)
         self.api_key = os.environ.get("CLAUD_API_KEY")
         self.headers = {
             'Content-Type': 'application/json', 
