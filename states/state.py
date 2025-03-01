@@ -22,7 +22,7 @@ class PropDefinition(BaseModel):
 
 class FunctionDefinition(BaseModel):
     name: str = Field(..., title="Function Name")
-    inputParams: List[str] = Field(None, title="Input Parameters of Function")
+    inputParams: List[str] = Field([], title="Input Parameters of Function")
     code: str = Field(..., title="Function code")
 
 
