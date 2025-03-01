@@ -2,6 +2,7 @@ import os
 import json
 import re
 
+
 def parse_txt_file(file_path, element_type):
     with open(file_path, "r", encoding="utf-8") as file:
         lines = file.readlines()
@@ -13,7 +14,7 @@ def parse_txt_file(file_path, element_type):
         "selfClosing": False,
         "childrenElementTypes": [],
         "static_attrs": [],
-        "dynamic_attrs": []
+        "dynamic_attrs": [],
     }
 
     static_attrs_section = False
@@ -105,5 +106,7 @@ def process_elements_directory(root_folder):
 
 
 # Example usage
-elements_directory = "./Version_0/elements"  # Root folder containing component subfolders
+elements_directory = (
+    "./Version_0/elements"  # Root folder containing component subfolders
+)
 process_elements_directory(elements_directory)

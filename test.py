@@ -13,20 +13,27 @@ load_config()
 # model = 'llama3.2:latest'
 # model_endpoint = None
 
-server = 'openai'
-model = 'gpt-4o-mini'
+server = "openai"
+model = "gpt-4o"
 
-print ("Creating graph and compiling workflow...")
-graph = create_graph(server=server, model=model,)
+print("Creating graph and compiling workflow...")
+graph = create_graph(
+    server=server,
+    model=model,
+)
 workflow = compile_workflow(graph)
 
-print ("Graph and workflow created.")
+print("Graph and workflow created.")
 
-initial_stateee = AgentGraphState(query="""I want a beautifuly header:
+mermaid_syntax = workflow.get_graph().draw_mermaid_png(output_file_path="diagram.png")
+
+initial_stateee = AgentGraphState(
+    query="""I want a beautifuly header:
                              in the right a image box have logo and title of website.
                              in the left many item link that each of them have a icon and text.
                              like : link to shoppage, link to about us page, link to contact us page.
-                             and at the end of left side a button for login.""")
+                             and at the end of left side a button for login."""
+)
 
 res = workflow.invoke(initial_stateee)
 

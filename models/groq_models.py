@@ -8,9 +8,9 @@ class GroqJSONModel:
     def __init__(self, temperature=0, model=None):
         self.api_key = os.environ.get("GROQ_API_KEY")
         self.headers = {
-            'Content-Type': 'application/json', 
-            'Authorization': f'Bearer {self.api_key}'
-            }
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
         self.model_endpoint = "https://api.groq.com/openai/v1/chat/completions"
         self.temperature = temperature
         self.model = model
@@ -23,35 +23,33 @@ class GroqJSONModel:
         payload = {
             "model": self.model,
             "messages": [
-                {
-                    "role": "user",
-                    "content": f"system:{system}\n\n user:{user}"
-                }
+                {"role": "user", "content": f"system:{system}\n\n user:{user}"}
             ],
             "temperature": self.temperature,
-            "response_format": {"type": "json_object"}
+            "response_format": {"type": "json_object"},
         }
-        
+
         try:
             request_response = requests.post(
-                self.model_endpoint, 
-                headers=self.headers, 
-                data=json.dumps(payload)
+                self.model_endpoint, headers=self.headers, data=json.dumps(payload)
             )
-            
+
             print("REQUEST RESPONSE", request_response.status_code)
             # print("REQUEST RESPONSE HEADERS", request_response.headers)
             # print("REQUEST RESPONSE TEXT", request_response.text)
-            
+
             request_response_json = request_response.json()
             # print("REQUEST RESPONSE JSON", request_response_json)
-            
-            if 'choices' not in request_response_json or len(request_response_json['choices']) == 0:
+
+            if (
+                "choices" not in request_response_json
+                or len(request_response_json["choices"]) == 0
+            ):
                 raise ValueError("No choices in response")
 
-            response_content = request_response_json['choices'][0]['message']['content']
+            response_content = request_response_json["choices"][0]["message"]["content"]
             # print("RESPONSE CONTENT", response_content)
-            
+
             response = json.loads(response_content)
             response = json.dumps(response)
 
@@ -65,13 +63,14 @@ class GroqJSONModel:
             response_formatted = HumanMessage(content=json.dumps(response))
             return response_formatted
 
+
 class GroqModel:
     def __init__(self, temperature=0, model=None):
         self.api_key = os.environ.get("GROQ_API_KEY")
         self.headers = {
-            'Content-Type': 'application/json', 
-            'Authorization': f'Bearer {self.api_key}'
-            }
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
         self.model_endpoint = "https://api.groq.com/openai/v1/chat/completions"
         self.temperature = temperature
         self.model = model
@@ -84,25 +83,22 @@ class GroqModel:
         payload = {
             "model": self.model,
             "messages": [
-                {
-                    "role": "user",
-                    "content": f"system:{system}\n\n user:{user}"
-                }
+                {"role": "user", "content": f"system:{system}\n\n user:{user}"}
             ],
             "temperature": self.temperature,
         }
 
         try:
             request_response = requests.post(
-                self.model_endpoint, 
-                headers=self.headers, 
-                data=json.dumps(payload)
-                )
-            
+                self.model_endpoint, headers=self.headers, data=json.dumps(payload)
+            )
+
             print("REQUEST RESPONSE", request_response)
-            request_response_json = request_response.json()['choices'][0]['message']['content']
+            request_response_json = request_response.json()["choices"][0]["message"][
+                "content"
+            ]
             response = str(request_response_json)
-            
+
             response_formatted = HumanMessage(content=response)
 
             return response_formatted
