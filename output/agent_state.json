@@ -1,38 +1,47 @@
 {
     "query": "I want a beautifuly header:\n                             in the right a image box have logo and title of website.\n                             in the left many item link that each of them have a icon and text.\n                             like : link to shoppage, link to about us page, link to contact us page.\n                             and at the end of left side a button for login.",
-    "context": "description ElementType (ALERT) is: The Alert component is a customizable alert component built on top of MUI's Alert component, and use from Alert component of MUI. It maintains a consistent appearance with a contained variant and customizable styles via props. .\ndescription ElementType (BUTTON) is: The Button component is a customizable button built on top of MUI's Button component, designed for use throughout the application. It maintains a consistent appearance with a contained variant and customizable styles via props, making it a versatile and reusable button component. This component used instead of button tag in the application. .\ndescription ElementType (CARD_ELEMENT) is: The card element is component for map in any list of data and show it in card view. in the provider is Grid component from material-ui and in the children is the data that we want to show in card view. .\ndescription ElementType (CHECK_BOX) is: The CheckBox component is a customizable checkbox built on top of MUI's Checkbox component, designed for use throughout the application. .\ndescription ElementType (COLUMN_CHART) is: The Column Chart component is a customizable 3D chart built on top of ApexCharts, this chart in 3D and can use it to show data in 3D. .\ndescription ElementType (DATE_PANEL) is: The DataPaned is a date picker component built on top of Mui/x-data-grid's DatePicker component, and use for date jalaali or ... date picker. .\ndescription ElementType (DIV) is: The Div component is a customizable div built on top of HTML's div element, this use Grid system from MUI and can use it to show data in div. and use instead of div or span or ui or li or ... in your project..\ndescription ElementType (DIVIDER) is: The Divider component is a customizable divider built on top of MUI's Divider component, it can be use separate content in the page. .\ndescription ElementType (DROP_DOWN_LIST) is: The DropDownList component is a customizable dropdown built on top of MUI's AutoComplete component, it can be use to select one item from a list of items. .\ndescription ElementType (FILE_BROWSER) is: The FileBrowser component is a simple customizable file browser, this component is simple and user can be upload one file. .\ndescription ElementType (FORM_LOADER) is: The FormLoader is a component of form provider of package react-hook-form, and used in wrapper of any form in my application. .\ndescription ElementType (HEADER_FIELD) is: The HeaderField component is a customizable header field, this component is wrapper of section element with title and can be seprate content in many segment. .\ndescription ElementType (HTML_EDITOR) is: The HtmlEditor component is Box input that user can be write html code in it. .\ndescription ElementType (HYPER_LINK) is: The HyperLink component is a simple customizable hyperlink, this component used instead of <a></a> or any Link tag in the application. .\ndescription ElementType (ICON) is: The Icon is component can used only for icon react-icons library. and anywhere user want to use icon in the application only need to use this component and icons in react-icons library. .\ndescription ElementType (ICON_BUTTON) is: The IconButton component is mui button with icon, this component is simple and user can be use it in the application. the icon of this component is from react-icons library and Icon element. .\ndescription ElementType (IMAGE_BOX) is: The ImageBox component is a simple customizable image box, this component used instead of <img></img> tag in the application. .\ndescription ElementType (LAYOUT) is: The Layout component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutRow in children. attr container, default is true and can not be change.\ndescription ElementType (LAYOUT_CELL) is: The LayoutCell component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes.attr item, default is true and can not be change .\ndescription ElementType (LAYOUT_ROW) is: The LayoutRow component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutCell in children.attr container and item, default is true and can not be change. always xs is 12.\ndescription ElementType (LOADING) is: The Loading component is a customizable loading built on top of MUI's CircularProgress component, it can be use to show loading in the page. .\ndescription ElementType (MENU) is: The Menu component is a customizable menu built on top of @radix-ui/react-menubar's Menu component, it can be use to show menu in the page. and data is attibute not children element. .\ndescription ElementType (MODAL) is: The Modal component is a customizable modal built on top of MUI's Dialog component, it can be use to show a modal in the page. .\ndescription ElementType (MULTI_FILE_BROWSER) is: The MultiFileBrowser component is a advance customizable file browser , and user can upload multiple files and drag and drop files in the file browser. .\ndescription ElementType (PIE_CHART) is: The PiChart component is a customizable 2D chart built on top of ApexCharts, this chart in 2D and can use it to show data in 2D. .\ndescription ElementType (RADIO_LIST) is: The RadioList component is a customizable radio list built on top of MUI's RadioGroup component, it can be use to select one item from a list of items. .\ndescription ElementType (STEPER_CONTAINER) is: The StepperContainer component is a customizable stepper container built on top of MUI's Stepper component, it can be use to show a stepper in the page. and only can used StepperElement component as children..\ndescription ElementType (STEPER_ELEMENT) is: The StepperElement component is a customizable stepper element built on top of MUI's Step component, this component is for each step in the StepperContainer component. .\ndescription ElementType (SWITCH) is: The Switch component is a customizable switch built on top of MUI's Switch component, it can be used for toggle on/off the switch. .\ndescription ElementType (TAB_CONTAINER) is: The TabConatiner component is a customizable tab container built on top of @radix-ui/react-tabs's TabConatiner component, it can be use to show a tab in the page. and only can used TabElement component as children..\ndescription ElementType (TAB_ELEMENT) is: The TabElement component is a customizable tab element built on top of @radix-ui/react-tabs's Tab component, this component is for each tab in the TabContainer component. .\ndescription ElementType (TAG_BOX_INPUT) is: The TagBoxInput component is a customizable tag box input built on top of MUI's AutoComplete component, this component is like of DropDown Element and used AutoComplete but in this component user can be select from a list or type a new tag and add it to the list of tags. .\ndescription ElementType (TEXT_BOX) is: The TextBox component is a customizable text box built on top of MUI's TextField component, it can be used for input text in the form. .\ndescription ElementType (TIME_PICKER) is: The TimePicker component is a customizable time picker built on top of @mui/x-date-pickers's TimePicker component, it can be used for select time in the application. .\ndescription ElementType (TOOLTIP) is: The Tooltip component is a customizable tooltip built on top of MUI's Tooltip component, it can be used to show a tooltip when the user hovers over the element. .\ndescription ElementType (TYPOGRAPHY) is: The Typography component is a customizable text component built on top of MUI's Typography component, this component used for any text in the application. .",
+    "context": "description ElementType (ALERT) is: The Alert component is a customizable alert component built on top of MUI's Alert component, and use from Alert component of MUI. It maintains a consistent appearance with a contained variant and customizable styles via props. .\ndescription ElementType (BUTTON) is: The Button component is a customizable button built on top of MUI's Button component, designed for use throughout the application. It maintains a consistent appearance with a contained variant and customizable styles via props, making it a versatile and reusable button component. This component used instead of button tag in the application. .\ndescription ElementType (CARD_ELEMENT) is: The card element is component for map in any list of data and show it in card view. in the provider is Grid component from material-ui and in the children is the data that we want to show in card view. .\ndescription ElementType (CHECK_BOX) is: The CheckBox component is a customizable checkbox built on top of MUI's Checkbox component, designed for use throughout the application. .\ndescription ElementType (COLUMN_CHART) is: The Column Chart component is a customizable 3D chart built on top of ApexCharts, this chart in 3D and can use it to show data in 3D. .\ndescription ElementType (DATE_PANEL) is: The DataPaned is a date picker component built on top of Mui/x-data-grid's DatePicker component, and use for date jalaali or ... date picker. .\ndescription ElementType (DIV) is: The Div component is a customizable div built on top of HTML's div element, this use Grid system from MUI and can use it to show data in div. and use instead of div or span or ui or li or ... in your project..\ndescription ElementType (DIVIDER) is: The Divider component is a customizable divider built on top of MUI's Divider component, it can be use separate content in the page. .\ndescription ElementType (DROP_DOWN_LIST) is: The DropDownList component is a customizable dropdown built on top of MUI's AutoComplete component, it can be use to select one item from a list of items. .\ndescription ElementType (FILE_BROWSER) is: The FileBrowser component is a simple customizable file browser, this component is simple and user can be upload one file. .\ndescription ElementType (FORM_LOADER) is: The FormLoader is a component of form provider of package react-hook-form, and used in wrapper of any form in my application. .\ndescription ElementType (HEADER_FIELD) is: The HeaderField component is a customizable header field, this component is wrapper of section element with title and can be seprate content in many segment. .\ndescription ElementType (HTML_EDITOR) is: The HtmlEditor component is Box input that user can be write html code in it. .\ndescription ElementType (HYPER_LINK) is: The HyperLink component is a simple customizable hyperlink, this component used instead of <a></a> or any Link tag in the application. .\ndescription ElementType (ICON) is: The Icon is component can used only for icon react-icons library. and anywhere user want to use icon in the application only need to use this component and icons in react-icons library. .\ndescription ElementType (ICON_BUTTON) is: The IconButton component is mui button with icon, this component is simple and user can be use it in the application. the icon of this component is from react-icons library and Icon element. .\ndescription ElementType (IMAGE_BOX) is: The ImageBox component is a simple customizable image box, this component used instead of <img></img> tag in the application. .\ndescription ElementType (LAYOUT) is: The Layout component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutRow in children. attr container, default is true and can not be change.\ndescription ElementType (LAYOUT_CELL) is: The LayoutCell component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes.attr item, default is true and can not be change .\ndescription ElementType (LAYOUT_ROW) is: The LayoutRow component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutCell in children.attr container and item, default is true and can not be change. always xs is 12.\ndescription ElementType (LOADING) is: The Loading component is a customizable loading built on top of MUI's CircularProgress component, it can be use to show loading in the page. .\ndescription ElementType (MENU) is: The Menu component is a customizable menu built on top of @radix-ui/react-menubar's Menu component, it can be use to show menu in the page. and data is attibute not children element. .\ndescription ElementType (MODAL) is: The Modal component is a customizable modal built on top of MUI's Dialog component, it can be use to show a modal in the page. .\ndescription ElementType (MULTI_FILE_BROWSER) is: The MultiFileBrowser component is a advance customizable file browser , and user can upload multiple files and drag and drop files in the file browser. .\ndescription ElementType (PIE_CHART) is: The PiChart component is a customizable 2D chart built on top of ApexCharts, this chart in 2D and can use it to show data in 2D. .\ndescription ElementType (RADIO_LIST) is: The RadioList component is a customizable radio list built on top of MUI's RadioGroup component, it can be use to select one item from a list of items. .\ndescription ElementType (STEPER_CONTAINER) is: The StepperContainer component is a customizable stepper container built on top of MUI's Stepper component, it can be use to show a stepper in the page. and only can used StepperElement component as children..\ndescription ElementType (STEPER_ELEMENT) is: The StepperElement component is a customizable stepper element built on top of MUI's Step component, this component is for each step in the StepperContainer component. each of StepperElement has one Trigger and one Content.\ndescription ElementType (SWITCH) is: The Switch component is a customizable switch built on top of MUI's Switch component, it can be used for toggle on/off the switch. .\ndescription ElementType (TAB_CONTAINER) is: The TabConatiner component is a customizable tab container built on top of @radix-ui/react-tabs's TabConatiner component, it can be use to show a tab in the page. and only can used TabElement component as children..\ndescription ElementType (TAB_ELEMENT) is: The TabElement component is a customizable tab element built on top of @radix-ui/react-tabs's Tab component, this component is for each tab in the TabContainer component. each of TabElement has one Trigger and one Content.\ndescription ElementType (TAG_BOX_INPUT) is: The TagBoxInput component is a customizable tag box input built on top of MUI's AutoComplete component, this component is like of DropDown Element and used AutoComplete but in this component user can be select from a list or type a new tag and add it to the list of tags. .\ndescription ElementType (TEXT_BOX) is: The TextBox component is a customizable text box built on top of MUI's TextField component, it can be used for input text in the form. .\ndescription ElementType (TIME_PICKER) is: The TimePicker component is a customizable time picker built on top of @mui/x-date-pickers's TimePicker component, it can be used for select time in the application. .\ndescription ElementType (TOOLTIP) is: The Tooltip component is a customizable tooltip built on top of MUI's Tooltip component, it can be used to show a tooltip when the user hovers over the element. .\ndescription ElementType (TYPOGRAPHY) is: The Typography component is a customizable text component built on top of MUI's Typography component, this component used for any text in the application. .",
     "is_relevant": true,
     "tasks": [],
     "final_result": {
         "title": "Header Component",
-        "description": "A responsive header component with navigation links, logo, and a login button.",
-        "states": [],
+        "description": "A header component with logo, navigation links, and login/logout button.",
+        "states": [
+            {
+                "name": "isLoggedIn",
+                "defaultValue": false,
+                "type": "BOOLEAN"
+            }
+        ],
         "props": [
             {
                 "name": "logoSrc",
                 "type": "STRING"
             },
             {
-                "name": "logoAlt",
-                "type": "STRING"
-            },
-            {
-                "name": "shopLink",
-                "type": "STRING"
-            },
-            {
-                "name": "aboutLink",
-                "type": "STRING"
-            },
-            {
-                "name": "contactLink",
+                "name": "title",
                 "type": "STRING"
             }
         ],
-        "functions": [],
-        "jsx_code": "<KdpaGrid container style={{ padding: '16px', alignItems: 'center', justifyContent: 'space-between' }}>\n    <KdpaGrid item xs={8} style={{ display: 'flex', alignItems: 'center' }}>\n        <Link href={shopLink} title=\"Shop\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n            <MdOutlineHomeIcon size={24} />\n            <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to Shop Page</KdTypography>\n        </Link>\n        <Link href={aboutLink} title=\"About Us\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n            <MdInfo size={24} />\n            <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to About Us Page</KdTypography>\n        </Link>\n        <Link href={contactLink} title=\"Contact Us\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n            <MdContactMail size={24} />\n            <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to Contact Us Page</KdTypography>\n        </Link>\n        <KdpaPrimaryButton variant=\"contained\" title=\"Login\" style={{ marginLeft: 'auto' }}>\n            Login\n        </KdpaPrimaryButton>\n    </KdpaGrid>\n    <KdpaGrid item xs={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>\n        <KdImageBox \n            src={logoSrc} \n            alt={logoAlt} \n            title=\"Website Logo\" \n            quality=\"HIGH\" \n            loading=\"lazy\" \n            style={{ width: '50px', height: '50px', marginRight: '8px' }} \n        />\n        <KdTypography variant=\"h4\">Website Title</KdTypography>\n    </KdpaGrid>\n</KdpaGrid>",
-        "component_code": "const Header = ({ logoSrc, logoAlt, shopLink, aboutLink, contactLink }) => {\n    return (\n        <KdpaGrid container style={{ padding: '16px', alignItems: 'center', justifyContent: 'space-between' }}>\n            <KdpaGrid item xs={8} style={{ display: 'flex', alignItems: 'center' }}>\n                <Link href={shopLink} title=\"Shop\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n                    <MdOutlineHomeIcon size={24} />\n                    <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to Shop Page</KdTypography>\n                </Link>\n                <Link href={aboutLink} title=\"About Us\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n                    <MdInfo size={24} />\n                    <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to About Us Page</KdTypography>\n                </Link>\n                <Link href={contactLink} title=\"Contact Us\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n                    <MdContactMail size={24} />\n                    <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to Contact Us Page</KdTypography>\n                </Link>\n                <KdpaPrimaryButton variant=\"contained\" title=\"Login\" style={{ marginLeft: 'auto' }}>\n                    Login\n                </KdpaPrimaryButton>\n            </KdpaGrid>\n            <KdpaGrid item xs={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>\n                <KdImageBox \n                    src={logoSrc} \n                    alt={logoAlt} \n                    title=\"Website Logo\" \n                    quality=\"HIGH\" \n                    loading=\"lazy\" \n                    style={{ width: '50px', height: '50px', marginRight: '8px' }} \n                />\n                <KdTypography variant=\"h4\">Website Title</KdTypography>\n            </KdpaGrid>\n        </KdpaGrid>\n    );\n};\n\nexport default Header;",
-        "elementTypes": []
+        "functions": [
+            {
+                "name": "toggleLogin",
+                "inputParams": [],
+                "code": "setIsLoggedIn(!isLoggedIn);"
+            }
+        ],
+        "jsx_code": "<KdpaGrid container style={{ backgroundColor: '#f5f5f5', padding: '10px 20px', alignItems: 'center' }}>\n  <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center' }}>\n    <KdImageBox\n      src={props.logoSrc}\n      alt=\"Website Logo\"\n      title=\"Website Logo\"\n      quality=\"HIGH\"\n      loading=\"lazy\"\n      style={{ width: '50px', height: '50px', marginRight: '10px' }}\n    />\n    <KdTypography variant=\"h5\" title=\"Website Title\" data={props.title} />\n  </KdpaGrid>\n\n  <KdpaGrid item xs={6} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>\n    <Link\n      href=\"/shop\"\n      title=\"Shop Page\"\n      target=\"default\"\n      style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n    >\n      <MdOutlineHome size={20} color=\"#000\" title=\"Shop Icon\" style={{ marginRight: '5px' }} />\n      <KdTypography variant=\"body1\" title=\"Shop\" data=\"Shop\" />\n    </Link>\n    <Link\n      href=\"/about\"\n      title=\"About Us Page\"\n      target=\"default\"\n      style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n    >\n      <MdOutlineInfo size={20} color=\"#000\" title=\"About Us Icon\" style={{ marginRight: '5px' }} />\n      <KdTypography variant=\"body1\" title=\"About Us\" data=\"About Us\" />\n    </Link>\n    <Link\n      href=\"/contact\"\n      title=\"Contact Us Page\"\n      target=\"default\"\n      style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n    >\n      <MdOutlineContactMail size={20} color=\"#000\" title=\"Contact Us Icon\" style={{ marginRight: '5px' }} />\n      <KdTypography variant=\"body1\" title=\"Contact Us\" data=\"Contact Us\" />\n    </Link>\n\n    <KdpaPrimaryButton\n      variant=\"contained\"\n      title={isLoggedIn ? 'Logout' : 'Login'}\n      onClick={toggleLogin}\n      style={{ backgroundColor: '#007bff', color: '#fff' }}\n    >\n      {isLoggedIn ? 'Logout' : 'Login'}\n    </KdpaPrimaryButton>\n  </KdpaGrid>\n</KdpaGrid>",
+        "component_code": "import React, { useState } from 'react';\nimport { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';\n\nconst Header = (props) => {\n  const [isLoggedIn, setIsLoggedIn] = useState(false);\n\n  const toggleLogin = () => {\n    setIsLoggedIn(!isLoggedIn);\n  };\n\n  return (\n    <KdpaGrid container style={{ backgroundColor: '#f5f5f5', padding: '10px 20px', alignItems: 'center' }}>\n      <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center' }}>\n        <KdImageBox\n          src={props.logoSrc}\n          alt=\"Website Logo\"\n          title=\"Website Logo\"\n          quality=\"HIGH\"\n          loading=\"lazy\"\n          style={{ width: '50px', height: '50px', marginRight: '10px' }}\n        />\n        <KdTypography variant=\"h5\" title=\"Website Title\" data={props.title} />\n      </KdpaGrid>\n\n      <KdpaGrid item xs={6} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>\n        <Link\n          href=\"/shop\"\n          title=\"Shop Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineHome size={20} color=\"#000\" title=\"Shop Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Shop\" data=\"Shop\" />\n        </Link>\n        <Link\n          href=\"/about\"\n          title=\"About Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineInfo size={20} color=\"#000\" title=\"About Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"About Us\" data=\"About Us\" />\n        </Link>\n        <Link\n          href=\"/contact\"\n          title=\"Contact Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineContactMail size={20} color=\"#000\" title=\"Contact Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Contact Us\" data=\"Contact Us\" />\n        </Link>\n\n        <KdpaPrimaryButton\n          variant=\"contained\"\n          title={isLoggedIn ? 'Logout' : 'Login'}\n          onClick={toggleLogin}\n          style={{ backgroundColor: '#007bff', color: '#fff' }}\n        >\n          {isLoggedIn ? 'Logout' : 'Login'}\n        </KdpaPrimaryButton>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;",
+        "elementTypes": [
+            "LAYOUT",
+            "LAYOUT_ROW",
+            "LAYOUT_CELL",
+            "IMAGE_BOX",
+            "TYPOGRAPHY",
+            "HYPER_LINK",
+            "ICON",
+            "BUTTON"
+        ]
     },
     "messages": [
         {
@@ -40,322 +49,66 @@
             "additional_kwargs": {
                 "tool_calls": [
                     {
-                        "id": "call_77D4xLsgsvOIKnlX9TnUyrJj",
-                        "function": {
-                            "arguments": "{\"elementType\":\"IMAGE_BOX\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    }
-                ],
-                "refusal": null
-            },
-            "response_metadata": {
-                "token_usage": {
-                    "completion_tokens": 18,
-                    "prompt_tokens": 2124,
-                    "total_tokens": 2142,
-                    "completion_tokens_details": {
-                        "accepted_prediction_tokens": 0,
-                        "audio_tokens": 0,
-                        "reasoning_tokens": 0,
-                        "rejected_prediction_tokens": 0
-                    },
-                    "prompt_tokens_details": {
-                        "audio_tokens": 0,
-                        "cached_tokens": 0
-                    }
-                },
-                "model_name": "gpt-4o-mini-2024-07-18",
-                "system_fingerprint": "fp_b705f0c291",
-                "finish_reason": "tool_calls",
-                "logprobs": null
-            },
-            "type": "ai",
-            "name": null,
-            "id": "run-95db4804-67fb-47f0-9d44-bc9ac7401854-0",
-            "example": false,
-            "tool_calls": [
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "IMAGE_BOX"
-                    },
-                    "id": "call_77D4xLsgsvOIKnlX9TnUyrJj",
-                    "type": "tool_call"
-                }
-            ],
-            "invalid_tool_calls": [],
-            "usage_metadata": {
-                "input_tokens": 2124,
-                "output_tokens": 18,
-                "total_tokens": 2142,
-                "input_token_details": {
-                    "audio": 0,
-                    "cache_read": 0
-                },
-                "output_token_details": {
-                    "audio": 0,
-                    "reasoning": 0
-                }
-            }
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"modal\", \"type\": \"boolean\", \"description\": \"\"}, {\"name\": \"alt\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"quality\", \"type\": \"string\", \"possibleValues\": [\"LOW\", \"HIGH\"], \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"string\", \"possibleValues\": [\"lazy\", \"eager\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"src\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"KdImageBox\"}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "node_elementType_attribute",
-            "id": "1f359b4b-25f7-4f44-98e2-e3a2eba09a21",
-            "tool_call_id": "call_77D4xLsgsvOIKnlX9TnUyrJj",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "",
-            "additional_kwargs": {
-                "tool_calls": [
-                    {
-                        "id": "call_0JXWZfnDXMu59Ei2qTqllNqM",
-                        "function": {
-                            "arguments": "{\"elementType\":\"HYPER_LINK\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    }
-                ],
-                "refusal": null
-            },
-            "response_metadata": {
-                "token_usage": {
-                    "completion_tokens": 20,
-                    "prompt_tokens": 2292,
-                    "total_tokens": 2312,
-                    "completion_tokens_details": {
-                        "accepted_prediction_tokens": 0,
-                        "audio_tokens": 0,
-                        "reasoning_tokens": 0,
-                        "rejected_prediction_tokens": 0
-                    },
-                    "prompt_tokens_details": {
-                        "audio_tokens": 0,
-                        "cached_tokens": 0
-                    }
-                },
-                "model_name": "gpt-4o-mini-2024-07-18",
-                "system_fingerprint": "fp_b705f0c291",
-                "finish_reason": "tool_calls",
-                "logprobs": null
-            },
-            "type": "ai",
-            "name": null,
-            "id": "run-d17aeaf2-e659-469d-8afe-557cb0c37341-0",
-            "example": false,
-            "tool_calls": [
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "HYPER_LINK"
-                    },
-                    "id": "call_0JXWZfnDXMu59Ei2qTqllNqM",
-                    "type": "tool_call"
-                }
-            ],
-            "invalid_tool_calls": [],
-            "usage_metadata": {
-                "input_tokens": 2292,
-                "output_tokens": 20,
-                "total_tokens": 2312,
-                "input_token_details": {
-                    "audio": 0,
-                    "cache_read": 0
-                },
-                "output_token_details": {
-                    "audio": 0,
-                    "reasoning": 0
-                }
-            }
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"target\", \"type\": \"string\", \"possibleValues\": [\"default\", \"_blank\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"href\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"Link\"}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "node_elementType_attribute",
-            "id": "ae3f70db-6ac5-4735-96b3-8970fe9d4c58",
-            "tool_call_id": "call_0JXWZfnDXMu59Ei2qTqllNqM",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "",
-            "additional_kwargs": {
-                "tool_calls": [
-                    {
-                        "id": "call_Xq8j7Tfi4QvJW6QqL3LKVXLe",
-                        "function": {
-                            "arguments": "{\"elementType\":\"ICON\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    }
-                ],
-                "refusal": null
-            },
-            "response_metadata": {
-                "token_usage": {
-                    "completion_tokens": 17,
-                    "prompt_tokens": 2398,
-                    "total_tokens": 2415,
-                    "completion_tokens_details": {
-                        "accepted_prediction_tokens": 0,
-                        "audio_tokens": 0,
-                        "reasoning_tokens": 0,
-                        "rejected_prediction_tokens": 0
-                    },
-                    "prompt_tokens_details": {
-                        "audio_tokens": 0,
-                        "cached_tokens": 0
-                    }
-                },
-                "model_name": "gpt-4o-mini-2024-07-18",
-                "system_fingerprint": "fp_b705f0c291",
-                "finish_reason": "tool_calls",
-                "logprobs": null
-            },
-            "type": "ai",
-            "name": null,
-            "id": "run-e49d789a-5ccd-4e6a-bd09-7ac84cd0114e-0",
-            "example": false,
-            "tool_calls": [
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "ICON"
-                    },
-                    "id": "call_Xq8j7Tfi4QvJW6QqL3LKVXLe",
-                    "type": "tool_call"
-                }
-            ],
-            "invalid_tool_calls": [],
-            "usage_metadata": {
-                "input_tokens": 2398,
-                "output_tokens": 17,
-                "total_tokens": 2415,
-                "input_token_details": {
-                    "audio": 0,
-                    "cache_read": 0
-                },
-                "output_token_details": {
-                    "audio": 0,
-                    "reasoning": 0
-                }
-            }
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"color\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"size\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library\"}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "node_elementType_attribute",
-            "id": "6b987cc4-95bc-4f62-9040-08d80bdc026e",
-            "tool_call_id": "call_Xq8j7Tfi4QvJW6QqL3LKVXLe",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "",
-            "additional_kwargs": {
-                "tool_calls": [
-                    {
-                        "id": "call_yeAzsQobIqh4xTC3ov8FRFmp",
-                        "function": {
-                            "arguments": "{\"elementType\":\"BUTTON\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    }
-                ],
-                "refusal": null
-            },
-            "response_metadata": {
-                "token_usage": {
-                    "completion_tokens": 17,
-                    "prompt_tokens": 2508,
-                    "total_tokens": 2525,
-                    "completion_tokens_details": {
-                        "accepted_prediction_tokens": 0,
-                        "audio_tokens": 0,
-                        "reasoning_tokens": 0,
-                        "rejected_prediction_tokens": 0
-                    },
-                    "prompt_tokens_details": {
-                        "audio_tokens": 0,
-                        "cached_tokens": 0
-                    }
-                },
-                "model_name": "gpt-4o-mini-2024-07-18",
-                "system_fingerprint": "fp_b705f0c291",
-                "finish_reason": "tool_calls",
-                "logprobs": null
-            },
-            "type": "ai",
-            "name": null,
-            "id": "run-1556d0ae-d269-4970-8ba1-67ee2bf22c76-0",
-            "example": false,
-            "tool_calls": [
-                {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "BUTTON"
-                    },
-                    "id": "call_yeAzsQobIqh4xTC3ov8FRFmp",
-                    "type": "tool_call"
-                }
-            ],
-            "invalid_tool_calls": [],
-            "usage_metadata": {
-                "input_tokens": 2508,
-                "output_tokens": 17,
-                "total_tokens": 2525,
-                "input_token_details": {
-                    "audio": 0,
-                    "cache_read": 0
-                },
-                "output_token_details": {
-                    "audio": 0,
-                    "reasoning": 0
-                }
-            }
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"contained\", \"outlined\", \"text\"], \"description\": \"\"}, {\"name\": \"children\", \"type\": \"string\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"boolean\", \"description\": \"\"}], \"tagName\": \"KdpaPrimaryButton\"}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "node_elementType_attribute",
-            "id": "24f96cf7-532a-49b2-9f9d-6833f03f455f",
-            "tool_call_id": "call_yeAzsQobIqh4xTC3ov8FRFmp",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "",
-            "additional_kwargs": {
-                "tool_calls": [
-                    {
-                        "id": "call_WOZYHTfNCWoxQCm6I27n7SBE",
-                        "function": {
-                            "arguments": "{\"elementType\": \"TYPOGRAPHY\"}",
-                            "name": "node_elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_SssMzGIOykdGxiUl8gsjANvV",
+                        "id": "call_tkwfFa3vYqedHXuT8UGhteOf",
                         "function": {
                             "arguments": "{\"elementType\": \"LAYOUT\"}",
-                            "name": "node_elementType_attribute"
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_XfKTmJH0VfW9VmW7z1utYKm5",
+                        "function": {
+                            "arguments": "{\"elementType\": \"LAYOUT_ROW\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_SNGwUPw2WXGuVlCjwEeXNeOY",
+                        "function": {
+                            "arguments": "{\"elementType\": \"LAYOUT_CELL\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_ZoIbyJA3t1RLsnNEiGE9CtUS",
+                        "function": {
+                            "arguments": "{\"elementType\": \"IMAGE_BOX\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_Iv0YWma5jQecjDpvCGXBACcH",
+                        "function": {
+                            "arguments": "{\"elementType\": \"TYPOGRAPHY\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_ZmIDbC0Ya2RuFJHmz17THnvL",
+                        "function": {
+                            "arguments": "{\"elementType\": \"HYPER_LINK\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_fO0ULMC4akj8KRLtViDwRY32",
+                        "function": {
+                            "arguments": "{\"elementType\": \"ICON\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_LHwGgaYXjIu7iV2oYWVsYCmh",
+                        "function": {
+                            "arguments": "{\"elementType\": \"BUTTON\"}",
+                            "name": "elementType_attribute"
                         },
                         "type": "function"
                     }
@@ -364,9 +117,9 @@
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 53,
-                    "prompt_tokens": 2634,
-                    "total_tokens": 2687,
+                    "completion_tokens": 155,
+                    "prompt_tokens": 2238,
+                    "total_tokens": 2393,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -378,38 +131,86 @@
                         "cached_tokens": 0
                     }
                 },
-                "model_name": "gpt-4o-mini-2024-07-18",
+                "model_name": "gpt-4o-2024-11-20",
                 "system_fingerprint": "fp_b705f0c291",
                 "finish_reason": "tool_calls",
                 "logprobs": null
             },
             "type": "ai",
             "name": null,
-            "id": "run-68a8dc47-469d-46b9-8b39-47d0ed947f34-0",
+            "id": "run-2e1cc0ec-ef73-4a22-8491-de665d4b4a69-0",
             "example": false,
             "tool_calls": [
                 {
-                    "name": "node_elementType_attribute",
-                    "args": {
-                        "elementType": "TYPOGRAPHY"
-                    },
-                    "id": "call_WOZYHTfNCWoxQCm6I27n7SBE",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "node_elementType_attribute",
+                    "name": "elementType_attribute",
                     "args": {
                         "elementType": "LAYOUT"
                     },
-                    "id": "call_SssMzGIOykdGxiUl8gsjANvV",
+                    "id": "call_tkwfFa3vYqedHXuT8UGhteOf",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "LAYOUT_ROW"
+                    },
+                    "id": "call_XfKTmJH0VfW9VmW7z1utYKm5",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "LAYOUT_CELL"
+                    },
+                    "id": "call_SNGwUPw2WXGuVlCjwEeXNeOY",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "IMAGE_BOX"
+                    },
+                    "id": "call_ZoIbyJA3t1RLsnNEiGE9CtUS",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "TYPOGRAPHY"
+                    },
+                    "id": "call_Iv0YWma5jQecjDpvCGXBACcH",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "HYPER_LINK"
+                    },
+                    "id": "call_ZmIDbC0Ya2RuFJHmz17THnvL",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "ICON"
+                    },
+                    "id": "call_fO0ULMC4akj8KRLtViDwRY32",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "BUTTON"
+                    },
+                    "id": "call_LHwGgaYXjIu7iV2oYWVsYCmh",
                     "type": "tool_call"
                 }
             ],
             "invalid_tool_calls": [],
             "usage_metadata": {
-                "input_tokens": 2634,
-                "output_tokens": 53,
-                "total_tokens": 2687,
+                "input_tokens": 2238,
+                "output_tokens": 155,
+                "total_tokens": 2393,
                 "input_token_details": {
                     "audio": 0,
                     "cache_read": 0
@@ -421,13 +222,13 @@
             }
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"subtitle1\", \"subtitle2\", \"body1\", \"body2\", \"caption\", \"button\", \"overline\", \"srOnly\", \"inherit\"], \"description\": \"\"}, {\"name\": \"type\", \"type\": \"string\", \"possibleValues\": [\"string\", \"number\", \"date\", \"time\", \"date-time\", \"html\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"data\", \"type\": \"string | number | ...\", \"description\": \"\"}], \"tagName\": \"KdTypography\"}",
+            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
-            "name": "node_elementType_attribute",
-            "id": "5021ea12-eebf-453f-b87d-70fda689bb5a",
-            "tool_call_id": "call_WOZYHTfNCWoxQCm6I27n7SBE",
+            "name": "elementType_attribute",
+            "id": "61b61301-f5e3-43c1-bbfe-f55f32173fdb",
+            "tool_call_id": "call_tkwfFa3vYqedHXuT8UGhteOf",
             "artifact": null,
             "status": "success"
         },
@@ -436,22 +237,88 @@
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
-            "name": "node_elementType_attribute",
-            "id": "206da678-2e92-423e-b492-02e4975caa61",
-            "tool_call_id": "call_SssMzGIOykdGxiUl8gsjANvV",
+            "name": "elementType_attribute",
+            "id": "458eacf9-d9cc-4762-8e1d-4c97ed5f06c7",
+            "tool_call_id": "call_XfKTmJH0VfW9VmW7z1utYKm5",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "Here is the JSX code for a beautifully structured header component based on your requirements:\n\n```jsx\nimport React from 'react';\nimport { KdpaGrid, KdImageBox, Link, KdTypography, KdpaPrimaryButton } from 'your-component-library'; // Adjust the import based on your component library\nimport { MdOutlineHomeIcon, MdInfo, MdContactMail } from 'react-icons/md'; // Example icons from react-icons\n\nconst Header = () => {\n    return (\n        <KdpaGrid container style={{ padding: '16px', alignItems: 'center', justifyContent: 'space-between' }}>\n            {/* Left Side: Links with Icons */}\n            <KdpaGrid item xs={8} style={{ display: 'flex', alignItems: 'center' }}>\n                <Link href=\"/shop\" title=\"Shop\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n                    <MdOutlineHomeIcon size={24} />\n                    <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to Shop Page</KdTypography>\n                </Link>\n                <Link href=\"/about\" title=\"About Us\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n                    <MdInfo size={24} />\n                    <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to About Us Page</KdTypography>\n                </Link>\n                <Link href=\"/contact\" title=\"Contact Us\" target=\"_blank\" style={{ display: 'flex', alignItems: 'center', marginRight: '16px' }}>\n                    <MdContactMail size={24} />\n                    <KdTypography variant=\"body1\" style={{ marginLeft: '8px' }}>Link to Contact Us Page</KdTypography>\n                </Link>\n                <KdpaPrimaryButton variant=\"contained\" title=\"Login\" style={{ marginLeft: 'auto' }}>\n                    Login\n                </KdpaPrimaryButton>\n            </KdpaGrid>\n\n            {/* Right Side: Logo and Title */}\n            <KdpaGrid item xs={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>\n                <KdImageBox \n                    src=\"path/to/logo.png\" \n                    alt=\"Website Logo\" \n                    title=\"Website Logo\" \n                    quality=\"HIGH\" \n                    loading=\"lazy\" \n                    style={{ width: '50px', height: '50px', marginRight: '8px' }} \n                />\n                <KdTypography variant=\"h4\">Website Title</KdTypography>\n            </KdpaGrid>\n        </KdpaGrid>\n    );\n};\n\nexport default Header;\n```\n\n### Explanation:\n- **Layout**: The header is structured using a grid layout to align items properly.\n- **Links**: Each link has an icon and text, styled to be horizontally aligned.\n- **Logo**: The logo is displayed on the right side with the website title next to it.\n- **Login Button**: A button for login is placed at the end of the left side links.\n- **Styling**: Inline styles are used for spacing and alignment, but you can replace them with your CSS classes or styled-components as needed. \n\nMake sure to replace `\"path/to/logo.png\"` with the actual path to your logo image.",
+            "content": "{\"static_attrs\": [{\"name\": \"xs\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"sm\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"md\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"lg\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "7df970fb-95cf-4c9c-8e11-bad67f3dcb3d",
+            "tool_call_id": "call_SNGwUPw2WXGuVlCjwEeXNeOY",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [{\"name\": \"modal\", \"type\": \"boolean\", \"description\": \"\"}, {\"name\": \"alt\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"quality\", \"type\": \"string\", \"possibleValues\": [\"LOW\", \"HIGH\"], \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"string\", \"possibleValues\": [\"lazy\", \"eager\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"src\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"KdImageBox\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "db07f322-9f1d-48b3-ad7f-0215dee7c1df",
+            "tool_call_id": "call_ZoIbyJA3t1RLsnNEiGE9CtUS",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"subtitle1\", \"subtitle2\", \"body1\", \"body2\", \"caption\", \"button\", \"overline\", \"srOnly\", \"inherit\"], \"description\": \"\"}, {\"name\": \"type\", \"type\": \"string\", \"possibleValues\": [\"string\", \"number\", \"date\", \"time\", \"date-time\", \"html\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"data\", \"type\": \"string | number | ...\", \"description\": \"\"}], \"tagName\": \"KdTypography\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "6ce0771c-e5e3-445b-8068-a6fe8bb61fbe",
+            "tool_call_id": "call_Iv0YWma5jQecjDpvCGXBACcH",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [{\"name\": \"target\", \"type\": \"string\", \"possibleValues\": [\"default\", \"_blank\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"href\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"Link\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "397b6ac2-fab3-4e88-9410-ab5fcc265453",
+            "tool_call_id": "call_ZmIDbC0Ya2RuFJHmz17THnvL",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [{\"name\": \"color\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"size\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "4ea7dc57-824d-4469-a371-ccb9c38f4794",
+            "tool_call_id": "call_fO0ULMC4akj8KRLtViDwRY32",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"contained\", \"outlined\", \"text\"], \"description\": \"\"}, {\"name\": \"children\", \"type\": \"string\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"boolean\", \"description\": \"\"}], \"tagName\": \"KdpaPrimaryButton\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "b95439bd-0330-44be-b770-7cc5ae62f35e",
+            "tool_call_id": "call_LHwGgaYXjIu7iV2oYWVsYCmh",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "Here is the JSX code for your beautifully designed header:\n\n```jsx\nimport React from 'react';\nimport { useState } from 'react';\nimport { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';\n\nconst Header = (props) => {\n  const [isLoggedIn, setIsLoggedIn] = useState(false);\n\n  return (\n    <KdpaGrid container style={{ backgroundColor: '#f5f5f5', padding: '10px 20px', alignItems: 'center' }}>\n      {/* Right Side: Logo and Title */}\n      <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center' }}>\n        <KdImageBox\n          src=\"logo.png\"\n          alt=\"Website Logo\"\n          title=\"Website Logo\"\n          quality=\"HIGH\"\n          loading=\"lazy\"\n          style={{ width: '50px', height: '50px', marginRight: '10px' }}\n        />\n        <KdTypography variant=\"h5\" title=\"Website Title\" data=\"My Website\" />\n      </KdpaGrid>\n\n      {/* Left Side: Navigation Links and Login Button */}\n      <KdpaGrid item xs={6} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>\n        {/* Navigation Links */}\n        <Link\n          href=\"/shop\"\n          title=\"Shop Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineHome size={20} color=\"#000\" title=\"Shop Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Shop\" data=\"Shop\" />\n        </Link>\n        <Link\n          href=\"/about\"\n          title=\"About Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineInfo size={20} color=\"#000\" title=\"About Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"About Us\" data=\"About Us\" />\n        </Link>\n        <Link\n          href=\"/contact\"\n          title=\"Contact Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineContactMail size={20} color=\"#000\" title=\"Contact Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Contact Us\" data=\"Contact Us\" />\n        </Link>\n\n        {/* Login Button */}\n        <KdpaPrimaryButton\n          variant=\"contained\"\n          title={isLoggedIn ? 'Logout' : 'Login'}\n          onClick={() => setIsLoggedIn(!isLoggedIn)}\n          style={{ backgroundColor: '#007bff', color: '#fff' }}\n        >\n          {isLoggedIn ? 'Logout' : 'Login'}\n        </KdpaPrimaryButton>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;\n```\n\n### Explanation:\n1. **Right Side**:\n   - Used `KdImageBox` for the logo with attributes like `src`, `alt`, `title`, etc.\n   - Used `KdTypography` for the website title.\n\n2. **Left Side**:\n   - Used `Link` for navigation links with icons (`MdOutlineHome`, `MdOutlineInfo`, `MdOutlineContactMail`) from `react-icons`.\n   - Each link has an icon and text styled with `KdTypography`.\n\n3. **Login Button**:\n   - Used `KdpaPrimaryButton` for the login/logout button.\n   - The button toggles between \"Login\" and \"Logout\" based on the `isLoggedIn` state.\n\n4. **Styling**:\n   - Inline styles are used for layout and alignment.",
             "additional_kwargs": {
                 "refusal": null
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 712,
-                    "prompt_tokens": 2890,
-                    "total_tokens": 3602,
+                    "completion_tokens": 876,
+                    "prompt_tokens": 3099,
+                    "total_tokens": 3975,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -460,27 +327,27 @@
                     },
                     "prompt_tokens_details": {
                         "audio_tokens": 0,
-                        "cached_tokens": 0
+                        "cached_tokens": 2304
                     }
                 },
-                "model_name": "gpt-4o-mini-2024-07-18",
+                "model_name": "gpt-4o-2024-11-20",
                 "system_fingerprint": "fp_b705f0c291",
                 "finish_reason": "stop",
                 "logprobs": null
             },
             "type": "ai",
             "name": null,
-            "id": "run-27504da3-195b-4624-adb2-7835345a39a2-0",
+            "id": "run-c4a30962-cc4e-46f5-aa97-6d65e010a85a-0",
             "example": false,
             "tool_calls": [],
             "invalid_tool_calls": [],
             "usage_metadata": {
-                "input_tokens": 2890,
-                "output_tokens": 712,
-                "total_tokens": 3602,
+                "input_tokens": 3099,
+                "output_tokens": 876,
+                "total_tokens": 3975,
                 "input_token_details": {
                     "audio": 0,
-                    "cache_read": 0
+                    "cache_read": 2304
                 },
                 "output_token_details": {
                     "audio": 0,

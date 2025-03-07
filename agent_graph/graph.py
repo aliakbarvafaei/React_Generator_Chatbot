@@ -12,7 +12,8 @@ from agents.agents import (
     ConvertStructuredOutputAgent,
 )
 
-from tools.elementType_attribute import node_elementType_attribute
+from tools.elementType_attribute import elementType_attribute
+from tools.elementType_sample_code import elementType_sample_code
 
 
 def create_graph(server=None, model=None, temperature=0):
@@ -32,8 +33,8 @@ def create_graph(server=None, model=None, temperature=0):
         ).invoke(),
     )
 
-    attribute_tool = [node_elementType_attribute]
-    graph.add_node("attribute_tool", ToolNode(attribute_tool))
+    tools = [elementType_sample_code, elementType_attribute]
+    graph.add_node("tools", ToolNode(tools))
 
     graph.add_node(
         "component_extractor",
@@ -46,14 +47,14 @@ def create_graph(server=None, model=None, temperature=0):
 
     graph.add_edge("retrieval", "component_generator")
 
-    graph.add_edge("attribute_tool", "component_generator")
+    graph.add_edge("tools", "component_generator")
 
     graph.add_conditional_edges(
         "component_generator",
         # If the latest message (result) from node reasoner is a tool call -> tools_condition routes to tools
         # If the latest message (result) from node reasoner is a not a tool call -> tools_condition routes to END
         tools_condition,
-        {"tools": "attribute_tool", "__end__": "component_extractor"},
+        {"tools": "tools", "__end__": "component_extractor"},
     )
 
     graph.add_edge("component_extractor", END)
@@ -63,4 +64,6 @@ def create_graph(server=None, model=None, temperature=0):
 
 def compile_workflow(graph):
     workflow = graph.compile()
+    workflow.get_graph().draw_mermaid_png(output_file_path="diagram.png")
+
     return workflow

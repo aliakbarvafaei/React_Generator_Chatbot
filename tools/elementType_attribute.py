@@ -2,7 +2,7 @@ import logging
 from utils.mongoClient import mongoClientCollection
 
 
-def node_elementType_attribute(elementType: str):
+def elementType_attribute(elementType: str):
     """get information of element of this system like attribute , tagName .
     Args:
         elementType: the specifc elementType.
@@ -26,7 +26,7 @@ def node_elementType_attribute(elementType: str):
     collection = mongoClientCollection(collectionName="elements")
     documents = collection.find({"elementType": elementType}).to_list()
 
-    logging.info(f"-----------attribute Tool ({elementType})----------")
+    logging.info(f"-----------Attribute Tool ({elementType})----------")
 
     return {
         "static_attrs": documents[0]["static_attrs"],

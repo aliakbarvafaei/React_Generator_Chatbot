@@ -19,7 +19,8 @@ from states.state import (
     FunctionDefinition,
 )
 
-from tools.elementType_attribute import node_elementType_attribute
+from tools.elementType_attribute import elementType_attribute
+from tools.elementType_sample_code import elementType_sample_code
 
 from utils.mongoClient import mongoClientCollection
 
@@ -92,13 +93,14 @@ class ComponentGeneratorAgent(Agent):
         context: {self.state.context}.
         """
 
-        tools = [node_elementType_attribute]
+        tools = [elementType_sample_code, elementType_attribute]
         llm_with_tools = self.get_llm().bind_tools(tools)
 
         sys_msg = SystemMessage(
             content="""You are great developer and you can create react component code.
                                                         you should generate jsx code for this task with element types.
                                                         but my element is specific and you can not use any element.
+                                                            this element have specific jsx code and attribute that use tools for get sample jsx code and attribute.
                                                             in context exist my element with description and valid attribute, static attrs and dynamic attrs.
                                                             static attrs is fixed and can not use state or props or ... and dynamic attrs can be used from state or props or static or ... .
                                                             also can use style element in style attribute.  
