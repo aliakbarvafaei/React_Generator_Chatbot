@@ -3,7 +3,7 @@ from utils.mongoClient import mongoClientCollection
 
 
 def elementType_attribute(elementType: str):
-    """get information of element of this system like attribute , tagName .
+    """get information of element of this system like attribute , tagName , childrenElementTypes.
     Args:
         elementType: the specifc elementType.
     Returns:
@@ -21,6 +21,9 @@ def elementType_attribute(elementType: str):
                 type: string | number ....,
             }
         - tagName: tagName of element that use in jsx
+        - childrenElementTypes: what elementType can be used in children. if childrenElementTypes is [] means selfClosing,
+        "ALL" means can use all elementTypes,
+        ["elementType1","elementType2"] means can use elementType1 and elementType2 in children.
     """
 
     collection = mongoClientCollection(collectionName="elements")
@@ -32,4 +35,5 @@ def elementType_attribute(elementType: str):
         "static_attrs": documents[0]["static_attrs"],
         "dynamic_attrs": documents[0]["dynamic_attrs"],
         "tagName": documents[0]["component"],
+        "childrenElementTypes": documents[0]["childrenElementTypes"],
     }

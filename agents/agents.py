@@ -17,6 +17,7 @@ from states.state import (
     StateDefinition,
     PropDefinition,
     FunctionDefinition,
+    KDLElementsJSX,
 )
 
 from tools.elementType_attribute import elementType_attribute
@@ -134,5 +135,23 @@ class ConvertStructuredOutputAgent(Agent):
         self.state.final_result = ComponentDefinition(**response.model_dump())
 
         logging.info("Final Generated React components.")
+
+        return self.state
+
+
+class KDLElementsAgent(Agent):
+    def invoke(self):
+        sys_msg = SystemMessage(
+            content="""You are great developer and you can convert jsx of any react component to 
+            specific dsl output. you should convert jsx code to dsl of element base child and parent(nested)
+                                                        """
+        )
+
+        structured_model = self.get_llm().with_structured_output(KDLElementsJSX)
+        response = structured_model.invoke([sys_msg] + self.state.messages)
+
+        self.state.elemens_kdl = KDLElementsJSX(**response.model_dump())
+
+        logging.info("Final KDL Element.")
 
         return self.state

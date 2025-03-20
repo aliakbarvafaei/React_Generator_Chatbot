@@ -5,33 +5,21 @@
     "tasks": [],
     "final_result": {
         "title": "Header Component",
-        "description": "A header component with logo, navigation links, and login/logout button.",
-        "states": [
-            {
-                "name": "isLoggedIn",
-                "defaultValue": false,
-                "type": "BOOLEAN"
-            }
-        ],
+        "description": "A header component with navigation links, a login button, and a logo.",
+        "states": [],
         "props": [
             {
                 "name": "logoSrc",
                 "type": "STRING"
             },
             {
-                "name": "title",
+                "name": "websiteTitle",
                 "type": "STRING"
             }
         ],
-        "functions": [
-            {
-                "name": "toggleLogin",
-                "inputParams": [],
-                "code": "setIsLoggedIn(!isLoggedIn);"
-            }
-        ],
-        "jsx_code": "<KdpaGrid container style={{ backgroundColor: '#f5f5f5', padding: '10px 20px', alignItems: 'center' }}>\n  <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center' }}>\n    <KdImageBox\n      src={props.logoSrc}\n      alt=\"Website Logo\"\n      title=\"Website Logo\"\n      quality=\"HIGH\"\n      loading=\"lazy\"\n      style={{ width: '50px', height: '50px', marginRight: '10px' }}\n    />\n    <KdTypography variant=\"h5\" title=\"Website Title\" data={props.title} />\n  </KdpaGrid>\n\n  <KdpaGrid item xs={6} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>\n    <Link\n      href=\"/shop\"\n      title=\"Shop Page\"\n      target=\"default\"\n      style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n    >\n      <MdOutlineHome size={20} color=\"#000\" title=\"Shop Icon\" style={{ marginRight: '5px' }} />\n      <KdTypography variant=\"body1\" title=\"Shop\" data=\"Shop\" />\n    </Link>\n    <Link\n      href=\"/about\"\n      title=\"About Us Page\"\n      target=\"default\"\n      style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n    >\n      <MdOutlineInfo size={20} color=\"#000\" title=\"About Us Icon\" style={{ marginRight: '5px' }} />\n      <KdTypography variant=\"body1\" title=\"About Us\" data=\"About Us\" />\n    </Link>\n    <Link\n      href=\"/contact\"\n      title=\"Contact Us Page\"\n      target=\"default\"\n      style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n    >\n      <MdOutlineContactMail size={20} color=\"#000\" title=\"Contact Us Icon\" style={{ marginRight: '5px' }} />\n      <KdTypography variant=\"body1\" title=\"Contact Us\" data=\"Contact Us\" />\n    </Link>\n\n    <KdpaPrimaryButton\n      variant=\"contained\"\n      title={isLoggedIn ? 'Logout' : 'Login'}\n      onClick={toggleLogin}\n      style={{ backgroundColor: '#007bff', color: '#fff' }}\n    >\n      {isLoggedIn ? 'Logout' : 'Login'}\n    </KdpaPrimaryButton>\n  </KdpaGrid>\n</KdpaGrid>",
-        "component_code": "import React, { useState } from 'react';\nimport { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';\n\nconst Header = (props) => {\n  const [isLoggedIn, setIsLoggedIn] = useState(false);\n\n  const toggleLogin = () => {\n    setIsLoggedIn(!isLoggedIn);\n  };\n\n  return (\n    <KdpaGrid container style={{ backgroundColor: '#f5f5f5', padding: '10px 20px', alignItems: 'center' }}>\n      <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center' }}>\n        <KdImageBox\n          src={props.logoSrc}\n          alt=\"Website Logo\"\n          title=\"Website Logo\"\n          quality=\"HIGH\"\n          loading=\"lazy\"\n          style={{ width: '50px', height: '50px', marginRight: '10px' }}\n        />\n        <KdTypography variant=\"h5\" title=\"Website Title\" data={props.title} />\n      </KdpaGrid>\n\n      <KdpaGrid item xs={6} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>\n        <Link\n          href=\"/shop\"\n          title=\"Shop Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineHome size={20} color=\"#000\" title=\"Shop Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Shop\" data=\"Shop\" />\n        </Link>\n        <Link\n          href=\"/about\"\n          title=\"About Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineInfo size={20} color=\"#000\" title=\"About Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"About Us\" data=\"About Us\" />\n        </Link>\n        <Link\n          href=\"/contact\"\n          title=\"Contact Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineContactMail size={20} color=\"#000\" title=\"Contact Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Contact Us\" data=\"Contact Us\" />\n        </Link>\n\n        <KdpaPrimaryButton\n          variant=\"contained\"\n          title={isLoggedIn ? 'Logout' : 'Login'}\n          onClick={toggleLogin}\n          style={{ backgroundColor: '#007bff', color: '#fff' }}\n        >\n          {isLoggedIn ? 'Logout' : 'Login'}\n        </KdpaPrimaryButton>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;",
+        "functions": [],
+        "jsx_code": "<KdpaGrid container>\n  {/* Left Section */}\n  <KdpaGrid item xs={9}>\n    <KdpaGrid container>\n      {/* Link to Shop Page */}\n      <KdpaGrid item xs={2}>\n        <Link href=\"/shop\" title=\"Shop\">\n          <MdOutlineHome size={24} color=\"black\" />\n          <KdTypography variant=\"body1\" title=\"Shop\" />\n        </Link>\n      </KdpaGrid>\n\n      {/* Link to About Us Page */}\n      <KdpaGrid item xs={2}>\n        <Link href=\"/about-us\" title=\"About Us\">\n          <MdOutlineInfo size={24} color=\"black\" />\n          <KdTypography variant=\"body1\" title=\"About Us\" />\n        </Link>\n      </KdpaGrid>\n\n      {/* Link to Contact Us Page */}\n      <KdpaGrid item xs={2}>\n        <Link href=\"/contact-us\" title=\"Contact Us\">\n          <MdOutlineContactMail size={24} color=\"black\" />\n          <KdTypography variant=\"body1\" title=\"Contact Us\" />\n        </Link>\n      </KdpaGrid>\n\n      {/* Login Button */}\n      <KdpaGrid item xs={2}>\n        <KdpaPrimaryButton variant=\"contained\" title=\"Login\">\n          Login\n        </KdpaPrimaryButton>\n      </KdpaGrid>\n    </KdpaGrid>\n  </KdpaGrid>\n\n  {/* Right Section */}\n  <KdpaGrid item xs={3}>\n    <KdImageBox\n      src={props.logoSrc}\n      title=\"Website Logo\"\n      alt=\"Website Logo\"\n      quality=\"HIGH\"\n      loading=\"lazy\"\n    />\n    <KdTypography variant=\"h5\" title={props.websiteTitle} />\n  </KdpaGrid>\n</KdpaGrid>",
+        "component_code": "import React from 'react';\nimport { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';\n\nconst Header = (props) => {\n  return (\n    <KdpaGrid container>\n      {/* Left Section */}\n      <KdpaGrid item xs={9}>\n        <KdpaGrid container>\n          {/* Link to Shop Page */}\n          <KdpaGrid item xs={2}>\n            <Link href=\"/shop\" title=\"Shop\">\n              <MdOutlineHome size={24} color=\"black\" />\n              <KdTypography variant=\"body1\" title=\"Shop\" />\n            </Link>\n          </KdpaGrid>\n\n          {/* Link to About Us Page */}\n          <KdpaGrid item xs={2}>\n            <Link href=\"/about-us\" title=\"About Us\">\n              <MdOutlineInfo size={24} color=\"black\" />\n              <KdTypography variant=\"body1\" title=\"About Us\" />\n            </Link>\n          </KdpaGrid>\n\n          {/* Link to Contact Us Page */}\n          <KdpaGrid item xs={2}>\n            <Link href=\"/contact-us\" title=\"Contact Us\">\n              <MdOutlineContactMail size={24} color=\"black\" />\n              <KdTypography variant=\"body1\" title=\"Contact Us\" />\n            </Link>\n          </KdpaGrid>\n\n          {/* Login Button */}\n          <KdpaGrid item xs={2}>\n            <KdpaPrimaryButton variant=\"contained\" title=\"Login\">\n              Login\n            </KdpaPrimaryButton>\n          </KdpaGrid>\n        </KdpaGrid>\n      </KdpaGrid>\n\n      {/* Right Section */}\n      <KdpaGrid item xs={3}>\n        <KdImageBox\n          src={props.logoSrc}\n          title=\"Website Logo\"\n          alt=\"Website Logo\"\n          quality=\"HIGH\"\n          loading=\"lazy\"\n        />\n        <KdTypography variant=\"h5\" title={props.websiteTitle} />\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;",
         "elementTypes": [
             "LAYOUT",
             "LAYOUT_ROW",
@@ -43,13 +31,385 @@
             "BUTTON"
         ]
     },
+    "elemens_kdl": {
+        "elementType": "LAYOUT",
+        "attributes": [],
+        "styles": [],
+        "children": [
+            {
+                "elementType": "LAYOUT_ROW",
+                "attributes": [],
+                "styles": [],
+                "children": [
+                    {
+                        "elementType": "LAYOUT_CELL",
+                        "attributes": [
+                            {
+                                "name": "xs",
+                                "type": "STATIC",
+                                "valueType": "NUMBER",
+                                "value": 9
+                            }
+                        ],
+                        "styles": [],
+                        "children": [
+                            {
+                                "elementType": "LAYOUT_ROW",
+                                "attributes": [],
+                                "styles": [],
+                                "children": [
+                                    {
+                                        "elementType": "LAYOUT_CELL",
+                                        "attributes": [
+                                            {
+                                                "name": "xs",
+                                                "type": "STATIC",
+                                                "valueType": "NUMBER",
+                                                "value": 2
+                                            }
+                                        ],
+                                        "styles": [],
+                                        "children": [
+                                            {
+                                                "elementType": "HYPER_LINK",
+                                                "attributes": [
+                                                    {
+                                                        "name": "href",
+                                                        "type": "STATIC",
+                                                        "valueType": "STRING",
+                                                        "value": "/shop"
+                                                    },
+                                                    {
+                                                        "name": "title",
+                                                        "type": "STATIC",
+                                                        "valueType": "STRING",
+                                                        "value": "Shop"
+                                                    }
+                                                ],
+                                                "styles": [],
+                                                "children": [
+                                                    {
+                                                        "elementType": "ICON",
+                                                        "attributes": [
+                                                            {
+                                                                "name": "title",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "MdOutlineHome"
+                                                            },
+                                                            {
+                                                                "name": "size",
+                                                                "type": "STATIC",
+                                                                "valueType": "NUMBER",
+                                                                "value": 24
+                                                            },
+                                                            {
+                                                                "name": "color",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "black"
+                                                            }
+                                                        ],
+                                                        "styles": [],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "elementType": "TYPOGRAPHY",
+                                                        "attributes": [
+                                                            {
+                                                                "name": "variant",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "body1"
+                                                            },
+                                                            {
+                                                                "name": "title",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "Shop"
+                                                            }
+                                                        ],
+                                                        "styles": [],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "elementType": "LAYOUT_CELL",
+                                                "attributes": [
+                                                    {
+                                                        "name": "xs",
+                                                        "type": "STATIC",
+                                                        "valueType": "NUMBER",
+                                                        "value": 2
+                                                    }
+                                                ],
+                                                "styles": [],
+                                                "children": [
+                                                    {
+                                                        "elementType": "HYPER_LINK",
+                                                        "attributes": [
+                                                            {
+                                                                "name": "href",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "/about-us"
+                                                            },
+                                                            {
+                                                                "name": "title",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "About Us"
+                                                            }
+                                                        ],
+                                                        "styles": [],
+                                                        "children": [
+                                                            {
+                                                                "elementType": "ICON",
+                                                                "attributes": [
+                                                                    {
+                                                                        "name": "title",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "STRING",
+                                                                        "value": "MdOutlineInfo"
+                                                                    },
+                                                                    {
+                                                                        "name": "size",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "NUMBER",
+                                                                        "value": 24
+                                                                    },
+                                                                    {
+                                                                        "name": "color",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "STRING",
+                                                                        "value": "black"
+                                                                    }
+                                                                ],
+                                                                "styles": [],
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "elementType": "TYPOGRAPHY",
+                                                                "attributes": [
+                                                                    {
+                                                                        "name": "variant",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "STRING",
+                                                                        "value": "body1"
+                                                                    },
+                                                                    {
+                                                                        "name": "title",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "STRING",
+                                                                        "value": "About Us"
+                                                                    }
+                                                                ],
+                                                                "styles": [],
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "elementType": "LAYOUT_CELL",
+                                                        "attributes": [
+                                                            {
+                                                                "name": "xs",
+                                                                "type": "STATIC",
+                                                                "valueType": "NUMBER",
+                                                                "value": 2
+                                                            }
+                                                        ],
+                                                        "styles": [],
+                                                        "children": [
+                                                            {
+                                                                "elementType": "HYPER_LINK",
+                                                                "attributes": [
+                                                                    {
+                                                                        "name": "href",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "STRING",
+                                                                        "value": "/contact-us"
+                                                                    },
+                                                                    {
+                                                                        "name": "title",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "STRING",
+                                                                        "value": "Contact Us"
+                                                                    }
+                                                                ],
+                                                                "styles": [],
+                                                                "children": [
+                                                                    {
+                                                                        "elementType": "ICON",
+                                                                        "attributes": [
+                                                                            {
+                                                                                "name": "title",
+                                                                                "type": "STATIC",
+                                                                                "valueType": "STRING",
+                                                                                "value": "MdOutlineContactMail"
+                                                                            },
+                                                                            {
+                                                                                "name": "size",
+                                                                                "type": "STATIC",
+                                                                                "valueType": "NUMBER",
+                                                                                "value": 24
+                                                                            },
+                                                                            {
+                                                                                "name": "color",
+                                                                                "type": "STATIC",
+                                                                                "valueType": "STRING",
+                                                                                "value": "black"
+                                                                            }
+                                                                        ],
+                                                                        "styles": [],
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "elementType": "TYPOGRAPHY",
+                                                                        "attributes": [
+                                                                            {
+                                                                                "name": "variant",
+                                                                                "type": "STATIC",
+                                                                                "valueType": "STRING",
+                                                                                "value": "body1"
+                                                                            },
+                                                                            {
+                                                                                "name": "title",
+                                                                                "type": "STATIC",
+                                                                                "valueType": "STRING",
+                                                                                "value": "Contact Us"
+                                                                            }
+                                                                        ],
+                                                                        "styles": [],
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "elementType": "LAYOUT_CELL",
+                                                                "attributes": [
+                                                                    {
+                                                                        "name": "xs",
+                                                                        "type": "STATIC",
+                                                                        "valueType": "NUMBER",
+                                                                        "value": 2
+                                                                    }
+                                                                ],
+                                                                "styles": [],
+                                                                "children": [
+                                                                    {
+                                                                        "elementType": "BUTTON",
+                                                                        "attributes": [
+                                                                            {
+                                                                                "name": "variant",
+                                                                                "type": "STATIC",
+                                                                                "valueType": "STRING",
+                                                                                "value": "contained"
+                                                                            },
+                                                                            {
+                                                                                "name": "title",
+                                                                                "type": "STATIC",
+                                                                                "valueType": "STRING",
+                                                                                "value": "Login"
+                                                                            }
+                                                                        ],
+                                                                        "styles": [],
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "elementType": "LAYOUT_CELL",
+                                                "attributes": [
+                                                    {
+                                                        "name": "xs",
+                                                        "type": "STATIC",
+                                                        "valueType": "NUMBER",
+                                                        "value": 3
+                                                    }
+                                                ],
+                                                "styles": [],
+                                                "children": [
+                                                    {
+                                                        "elementType": "IMAGE_BOX",
+                                                        "attributes": [
+                                                            {
+                                                                "name": "src",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "/path-to-logo.png"
+                                                            },
+                                                            {
+                                                                "name": "title",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "Website Logo"
+                                                            },
+                                                            {
+                                                                "name": "alt",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "Website Logo"
+                                                            },
+                                                            {
+                                                                "name": "quality",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "HIGH"
+                                                            },
+                                                            {
+                                                                "name": "loading",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "lazy"
+                                                            }
+                                                        ],
+                                                        "styles": [],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "elementType": "TYPOGRAPHY",
+                                                        "attributes": [
+                                                            {
+                                                                "name": "variant",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "h5"
+                                                            },
+                                                            {
+                                                                "name": "title",
+                                                                "type": "STATIC",
+                                                                "valueType": "STRING",
+                                                                "value": "Website Title"
+                                                            }
+                                                        ],
+                                                        "styles": [],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
     "messages": [
         {
             "content": "",
             "additional_kwargs": {
                 "tool_calls": [
                     {
-                        "id": "call_tkwfFa3vYqedHXuT8UGhteOf",
+                        "id": "call_Wi4pUCGwiqPx5QjUVQgZ8Dta",
                         "function": {
                             "arguments": "{\"elementType\": \"LAYOUT\"}",
                             "name": "elementType_attribute"
@@ -57,7 +417,7 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_XfKTmJH0VfW9VmW7z1utYKm5",
+                        "id": "call_qN8AZDAN5Z08xZvljVvNdc1a",
                         "function": {
                             "arguments": "{\"elementType\": \"LAYOUT_ROW\"}",
                             "name": "elementType_attribute"
@@ -65,7 +425,7 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_SNGwUPw2WXGuVlCjwEeXNeOY",
+                        "id": "call_O2k8Pq6wD0ZlsIrVkceikOmD",
                         "function": {
                             "arguments": "{\"elementType\": \"LAYOUT_CELL\"}",
                             "name": "elementType_attribute"
@@ -73,7 +433,7 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_ZoIbyJA3t1RLsnNEiGE9CtUS",
+                        "id": "call_NwGji3X6AROj6gqGIaGBpNZs",
                         "function": {
                             "arguments": "{\"elementType\": \"IMAGE_BOX\"}",
                             "name": "elementType_attribute"
@@ -81,7 +441,7 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_Iv0YWma5jQecjDpvCGXBACcH",
+                        "id": "call_ELRWS8dPBRf5W2yTj3aAj6HZ",
                         "function": {
                             "arguments": "{\"elementType\": \"TYPOGRAPHY\"}",
                             "name": "elementType_attribute"
@@ -89,7 +449,7 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_ZmIDbC0Ya2RuFJHmz17THnvL",
+                        "id": "call_CksvjYjxcReGpZZLNMaV35BX",
                         "function": {
                             "arguments": "{\"elementType\": \"HYPER_LINK\"}",
                             "name": "elementType_attribute"
@@ -97,7 +457,7 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_fO0ULMC4akj8KRLtViDwRY32",
+                        "id": "call_5Xy8d7iqR0wFahTPvDN5DrGd",
                         "function": {
                             "arguments": "{\"elementType\": \"ICON\"}",
                             "name": "elementType_attribute"
@@ -105,7 +465,7 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_LHwGgaYXjIu7iV2oYWVsYCmh",
+                        "id": "call_t5MxQaB2lr7jSDu9MEFmt6Zg",
                         "function": {
                             "arguments": "{\"elementType\": \"BUTTON\"}",
                             "name": "elementType_attribute"
@@ -117,9 +477,9 @@
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 155,
-                    "prompt_tokens": 2238,
-                    "total_tokens": 2393,
+                    "completion_tokens": 156,
+                    "prompt_tokens": 2298,
+                    "total_tokens": 2454,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -132,13 +492,13 @@
                     }
                 },
                 "model_name": "gpt-4o-2024-11-20",
-                "system_fingerprint": "fp_b705f0c291",
+                "system_fingerprint": "fp_ded0d14823",
                 "finish_reason": "tool_calls",
                 "logprobs": null
             },
             "type": "ai",
             "name": null,
-            "id": "run-2e1cc0ec-ef73-4a22-8491-de665d4b4a69-0",
+            "id": "run-638669fe-cd3f-441c-adf2-cf918bf44a34-0",
             "example": false,
             "tool_calls": [
                 {
@@ -146,7 +506,7 @@
                     "args": {
                         "elementType": "LAYOUT"
                     },
-                    "id": "call_tkwfFa3vYqedHXuT8UGhteOf",
+                    "id": "call_Wi4pUCGwiqPx5QjUVQgZ8Dta",
                     "type": "tool_call"
                 },
                 {
@@ -154,7 +514,7 @@
                     "args": {
                         "elementType": "LAYOUT_ROW"
                     },
-                    "id": "call_XfKTmJH0VfW9VmW7z1utYKm5",
+                    "id": "call_qN8AZDAN5Z08xZvljVvNdc1a",
                     "type": "tool_call"
                 },
                 {
@@ -162,7 +522,7 @@
                     "args": {
                         "elementType": "LAYOUT_CELL"
                     },
-                    "id": "call_SNGwUPw2WXGuVlCjwEeXNeOY",
+                    "id": "call_O2k8Pq6wD0ZlsIrVkceikOmD",
                     "type": "tool_call"
                 },
                 {
@@ -170,7 +530,7 @@
                     "args": {
                         "elementType": "IMAGE_BOX"
                     },
-                    "id": "call_ZoIbyJA3t1RLsnNEiGE9CtUS",
+                    "id": "call_NwGji3X6AROj6gqGIaGBpNZs",
                     "type": "tool_call"
                 },
                 {
@@ -178,7 +538,7 @@
                     "args": {
                         "elementType": "TYPOGRAPHY"
                     },
-                    "id": "call_Iv0YWma5jQecjDpvCGXBACcH",
+                    "id": "call_ELRWS8dPBRf5W2yTj3aAj6HZ",
                     "type": "tool_call"
                 },
                 {
@@ -186,7 +546,7 @@
                     "args": {
                         "elementType": "HYPER_LINK"
                     },
-                    "id": "call_ZmIDbC0Ya2RuFJHmz17THnvL",
+                    "id": "call_CksvjYjxcReGpZZLNMaV35BX",
                     "type": "tool_call"
                 },
                 {
@@ -194,7 +554,7 @@
                     "args": {
                         "elementType": "ICON"
                     },
-                    "id": "call_fO0ULMC4akj8KRLtViDwRY32",
+                    "id": "call_5Xy8d7iqR0wFahTPvDN5DrGd",
                     "type": "tool_call"
                 },
                 {
@@ -202,15 +562,15 @@
                     "args": {
                         "elementType": "BUTTON"
                     },
-                    "id": "call_LHwGgaYXjIu7iV2oYWVsYCmh",
+                    "id": "call_t5MxQaB2lr7jSDu9MEFmt6Zg",
                     "type": "tool_call"
                 }
             ],
             "invalid_tool_calls": [],
             "usage_metadata": {
-                "input_tokens": 2238,
-                "output_tokens": 155,
-                "total_tokens": 2393,
+                "input_tokens": 2298,
+                "output_tokens": 156,
+                "total_tokens": 2454,
                 "input_token_details": {
                     "audio": 0,
                     "cache_read": 0
@@ -222,103 +582,103 @@
             }
         },
         {
-            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
+            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\", \"childrenElementTypes\": [\"LAYOUT_ROW\"]}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "61b61301-f5e3-43c1-bbfe-f55f32173fdb",
-            "tool_call_id": "call_tkwfFa3vYqedHXuT8UGhteOf",
+            "id": "df38e0c7-a664-4b41-9a9e-577a019f9d49",
+            "tool_call_id": "call_Wi4pUCGwiqPx5QjUVQgZ8Dta",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
+            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\", \"childrenElementTypes\": [\"LAYOUT_CELL\"]}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "458eacf9-d9cc-4762-8e1d-4c97ed5f06c7",
-            "tool_call_id": "call_XfKTmJH0VfW9VmW7z1utYKm5",
+            "id": "00a78bd0-6a3b-48a2-917f-46944b232856",
+            "tool_call_id": "call_qN8AZDAN5Z08xZvljVvNdc1a",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"xs\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"sm\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"md\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"lg\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\"}",
+            "content": "{\"static_attrs\": [{\"name\": \"xs\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"sm\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"md\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"lg\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\", \"childrenElementTypes\": \"ALL\"}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "7df970fb-95cf-4c9c-8e11-bad67f3dcb3d",
-            "tool_call_id": "call_SNGwUPw2WXGuVlCjwEeXNeOY",
+            "id": "a3d468bb-df1c-41ce-8bf9-0894d1beff1e",
+            "tool_call_id": "call_O2k8Pq6wD0ZlsIrVkceikOmD",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"modal\", \"type\": \"boolean\", \"description\": \"\"}, {\"name\": \"alt\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"quality\", \"type\": \"string\", \"possibleValues\": [\"LOW\", \"HIGH\"], \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"string\", \"possibleValues\": [\"lazy\", \"eager\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"src\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"KdImageBox\"}",
+            "content": "{\"static_attrs\": [{\"name\": \"modal\", \"type\": \"boolean\", \"description\": \"\"}, {\"name\": \"alt\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"quality\", \"type\": \"string\", \"possibleValues\": [\"LOW\", \"HIGH\"], \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"string\", \"possibleValues\": [\"lazy\", \"eager\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"src\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"KdImageBox\", \"childrenElementTypes\": []}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "db07f322-9f1d-48b3-ad7f-0215dee7c1df",
-            "tool_call_id": "call_ZoIbyJA3t1RLsnNEiGE9CtUS",
+            "id": "37a933b3-a72d-4494-96cf-18035125b3f9",
+            "tool_call_id": "call_NwGji3X6AROj6gqGIaGBpNZs",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"subtitle1\", \"subtitle2\", \"body1\", \"body2\", \"caption\", \"button\", \"overline\", \"srOnly\", \"inherit\"], \"description\": \"\"}, {\"name\": \"type\", \"type\": \"string\", \"possibleValues\": [\"string\", \"number\", \"date\", \"time\", \"date-time\", \"html\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"data\", \"type\": \"string | number | ...\", \"description\": \"\"}], \"tagName\": \"KdTypography\"}",
+            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"subtitle1\", \"subtitle2\", \"body1\", \"body2\", \"caption\", \"button\", \"overline\", \"srOnly\", \"inherit\"], \"description\": \"\"}, {\"name\": \"type\", \"type\": \"string\", \"possibleValues\": [\"string\", \"number\", \"date\", \"time\", \"date-time\", \"html\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"data\", \"type\": \"string | number | ...\", \"description\": \"\"}], \"tagName\": \"KdTypography\", \"childrenElementTypes\": []}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "6ce0771c-e5e3-445b-8068-a6fe8bb61fbe",
-            "tool_call_id": "call_Iv0YWma5jQecjDpvCGXBACcH",
+            "id": "5a52f810-5881-401d-a0f3-42f51ff5a647",
+            "tool_call_id": "call_ELRWS8dPBRf5W2yTj3aAj6HZ",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"target\", \"type\": \"string\", \"possibleValues\": [\"default\", \"_blank\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"href\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"Link\"}",
+            "content": "{\"static_attrs\": [{\"name\": \"target\", \"type\": \"string\", \"possibleValues\": [\"default\", \"_blank\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"href\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"Link\", \"childrenElementTypes\": \"ALL\"}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "397b6ac2-fab3-4e88-9410-ab5fcc265453",
-            "tool_call_id": "call_ZmIDbC0Ya2RuFJHmz17THnvL",
+            "id": "fcdb4607-4557-4060-b8f1-c024a33000cb",
+            "tool_call_id": "call_CksvjYjxcReGpZZLNMaV35BX",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"color\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"size\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library\"}",
+            "content": "{\"static_attrs\": [{\"name\": \"color\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"size\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"like <MdOutlineHomeIcon /> or <FiClose /> or ... of react-icons library\", \"childrenElementTypes\": []}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "4ea7dc57-824d-4469-a371-ccb9c38f4794",
-            "tool_call_id": "call_fO0ULMC4akj8KRLtViDwRY32",
+            "id": "7d14cf5a-cdda-48f0-bfcb-b3170ecb1715",
+            "tool_call_id": "call_5Xy8d7iqR0wFahTPvDN5DrGd",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"contained\", \"outlined\", \"text\"], \"description\": \"\"}, {\"name\": \"children\", \"type\": \"string\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"boolean\", \"description\": \"\"}], \"tagName\": \"KdpaPrimaryButton\"}",
+            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"contained\", \"outlined\", \"text\"], \"description\": \"\"}, {\"name\": \"children\", \"type\": \"string\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"boolean\", \"description\": \"\"}], \"tagName\": \"KdpaPrimaryButton\", \"childrenElementTypes\": []}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "b95439bd-0330-44be-b770-7cc5ae62f35e",
-            "tool_call_id": "call_LHwGgaYXjIu7iV2oYWVsYCmh",
+            "id": "9bd7a1dc-77f6-4239-9782-723cbf05ed92",
+            "tool_call_id": "call_t5MxQaB2lr7jSDu9MEFmt6Zg",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "Here is the JSX code for your beautifully designed header:\n\n```jsx\nimport React from 'react';\nimport { useState } from 'react';\nimport { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';\n\nconst Header = (props) => {\n  const [isLoggedIn, setIsLoggedIn] = useState(false);\n\n  return (\n    <KdpaGrid container style={{ backgroundColor: '#f5f5f5', padding: '10px 20px', alignItems: 'center' }}>\n      {/* Right Side: Logo and Title */}\n      <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center' }}>\n        <KdImageBox\n          src=\"logo.png\"\n          alt=\"Website Logo\"\n          title=\"Website Logo\"\n          quality=\"HIGH\"\n          loading=\"lazy\"\n          style={{ width: '50px', height: '50px', marginRight: '10px' }}\n        />\n        <KdTypography variant=\"h5\" title=\"Website Title\" data=\"My Website\" />\n      </KdpaGrid>\n\n      {/* Left Side: Navigation Links and Login Button */}\n      <KdpaGrid item xs={6} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>\n        {/* Navigation Links */}\n        <Link\n          href=\"/shop\"\n          title=\"Shop Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineHome size={20} color=\"#000\" title=\"Shop Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Shop\" data=\"Shop\" />\n        </Link>\n        <Link\n          href=\"/about\"\n          title=\"About Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineInfo size={20} color=\"#000\" title=\"About Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"About Us\" data=\"About Us\" />\n        </Link>\n        <Link\n          href=\"/contact\"\n          title=\"Contact Us Page\"\n          target=\"default\"\n          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}\n        >\n          <MdOutlineContactMail size={20} color=\"#000\" title=\"Contact Us Icon\" style={{ marginRight: '5px' }} />\n          <KdTypography variant=\"body1\" title=\"Contact Us\" data=\"Contact Us\" />\n        </Link>\n\n        {/* Login Button */}\n        <KdpaPrimaryButton\n          variant=\"contained\"\n          title={isLoggedIn ? 'Logout' : 'Login'}\n          onClick={() => setIsLoggedIn(!isLoggedIn)}\n          style={{ backgroundColor: '#007bff', color: '#fff' }}\n        >\n          {isLoggedIn ? 'Logout' : 'Login'}\n        </KdpaPrimaryButton>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;\n```\n\n### Explanation:\n1. **Right Side**:\n   - Used `KdImageBox` for the logo with attributes like `src`, `alt`, `title`, etc.\n   - Used `KdTypography` for the website title.\n\n2. **Left Side**:\n   - Used `Link` for navigation links with icons (`MdOutlineHome`, `MdOutlineInfo`, `MdOutlineContactMail`) from `react-icons`.\n   - Each link has an icon and text styled with `KdTypography`.\n\n3. **Login Button**:\n   - Used `KdpaPrimaryButton` for the login/logout button.\n   - The button toggles between \"Login\" and \"Logout\" based on the `isLoggedIn` state.\n\n4. **Styling**:\n   - Inline styles are used for layout and alignment.",
+            "content": "Here is the JSX code for a beautifully designed header based on your requirements:\n\n```jsx\nimport React from 'react';\nimport { useState } from 'react';\nimport { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';\n\nconst Header = (props) => {\n  return (\n    <KdpaGrid container>\n      {/* Left Section */}\n      <KdpaGrid item xs={9}>\n        <KdpaGrid container>\n          {/* Link to Shop Page */}\n          <KdpaGrid item xs={2}>\n            <Link href=\"/shop\" title=\"Shop\">\n              <MdOutlineHome size={24} color=\"black\" />\n              <KdTypography variant=\"body1\" title=\"Shop\" />\n            </Link>\n          </KdpaGrid>\n\n          {/* Link to About Us Page */}\n          <KdpaGrid item xs={2}>\n            <Link href=\"/about-us\" title=\"About Us\">\n              <MdOutlineInfo size={24} color=\"black\" />\n              <KdTypography variant=\"body1\" title=\"About Us\" />\n            </Link>\n          </KdpaGrid>\n\n          {/* Link to Contact Us Page */}\n          <KdpaGrid item xs={2}>\n            <Link href=\"/contact-us\" title=\"Contact Us\">\n              <MdOutlineContactMail size={24} color=\"black\" />\n              <KdTypography variant=\"body1\" title=\"Contact Us\" />\n            </Link>\n          </KdpaGrid>\n\n          {/* Login Button */}\n          <KdpaGrid item xs={2}>\n            <KdpaPrimaryButton variant=\"contained\" title=\"Login\">\n              Login\n            </KdpaPrimaryButton>\n          </KdpaGrid>\n        </KdpaGrid>\n      </KdpaGrid>\n\n      {/* Right Section */}\n      <KdpaGrid item xs={3}>\n        <KdImageBox\n          src=\"/path-to-logo.png\"\n          title=\"Website Logo\"\n          alt=\"Website Logo\"\n          quality=\"HIGH\"\n          loading=\"lazy\"\n        />\n        <KdTypography variant=\"h5\" title=\"Website Title\" />\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;\n```\n\n### Explanation:\n1. **Left Section**:\n   - Contains links to the shop, about us, and contact us pages.\n   - Each link has an icon (`MdOutlineHome`, `MdOutlineInfo`, `MdOutlineContactMail`) and a text label (`KdTypography`).\n   - A login button (`KdpaPrimaryButton`) is placed at the end.\n\n2. **Right Section**:\n   - Displays the website logo using `KdImageBox`.\n   - Shows the website title using `KdTypography`.\n\n3. **Grid Layout**:\n   - The `KdpaGrid` component is used to structure the layout.\n   - The left section occupies 9 columns, and the right section occupies 3 columns.\n\n4. **Icons**:\n   - Icons are imported from `react-icons` and used directly.\n\n5. **Dynamic Attributes**:\n   - Attributes like `href`, `title`, and `src` are dynamically set based on the requirements.\n\nFeel free to customize the paths, titles, and other attributes as needed!",
             "additional_kwargs": {
                 "refusal": null
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 876,
-                    "prompt_tokens": 3099,
-                    "total_tokens": 3975,
+                    "completion_tokens": 660,
+                    "prompt_tokens": 3224,
+                    "total_tokens": 3884,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -331,20 +691,20 @@
                     }
                 },
                 "model_name": "gpt-4o-2024-11-20",
-                "system_fingerprint": "fp_b705f0c291",
+                "system_fingerprint": "fp_ded0d14823",
                 "finish_reason": "stop",
                 "logprobs": null
             },
             "type": "ai",
             "name": null,
-            "id": "run-c4a30962-cc4e-46f5-aa97-6d65e010a85a-0",
+            "id": "run-620b6b07-3b43-4ac2-85fa-795c3722343f-0",
             "example": false,
             "tool_calls": [],
             "invalid_tool_calls": [],
             "usage_metadata": {
-                "input_tokens": 3099,
-                "output_tokens": 876,
-                "total_tokens": 3975,
+                "input_tokens": 3224,
+                "output_tokens": 660,
+                "total_tokens": 3884,
                 "input_token_details": {
                     "audio": 0,
                     "cache_read": 2304

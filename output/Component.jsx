@@ -1,64 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';
 
 const Header = (props) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const toggleLogin = () => {
-    setIsLoggedIn(!isLoggedIn);
-  };
-
   return (
-    <KdpaGrid container style={{ backgroundColor: '#f5f5f5', padding: '10px 20px', alignItems: 'center' }}>
-      <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center' }}>
-        <KdImageBox
-          src={props.logoSrc}
-          alt="Website Logo"
-          title="Website Logo"
-          quality="HIGH"
-          loading="lazy"
-          style={{ width: '50px', height: '50px', marginRight: '10px' }}
-        />
-        <KdTypography variant="h5" title="Website Title" data={props.title} />
+    <KdpaGrid container>
+      {/* Left Section */}
+      <KdpaGrid item xs={9}>
+        <KdpaGrid container>
+          {/* Link to Shop Page */}
+          <KdpaGrid item xs={2}>
+            <Link href="/shop" title="Shop">
+              <MdOutlineHome size={24} color="black" />
+              <KdTypography variant="body1" title="Shop" />
+            </Link>
+          </KdpaGrid>
+
+          {/* Link to About Us Page */}
+          <KdpaGrid item xs={2}>
+            <Link href="/about-us" title="About Us">
+              <MdOutlineInfo size={24} color="black" />
+              <KdTypography variant="body1" title="About Us" />
+            </Link>
+          </KdpaGrid>
+
+          {/* Link to Contact Us Page */}
+          <KdpaGrid item xs={2}>
+            <Link href="/contact-us" title="Contact Us">
+              <MdOutlineContactMail size={24} color="black" />
+              <KdTypography variant="body1" title="Contact Us" />
+            </Link>
+          </KdpaGrid>
+
+          {/* Login Button */}
+          <KdpaGrid item xs={2}>
+            <KdpaPrimaryButton variant="contained" title="Login">
+              Login
+            </KdpaPrimaryButton>
+          </KdpaGrid>
+        </KdpaGrid>
       </KdpaGrid>
 
-      <KdpaGrid item xs={6} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-        <Link
-          href="/shop"
-          title="Shop Page"
-          target="default"
-          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}
-        >
-          <MdOutlineHome size={20} color="#000" title="Shop Icon" style={{ marginRight: '5px' }} />
-          <KdTypography variant="body1" title="Shop" data="Shop" />
-        </Link>
-        <Link
-          href="/about"
-          title="About Us Page"
-          target="default"
-          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}
-        >
-          <MdOutlineInfo size={20} color="#000" title="About Us Icon" style={{ marginRight: '5px' }} />
-          <KdTypography variant="body1" title="About Us" data="About Us" />
-        </Link>
-        <Link
-          href="/contact"
-          title="Contact Us Page"
-          target="default"
-          style={{ display: 'flex', alignItems: 'center', marginRight: '15px', textDecoration: 'none', color: '#000' }}
-        >
-          <MdOutlineContactMail size={20} color="#000" title="Contact Us Icon" style={{ marginRight: '5px' }} />
-          <KdTypography variant="body1" title="Contact Us" data="Contact Us" />
-        </Link>
-
-        <KdpaPrimaryButton
-          variant="contained"
-          title={isLoggedIn ? 'Logout' : 'Login'}
-          onClick={toggleLogin}
-          style={{ backgroundColor: '#007bff', color: '#fff' }}
-        >
-          {isLoggedIn ? 'Logout' : 'Login'}
-        </KdpaPrimaryButton>
+      {/* Right Section */}
+      <KdpaGrid item xs={3}>
+        <KdImageBox
+          src={props.logoSrc}
+          title="Website Logo"
+          alt="Website Logo"
+          quality="HIGH"
+          loading="lazy"
+        />
+        <KdTypography variant="h5" title={props.websiteTitle} />
       </KdpaGrid>
     </KdpaGrid>
   );

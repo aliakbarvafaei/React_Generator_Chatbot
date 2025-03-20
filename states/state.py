@@ -42,6 +42,30 @@ class TaskDefinition(BaseModel):
     result_task: ComponentDefinition = Field(None, title="Result Task")
 
 
+class AttributeDefinition(BaseModel):
+    name: str = Field(..., title="Attribute Name")
+    type: Literal["STATIC", "DYNAMIC"] = Field(..., title="Type of Attribute")
+    valueType: Literal["STRING", "NUMBER", "BOOLEAN", "OBJECT", "ARRAY", "FUNCTION"] = (
+        Field(..., title="Type of Attribute")
+    )
+    value: Union[str, int, bool, dict, list, None] = Field(
+        None, title="Value of Attribute"
+    )
+
+
+class StyleDefinition(BaseModel):
+    name: str = Field(..., title="Style Name")
+    # type: Literal["STATIC"] = Field(..., title="Type of Style")
+    value: str = Field(..., title="Value of Style")
+
+
+class KDLElementsJSX(BaseModel):
+    elementType: str = Field(..., title="Element Type")
+    attributes: List[AttributeDefinition] = Field([], title="Attributes of Element")
+    styles: List[StyleDefinition] = Field([], title="Styles of Element")
+    children: List["KDLElementsJSX"] = Field([], title="Children of Element")
+
+
 # Define Agent State
 class AgentGraphState(BaseModel):
     query: str
@@ -49,4 +73,5 @@ class AgentGraphState(BaseModel):
     is_relevant: bool = True
     tasks: List[TaskDefinition] = []
     final_result: ComponentDefinition = None
+    elemens_kdl: KDLElementsJSX = None
     messages: Annotated[list, add_messages] = []

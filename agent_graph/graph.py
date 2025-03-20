@@ -10,6 +10,7 @@ from agents.agents import (
     RetrievalAgent,
     ComponentGeneratorAgent,
     ConvertStructuredOutputAgent,
+    KDLElementsAgent,
 )
 
 from tools.elementType_attribute import elementType_attribute
@@ -43,6 +44,13 @@ def create_graph(server=None, model=None, temperature=0):
         ).invoke(),
     )
 
+    graph.add_node(
+        "KDLElements",
+        lambda state: KDLElementsAgent(
+            state=state, server=server, model=model, temperature=temperature
+        ).invoke(),
+    )
+
     graph.add_edge(START, "retrieval")
 
     graph.add_edge("retrieval", "component_generator")
@@ -57,7 +65,9 @@ def create_graph(server=None, model=None, temperature=0):
         {"tools": "tools", "__end__": "component_extractor"},
     )
 
-    graph.add_edge("component_extractor", END)
+    graph.add_edge("component_extractor", "KDLElements")
+
+    graph.add_edge("KDLElements", END)
 
     return graph
 

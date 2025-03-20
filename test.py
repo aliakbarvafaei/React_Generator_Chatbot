@@ -25,8 +25,6 @@ workflow = compile_workflow(graph)
 
 print("Graph and workflow created.")
 
-mermaid_syntax = workflow.get_graph().draw_mermaid_png(output_file_path="diagram.png")
-
 initial_stateee = AgentGraphState(
     query="""I want a beautifuly header:
                              in the right a image box have logo and title of website.
