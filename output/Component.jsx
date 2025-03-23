@@ -1,58 +1,46 @@
-import React from 'react';
-import { MdOutlineHome, MdOutlineInfo, MdOutlineContactMail } from 'react-icons/md';
+<KdpaGrid container>
+    <KdpaGrid item xs={12}>
+        <KdpaGrid container justifyContent="space-between" alignItems="center">
+            {/* Right Side: Logo and Title */}
+            <KdpaGrid item>
+                <KdImageBox
+                    src={logoSrc}
+                    alt={logoAlt}
+                    title={logoTitle}
+                    quality="HIGH"
+                    loading="lazy"
+                />
+                <KdTypography variant="h6" title={logoTitle} />
+            </KdpaGrid>
 
-const Header = (props) => {
-  return (
-    <KdpaGrid container>
-      {/* Left Section */}
-      <KdpaGrid item xs={9}>
-        <KdpaGrid container>
-          {/* Link to Shop Page */}
-          <KdpaGrid item xs={2}>
-            <Link href="/shop" title="Shop">
-              <MdOutlineHome size={24} color="black" />
-              <KdTypography variant="body1" title="Shop" />
-            </Link>
-          </KdpaGrid>
-
-          {/* Link to About Us Page */}
-          <KdpaGrid item xs={2}>
-            <Link href="/about-us" title="About Us">
-              <MdOutlineInfo size={24} color="black" />
-              <KdTypography variant="body1" title="About Us" />
-            </Link>
-          </KdpaGrid>
-
-          {/* Link to Contact Us Page */}
-          <KdpaGrid item xs={2}>
-            <Link href="/contact-us" title="Contact Us">
-              <MdOutlineContactMail size={24} color="black" />
-              <KdTypography variant="body1" title="Contact Us" />
-            </Link>
-          </KdpaGrid>
-
-          {/* Login Button */}
-          <KdpaGrid item xs={2}>
-            <KdpaPrimaryButton variant="contained" title="Login">
-              Login
-            </KdpaPrimaryButton>
-          </KdpaGrid>
+            {/* Left Side: Links and Login Button */}
+            <KdpaGrid item>
+                <KdpaGrid container spacing={2}>
+                    <KdpaGrid item>
+                        <Link href={shopLink} target="_blank" title="فروشگاه">
+                            <MdOutlineShopIcon color="black" size={24} />
+                            <KdTypography variant="body1" title="فروشگاه" />
+                        </Link>
+                    </KdpaGrid>
+                    <KdpaGrid item>
+                        <Link href={aboutLink} target="_blank" title="درباره ما">
+                            <MdOutlineInfoIcon color="black" size={24} />
+                            <KdTypography variant="body1" title="درباره ما" />
+                        </Link>
+                    </KdpaGrid>
+                    <KdpaGrid item>
+                        <Link href={contactLink} target="_blank" title="تماس با ما">
+                            <MdOutlineContactMailIcon color="black" size={24} />
+                            <KdTypography variant="body1" title="تماس با ما" />
+                        </Link>
+                    </KdpaGrid>
+                    <KdpaGrid item>
+                        <KdpaPrimaryButton variant="contained" title={loginTitle}>
+                            {loginTitle}
+                        </KdpaPrimaryButton>
+                    </KdpaGrid>
+                </KdpaGrid>
+            </KdpaGrid>
         </KdpaGrid>
-      </KdpaGrid>
-
-      {/* Right Section */}
-      <KdpaGrid item xs={3}>
-        <KdImageBox
-          src={props.logoSrc}
-          title="Website Logo"
-          alt="Website Logo"
-          quality="HIGH"
-          loading="lazy"
-        />
-        <KdTypography variant="h5" title={props.websiteTitle} />
-      </KdpaGrid>
     </KdpaGrid>
-  );
-};
-
-export default Header;
+</KdpaGrid>

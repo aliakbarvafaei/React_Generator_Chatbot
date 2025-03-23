@@ -38,12 +38,12 @@ class ChatWorkflow:
 
         for event in self.workflow.stream(dict_inputs, limit):
 
-            if "component_extractor" in event.keys():
+            if "component extractor" in event.keys():
                 # print("\n\nEVENT_DEBUG:", event)
-                state = event["component_extractor"]
-                component_code = state["final_result"].component_code
+                state = event["component extractor"]
+                componentCode = state["finalResult"].componentCode
 
-                return component_code if component_code else "No Result available"
+                return componentCode if componentCode else "No Result available"
 
         return "Workflow did not reach final result"
 

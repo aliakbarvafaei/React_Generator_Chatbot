@@ -7,67 +7,68 @@ from langgraph.prebuilt import ToolNode
 from states.state import AgentGraphState
 
 from agents.agents import (
-    RetrievalAgent,
+    RetrievalElementDetailsAgent,
     ComponentGeneratorAgent,
-    ConvertStructuredOutputAgent,
-    KDLElementsAgent,
+    SaveComponentPartsAgent,
+    ConvertJsxCodeToJsxNodeAgent,
 )
 
 from tools.elementType_attribute import elementType_attribute
 from tools.elementType_sample_code import elementType_sample_code
+from tools.jsx_to_kdl_element import jsx_to_kdl_element
 
 
 def create_graph(server=None, model=None, temperature=0):
     graph = StateGraph(AgentGraphState)
 
     graph.add_node(
-        "retrieval",
-        lambda state: RetrievalAgent(
+        "retrieval element details",
+        lambda state: RetrievalElementDetailsAgent(
             state=state, server=server, model=model, temperature=temperature
         ).invoke(),
     )
 
     graph.add_node(
-        "component_generator",
+        "component generator",
         lambda state: ComponentGeneratorAgent(
             state=state, server=server, model=model, temperature=temperature
         ).invoke(),
     )
 
-    tools = [elementType_sample_code, elementType_attribute]
-    graph.add_node("tools", ToolNode(tools))
+    tools_generator = [elementType_sample_code, elementType_attribute]
+    graph.add_node("tools generator", ToolNode(tools_generator))
 
     graph.add_node(
-        "component_extractor",
-        lambda state: ConvertStructuredOutputAgent(
+        "save component parts",
+        lambda state: SaveComponentPartsAgent(
             state=state, server=server, model=model, temperature=temperature
         ).invoke(),
     )
 
     graph.add_node(
-        "KDLElements",
-        lambda state: KDLElementsAgent(
+        "Convert JsxCode To JsxNode",
+        lambda state: ConvertJsxCodeToJsxNodeAgent(
             state=state, server=server, model=model, temperature=temperature
         ).invoke(),
     )
 
-    graph.add_edge(START, "retrieval")
+    graph.add_edge(START, "retrieval element details")
 
-    graph.add_edge("retrieval", "component_generator")
+    graph.add_edge("retrieval element details", "component generator")
 
-    graph.add_edge("tools", "component_generator")
+    graph.add_edge("tools generator", "component generator")
 
     graph.add_conditional_edges(
-        "component_generator",
+        "component generator",
         # If the latest message (result) from node reasoner is a tool call -> tools_condition routes to tools
         # If the latest message (result) from node reasoner is a not a tool call -> tools_condition routes to END
         tools_condition,
-        {"tools": "tools", "__end__": "component_extractor"},
+        # ["tools generator", "save component parts"],
+        {"tools": "tools generator", "__end__": "save component parts"},
     )
 
-    graph.add_edge("component_extractor", "KDLElements")
-
-    graph.add_edge("KDLElements", END)
+    graph.add_edge("save component parts", "Convert JsxCode To JsxNode")
+    graph.add_edge("Convert JsxCode To JsxNode", END)
 
     return graph
 

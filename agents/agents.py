@@ -1,7 +1,10 @@
 # import json
 # import yaml
 # import os
+import time
 import logging
+
+from pydantic import BaseModel, ValidationError
 
 from langchain.schema import SystemMessage, HumanMessage
 
@@ -14,16 +17,16 @@ from models.gemini_models import GeminiModel, GeminiJSONModel
 from states.state import (
     AgentGraphState,
     ComponentDefinition,
-    StateDefinition,
-    PropDefinition,
-    FunctionDefinition,
-    KDLElementsJSX,
+    JsxNode,
 )
 
 from tools.elementType_attribute import elementType_attribute
 from tools.elementType_sample_code import elementType_sample_code
+from tools.jsx_to_kdl_element import jsx_to_kdl_element
 
 from utils.mongoClient import mongoClientCollection
+
+time_sleep = 20
 
 
 class Agent:
@@ -69,7 +72,7 @@ class Agent:
         self.state = {**self.state, key: value}
 
 
-class RetrievalAgent(Agent):
+class RetrievalElementDetailsAgent(Agent):
     def invoke(self):
         collection = mongoClientCollection(collectionName="elements")
 
@@ -90,8 +93,10 @@ class RetrievalAgent(Agent):
 class ComponentGeneratorAgent(Agent):
     def invoke(self):
 
-        prompt = f"""the user query is: {self.state.query}.\n\n     
-        context: {self.state.context}.
+        prompt = f"""the user query is: {self.state.query}.\n\n  
+        the user language is: {self.state.config.language}.\n\n  
+        accessGenerate: {self.state.config.accessGenerate}.\n\n
+        context: {self.state.context}.\n\n 
         """
 
         tools = [elementType_sample_code, elementType_attribute]
@@ -102,14 +107,29 @@ class ComponentGeneratorAgent(Agent):
                                                         you should generate jsx code for this task with element types.
                                                         but my element is specific and you can not use any element.
                                                             this element have specific jsx code and attribute that use tools for get sample jsx code and attribute.
-                                                            in context exist my element with description and valid attribute, static attrs and dynamic attrs.
+                                                            in context exist my element with description and for valid attribute and sample code exist some tools.
                                                             static attrs is fixed and can not use state or props or ... and dynamic attrs can be used from state or props or static or ... .
                                                             also can use style element in style attribute.  
                                                             you can only use useState and props component and function in your code.
+                                                            also you should generate base on user language.
                                                         """
         )
+
+        sys_msg2 = SystemMessage(
+            content="""For this generation you have some list of access for generate.
+                                 with type accessGenerate: List[Literal["FULL", "STATE", "PROP", "EVENT"]]
+                                 if FULL you have all access,
+                                 if STATE you have only use state,
+                                 if "PROP", "EVENT" you have access for define event for element and use prop component.
+                                 and else accessGenerate is empty you do not access to use state , prop, event and should be 
+                                 static data.
+                                 """
+        )
         humam_msg = HumanMessage(content=prompt)
-        response = llm_with_tools.invoke([sys_msg] + [humam_msg] + self.state.messages)
+        time.sleep(time_sleep)
+        response = llm_with_tools.invoke(
+            [sys_msg] + [sys_msg2] + [humam_msg] + self.state.messages
+        )
 
         # Ensure `messages` exists before updating
         if not self.state.messages:
@@ -121,7 +141,7 @@ class ComponentGeneratorAgent(Agent):
         return self.state
 
 
-class ConvertStructuredOutputAgent(Agent):
+class SaveComponentPartsAgent(Agent):
     def invoke(self):
         sys_msg = SystemMessage(
             content="""You are great developer and you can create react component code.
@@ -130,16 +150,29 @@ class ConvertStructuredOutputAgent(Agent):
         )
 
         structured_model = self.get_llm().with_structured_output(ComponentDefinition)
+        time.sleep(time_sleep)
+
         response = structured_model.invoke([sys_msg] + self.state.messages)
 
-        self.state.final_result = ComponentDefinition(**response.model_dump())
+        result = ComponentDefinition(**response.model_dump())
 
-        logging.info("Final Generated React components.")
+        self.state.finalResult = result
+        # logging.info("Final Generated React components.")
+        # output_path = "./output/"
+
+        # with open(output_path + "agent_state.json", "w", encoding="utf-8") as f:
+        #     f.write(result.model_dump_json(indent=4))
+
+        # with open(output_path + "Component.jsx", "w", encoding="utf-8") as f:
+        #     if not result.componentCode or result.componentCode == "":
+        #         f.write(result.jsxCode)
+        #     else:
+        #         f.write(result.componentCode)
 
         return self.state
 
 
-class KDLElementsAgent(Agent):
+class ConvertJsxCodeToJsxNodeAgent(Agent):
     def invoke(self):
         sys_msg = SystemMessage(
             content="""You are great developer and you can convert jsx of any react component to 
@@ -147,11 +180,16 @@ class KDLElementsAgent(Agent):
                                                         """
         )
 
-        structured_model = self.get_llm().with_structured_output(KDLElementsJSX)
-        response = structured_model.invoke([sys_msg] + self.state.messages)
+        structured_model = self.get_llm().with_structured_output(JsxNode)
 
-        self.state.elemens_kdl = KDLElementsJSX(**response.model_dump())
+        try:
+            time.sleep(time_sleep)
+            response = structured_model.invoke([sys_msg] + self.state.messages)
 
-        logging.info("Final KDL Element.")
+            self.state.jsxNodes = JsxNode(**response.model_dump())
+
+            logging.info("Final KDL Element.")
+        except ValidationError as exc:
+            logging.info("Error KDL Element: ", repr(exc.errors()))
 
         return self.state
