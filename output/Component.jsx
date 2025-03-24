@@ -1,46 +1,28 @@
-<KdpaGrid container>
-    <KdpaGrid item xs={12}>
-        <KdpaGrid container justifyContent="space-between" alignItems="center">
-            {/* Right Side: Logo and Title */}
-            <KdpaGrid item>
-                <KdImageBox
-                    src={logoSrc}
-                    alt={logoAlt}
-                    title={logoTitle}
-                    quality="HIGH"
-                    loading="lazy"
-                />
-                <KdTypography variant="h6" title={logoTitle} />
-            </KdpaGrid>
+import React from 'react';
+import { KdImageBox, KdTypography, KdpaGrid, KdpaPrimaryButton, KdHyperLink, KdIcon } from 'your-component-library';
 
-            {/* Left Side: Links and Login Button */}
-            <KdpaGrid item>
-                <KdpaGrid container spacing={2}>
-                    <KdpaGrid item>
-                        <Link href={shopLink} target="_blank" title="فروشگاه">
-                            <MdOutlineShopIcon color="black" size={24} />
-                            <KdTypography variant="body1" title="فروشگاه" />
-                        </Link>
-                    </KdpaGrid>
-                    <KdpaGrid item>
-                        <Link href={aboutLink} target="_blank" title="درباره ما">
-                            <MdOutlineInfoIcon color="black" size={24} />
-                            <KdTypography variant="body1" title="درباره ما" />
-                        </Link>
-                    </KdpaGrid>
-                    <KdpaGrid item>
-                        <Link href={contactLink} target="_blank" title="تماس با ما">
-                            <MdOutlineContactMailIcon color="black" size={24} />
-                            <KdTypography variant="body1" title="تماس با ما" />
-                        </Link>
-                    </KdpaGrid>
-                    <KdpaGrid item>
-                        <KdpaPrimaryButton variant="contained" title={loginTitle}>
-                            {loginTitle}
-                        </KdpaPrimaryButton>
-                    </KdpaGrid>
-                </KdpaGrid>
+const Header = ({ logoSrc, websiteTitle, navLinks, loginText }) => {
+    return (
+        <KdpaGrid container alignItems="center" justifyContent="space-between" style={{ padding: '10px', direction: 'rtl' }}>
+            <KdpaGrid item xs={6} container alignItems="center">
+                <KdImageBox src={logoSrc} alt="لوگو" quality="HIGH" loading="lazy" style={{ width: '50px', height: '50px' }} />
+                <KdTypography variant="h4" title={websiteTitle} style={{ marginRight: '10px' }}>
+                    {websiteTitle}
+                </KdTypography>
+            </KdpaGrid>
+            <KdpaGrid item xs={6} container justifyContent="flex-end" alignItems="center">
+                {navLinks.map((link, index) => (
+                    <KdHyperLink key={index} href={link.href} title={link.title} style={{ margin: '0 10px' }}>
+                        <KdIcon title={link.iconTitle} size={20} />
+                        <KdTypography variant="body1">{link.text}</KdTypography>
+                    </KdHyperLink>
+                ))}
+                <KdpaPrimaryButton variant="contained" title={loginText} style={{ marginLeft: '10px' }}>
+                    {loginText}
+                </KdpaPrimaryButton>
             </KdpaGrid>
         </KdpaGrid>
-    </KdpaGrid>
-</KdpaGrid>
+    );
+};
+
+export default Header;

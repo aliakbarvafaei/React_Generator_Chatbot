@@ -26,7 +26,7 @@ from tools.jsx_to_kdl_element import jsx_to_kdl_element
 
 from utils.mongoClient import mongoClientCollection
 
-time_sleep = 20
+time_sleep = 60
 
 
 class Agent:
@@ -74,110 +74,97 @@ class Agent:
 
 class RetrievalElementDetailsAgent(Agent):
     def invoke(self):
+        """Fetch element details from the database and prepare a detailed context for the LLM."""
         collection = mongoClientCollection(collectionName="elements")
 
         data = collection.find({}).to_list()
-        context = "\n".join(
+
+        self.state.context = "\n".join(
             [
-                f"description ElementType ({item['elementType']}) is: {item['description']}."
+                f"Element ({item['elementType']}): {item['description']}."
                 for item in data
             ]
         )
-
-        self.state.context = context
-
-        logging.info(f"Context Generated.")
+        logging.info("🔹 Element details successfully retrieved.")
         return self.state
 
 
 class ComponentGeneratorAgent(Agent):
     def invoke(self):
+        """Generate JSX code based on user query while strictly using allowed tags and elements."""
+        prompt = f"""🔹 **User Request:** {self.state.query}
+🔹 **Programming Language:** {self.state.config.language}
+🔹 **Access Level:** {self.state.config.accessGenerate}
+    - **"FULL"**: You can use all attributes, props, state, and events.  
+    - **"STATE"**: You can only use `useState` and state-based attributes.  
+    - **"PROP"**: You can define and use `props` for components but not state.  
+    - **"EVENT"**: You can define and use event handlers but not state or props.  
+    - **Empty Access Level**: You can only use static data and cannot use state, props, or events.
+🔹 **Allowed Elements & Tags:**  
+Only use the elements and tags that are mentioned in the context below. Do NOT use any external or arbitrary elements.  
+If you need more information about an element’s attributes or structure, use the provided tools.  
 
-        prompt = f"""the user query is: {self.state.query}.\n\n  
-        the user language is: {self.state.config.language}.\n\n  
-        accessGenerate: {self.state.config.accessGenerate}.\n\n
-        context: {self.state.context}.\n\n 
-        """
+🔹 **Context Information:**  
+{self.state.context}  
 
-        tools = [elementType_sample_code, elementType_attribute]
-        llm_with_tools = self.get_llm().bind_tools(tools)
+⚠️ **IMPORTANT:**  
+- 🚫 You CANNOT use any elements or tags that are not explicitly defined in the context.  
+- 🔍 If you need further details on an element, query `elementType_sample_code` or `elementType_attribute` instead of making assumptions.  
+- ✅ Ensure that the JSX follows best practices and maintains a modular, readable structure.
+"""
 
-        sys_msg = SystemMessage(
-            content="""You are great developer and you can create react component code.
-                                                        you should generate jsx code for this task with element types.
-                                                        but my element is specific and you can not use any element.
-                                                            this element have specific jsx code and attribute that use tools for get sample jsx code and attribute.
-                                                            in context exist my element with description and for valid attribute and sample code exist some tools.
-                                                            static attrs is fixed and can not use state or props or ... and dynamic attrs can be used from state or props or static or ... .
-                                                            also can use style element in style attribute.  
-                                                            you can only use useState and props component and function in your code.
-                                                            also you should generate base on user language.
-                                                        """
+        llm_with_tools = self.get_llm().bind_tools(
+            [elementType_sample_code, elementType_attribute]
         )
 
-        sys_msg2 = SystemMessage(
-            content="""For this generation you have some list of access for generate.
-                                 with type accessGenerate: List[Literal["FULL", "STATE", "PROP", "EVENT"]]
-                                 if FULL you have all access,
-                                 if STATE you have only use state,
-                                 if "PROP", "EVENT" you have access for define event for element and use prop component.
-                                 and else accessGenerate is empty you do not access to use state , prop, event and should be 
-                                 static data.
-                                 """
-        )
-        humam_msg = HumanMessage(content=prompt)
+        sys_msgs = [
+            SystemMessage(
+                content="💡 You are a skilled React developer. Your task is to generate clean, modular, and well-structured components."
+            ),
+            SystemMessage(
+                content="⚙️ Strictly adhere to the list of allowed elements provided in the context. Do NOT use any other tags."
+            ),
+            SystemMessage(
+                content="🔍 If an element’s attributes or structure are unclear, use the available tools to fetch additional details."
+            ),
+            SystemMessage(
+                content="🚀 Ensure the JSX is optimized, follows React best practices, and is easy to maintain."
+            ),
+            SystemMessage(
+                content=f"🌍 **Language**: The generated code should be in the language `{self.state.config.language}`. If the language is `fa` (Persian),ensure text is persian and ensure components are properly adjusted for right-to-left (RTL) rendering."
+            ),
+        ]
+
         time.sleep(time_sleep)
         response = llm_with_tools.invoke(
-            [sys_msg] + [sys_msg2] + [humam_msg] + self.state.messages
+            sys_msgs + [HumanMessage(content=prompt)] + self.state.messages
         )
-
-        # Ensure `messages` exists before updating
-        if not self.state.messages:
-            self.state.messages = []
-
-        # Append the response to `messages`
-        self.state.messages = self.state.messages + [response]
+        self.state.messages.append(response)
 
         return self.state
 
 
 class SaveComponentPartsAgent(Agent):
     def invoke(self):
+        """Extract different parts of the generated React component and store them in a structured format."""
         sys_msg = SystemMessage(
-            content="""You are great developer and you can create react component code.
-                                                        you should extract section of generated react component 
-                                                        """
+            content="🛠 Please break down the generated JSX structure into separate sections such as State, Props, Render, and Effects."
         )
 
         structured_model = self.get_llm().with_structured_output(ComponentDefinition)
-        time.sleep(time_sleep)
 
+        time.sleep(time_sleep)
         response = structured_model.invoke([sys_msg] + self.state.messages)
 
-        result = ComponentDefinition(**response.model_dump())
-
-        self.state.finalResult = result
-        # logging.info("Final Generated React components.")
-        # output_path = "./output/"
-
-        # with open(output_path + "agent_state.json", "w", encoding="utf-8") as f:
-        #     f.write(result.model_dump_json(indent=4))
-
-        # with open(output_path + "Component.jsx", "w", encoding="utf-8") as f:
-        #     if not result.componentCode or result.componentCode == "":
-        #         f.write(result.jsxCode)
-        #     else:
-        #         f.write(result.componentCode)
-
+        self.state.finalResult = ComponentDefinition(**response.model_dump())
         return self.state
 
 
 class ConvertJsxCodeToJsxNodeAgent(Agent):
     def invoke(self):
+        """Convert JSX code into a structured tree format (DSL) for processing and storage."""
         sys_msg = SystemMessage(
-            content="""You are great developer and you can convert jsx of any react component to 
-            specific dsl output. you should convert jsx code to dsl of element base child and parent(nested)
-                                                        """
+            content="📌 Convert the provided JSX code into a structured JSON-based tree representation suitable for further processing and storage."
         )
 
         structured_model = self.get_llm().with_structured_output(JsxNode)
@@ -185,11 +172,11 @@ class ConvertJsxCodeToJsxNodeAgent(Agent):
         try:
             time.sleep(time_sleep)
             response = structured_model.invoke([sys_msg] + self.state.messages)
-
             self.state.jsxNodes = JsxNode(**response.model_dump())
-
-            logging.info("Final KDL Element.")
+            logging.info("✅ Successfully converted JSX into a structured tree format.")
         except ValidationError as exc:
-            logging.info("Error KDL Element: ", repr(exc.errors()))
+            logging.error(
+                f"❌ Error in converting JSX to structured format: {exc.errors()}"
+            )
 
         return self.state

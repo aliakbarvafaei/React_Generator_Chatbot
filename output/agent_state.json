@@ -1,9 +1,12 @@
 {
     "query": "I want a beautifuly header:\n                             in the right a image box have logo and title of website.\n                             in the left many item link that each of them have a icon and text.\n                             like : link to shoppage, link to about us page, link to contact us page.\n                             and at the end of left side a button for login.",
-    "context": "description ElementType (ALERT) is: The Alert component is a customizable alert component built on top of MUI's Alert component, and use from Alert component of MUI. It maintains a consistent appearance with a contained variant and customizable styles via props. .\ndescription ElementType (BUTTON) is: The Button component is a customizable button built on top of MUI's Button component, designed for use throughout the application. It maintains a consistent appearance with a contained variant and customizable styles via props, making it a versatile and reusable button component. This component used instead of button tag in the application. .\ndescription ElementType (CARD_ELEMENT) is: The card element is component for map in any list of data and show it in card view. in the provider is Grid component from material-ui and in the children is the data that we want to show in card view. .\ndescription ElementType (CHECK_BOX) is: The CheckBox component is a customizable checkbox built on top of MUI's Checkbox component, designed for use throughout the application. .\ndescription ElementType (COLUMN_CHART) is: The Column Chart component is a customizable 3D chart built on top of ApexCharts, this chart in 3D and can use it to show data in 3D. .\ndescription ElementType (DATE_PANEL) is: The DataPaned is a date picker component built on top of Mui/x-data-grid's DatePicker component, and use for date jalaali or ... date picker. .\ndescription ElementType (DIV) is: The Div component is a customizable div built on top of HTML's div element, this use Grid system from MUI and can use it to show data in div. and use instead of div or span or ui or li or ... in your project..\ndescription ElementType (DIVIDER) is: The Divider component is a customizable divider built on top of MUI's Divider component, it can be use separate content in the page. .\ndescription ElementType (DROP_DOWN_LIST) is: The DropDownList component is a customizable dropdown built on top of MUI's AutoComplete component, it can be use to select one item from a list of items. .\ndescription ElementType (FILE_BROWSER) is: The FileBrowser component is a simple customizable file browser, this component is simple and user can be upload one file. .\ndescription ElementType (FORM_LOADER) is: The FormLoader is a component of form provider of package react-hook-form, and used in wrapper of any form in my application. .\ndescription ElementType (HEADER_FIELD) is: The HeaderField component is a customizable header field, this component is wrapper of section element with title and can be seprate content in many segment. .\ndescription ElementType (HTML_EDITOR) is: The HtmlEditor component is Box input that user can be write html code in it. .\ndescription ElementType (HYPER_LINK) is: The HyperLink component is a simple customizable hyperlink, this component used instead of <a></a> or any Link tag in the application. .\ndescription ElementType (ICON) is: The Icon is component can used only for icon react-icons library. and anywhere user want to use icon in the application only need to use this component and icons in react-icons library. .\ndescription ElementType (ICON_BUTTON) is: The IconButton component is mui button with icon, this component is simple and user can be use it in the application. the icon of this component is from react-icons library and Icon element. .\ndescription ElementType (IMAGE_BOX) is: The ImageBox component is a simple customizable image box, this component used instead of <img></img> tag in the application. .\ndescription ElementType (LAYOUT) is: The Layout component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutRow in children. attr container, default is true and can not be change.\ndescription ElementType (LAYOUT_CELL) is: The LayoutCell component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes.attr item, default is true and can not be change .\ndescription ElementType (LAYOUT_ROW) is: The LayoutRow component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutCell in children.attr container and item, default is true and can not be change. always xs is 12.\ndescription ElementType (LOADING) is: The Loading component is a customizable loading built on top of MUI's CircularProgress component, it can be use to show loading in the page. .\ndescription ElementType (MENU) is: The Menu component is a customizable menu built on top of @radix-ui/react-menubar's Menu component, it can be use to show menu in the page. and data is attibute not children element. .\ndescription ElementType (MODAL) is: The Modal component is a customizable modal built on top of MUI's Dialog component, it can be use to show a modal in the page. .\ndescription ElementType (MULTI_FILE_BROWSER) is: The MultiFileBrowser component is a advance customizable file browser , and user can upload multiple files and drag and drop files in the file browser. .\ndescription ElementType (PIE_CHART) is: The PiChart component is a customizable 2D chart built on top of ApexCharts, this chart in 2D and can use it to show data in 2D. .\ndescription ElementType (RADIO_LIST) is: The RadioList component is a customizable radio list built on top of MUI's RadioGroup component, it can be use to select one item from a list of items. .\ndescription ElementType (STEPER_CONTAINER) is: The StepperContainer component is a customizable stepper container built on top of MUI's Stepper component, it can be use to show a stepper in the page. and only can used StepperElement component as children..\ndescription ElementType (STEPER_ELEMENT) is: The StepperElement component is a customizable stepper element built on top of MUI's Step component, this component is for each step in the StepperContainer component. each of StepperElement has one Trigger and one Content.\ndescription ElementType (SWITCH) is: The Switch component is a customizable switch built on top of MUI's Switch component, it can be used for toggle on/off the switch. .\ndescription ElementType (TAB_CONTAINER) is: The TabConatiner component is a customizable tab container built on top of @radix-ui/react-tabs's TabConatiner component, it can be use to show a tab in the page. and only can used TabElement component as children..\ndescription ElementType (TAB_ELEMENT) is: The TabElement component is a customizable tab element built on top of @radix-ui/react-tabs's Tab component, this component is for each tab in the TabContainer component. each of TabElement has one Trigger and one Content.\ndescription ElementType (TAG_BOX_INPUT) is: The TagBoxInput component is a customizable tag box input built on top of MUI's AutoComplete component, this component is like of DropDown Element and used AutoComplete but in this component user can be select from a list or type a new tag and add it to the list of tags. .\ndescription ElementType (TEXT_BOX) is: The TextBox component is a customizable text box built on top of MUI's TextField component, it can be used for input text in the form. .\ndescription ElementType (TIME_PICKER) is: The TimePicker component is a customizable time picker built on top of @mui/x-date-pickers's TimePicker component, it can be used for select time in the application. .\ndescription ElementType (TOOLTIP) is: The Tooltip component is a customizable tooltip built on top of MUI's Tooltip component, it can be used to show a tooltip when the user hovers over the element. .\ndescription ElementType (TYPOGRAPHY) is: The Typography component is a customizable text component built on top of MUI's Typography component, this component used for any text in the application. .",
+    "context": "Element (ALERT): The Alert component is a customizable alert component built on top of MUI's Alert component, and use from Alert component of MUI. It maintains a consistent appearance with a contained variant and customizable styles via props. .\nElement (BUTTON): The Button component is a customizable button built on top of MUI's Button component, designed for use throughout the application. It maintains a consistent appearance with a contained variant and customizable styles via props, making it a versatile and reusable button component. This component used instead of button tag in the application. .\nElement (CARD_ELEMENT): The card element is component for map in any list of data and show it in card view. in the provider is Grid component from material-ui and in the children is the data that we want to show in card view. .\nElement (CHECK_BOX): The CheckBox component is a customizable checkbox built on top of MUI's Checkbox component, designed for use throughout the application. .\nElement (COLUMN_CHART): The Column Chart component is a customizable 3D chart built on top of ApexCharts, this chart in 3D and can use it to show data in 3D. .\nElement (DATE_PANEL): The DataPaned is a date picker component built on top of Mui/x-data-grid's DatePicker component, and use for date jalaali or ... date picker. .\nElement (DIV): The Div component is a customizable div built on top of HTML's div element, this use Grid system from MUI and can use it to show data in div. and use instead of div or span or ui or li or ... in your project..\nElement (DIVIDER): The Divider component is a customizable divider built on top of MUI's Divider component, it can be use separate content in the page. .\nElement (DROP_DOWN_LIST): The DropDownList component is a customizable dropdown built on top of MUI's AutoComplete component, it can be use to select one item from a list of items. .\nElement (FILE_BROWSER): The FileBrowser component is a simple customizable file browser, this component is simple and user can be upload one file. .\nElement (FORM_LOADER): The FormLoader is a component of form provider of package react-hook-form, and used in wrapper of any form in my application. .\nElement (HEADER_FIELD): The HeaderField component is a customizable header field, this component is wrapper of section element with title and can be seprate content in many segment. .\nElement (HTML_EDITOR): The HtmlEditor component is Box input that user can be write html code in it. .\nElement (HYPER_LINK): The HyperLink component is a simple customizable hyperlink, this component used instead of <a></a> or any Link tag in the application. .\nElement (ICON): The Icon is component can used only for icon react-icons library. and anywhere user want to use icon in the application only need to use this component and icons in react-icons library. .\nElement (ICON_BUTTON): The IconButton component is mui button with icon, this component is simple and user can be use it in the application. the icon of this component is from react-icons library and Icon element. .\nElement (IMAGE_BOX): The ImageBox component is a simple customizable image box, this component used instead of <img></img> tag in the application. .\nElement (LAYOUT): The Layout component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutRow in children. attr container, default is true and can not be change.\nElement (LAYOUT_CELL): The LayoutCell component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes.attr item, default is true and can not be change .\nElement (LAYOUT_ROW): The LayoutRow component is a simple customizable layout, it used Grid component from MUI to create a layout in the application. and can be used xs (extra small), sm (small), md (medium), lg (large), xl (extra large) screen sizes. and only used Element LayoutCell in children.attr container and item, default is true and can not be change. always xs is 12.\nElement (LOADING): The Loading component is a customizable loading built on top of MUI's CircularProgress component, it can be use to show loading in the page. .\nElement (MENU): The Menu component is a customizable menu built on top of @radix-ui/react-menubar's Menu component, it can be use to show menu in the page. and data is attibute not children element. .\nElement (MODAL): The Modal component is a customizable modal built on top of MUI's Dialog component, it can be use to show a modal in the page. .\nElement (MULTI_FILE_BROWSER): The MultiFileBrowser component is a advance customizable file browser , and user can upload multiple files and drag and drop files in the file browser. .\nElement (PIE_CHART): The PiChart component is a customizable 2D chart built on top of ApexCharts, this chart in 2D and can use it to show data in 2D. .\nElement (RADIO_LIST): The RadioList component is a customizable radio list built on top of MUI's RadioGroup component, it can be use to select one item from a list of items. .\nElement (STEPER_CONTAINER): The StepperContainer component is a customizable stepper container built on top of MUI's Stepper component, it can be use to show a stepper in the page. and only can used StepperElement component as children..\nElement (STEPER_ELEMENT): The StepperElement component is a customizable stepper element built on top of MUI's Step component, this component is for each step in the StepperContainer component. each of StepperElement has one Trigger and one Content.\nElement (SWITCH): The Switch component is a customizable switch built on top of MUI's Switch component, it can be used for toggle on/off the switch. .\nElement (TAB_CONTAINER): The TabConatiner component is a customizable tab container built on top of @radix-ui/react-tabs's TabConatiner component, it can be use to show a tab in the page. and only can used TabElement component as children..\nElement (TAB_ELEMENT): The TabElement component is a customizable tab element built on top of @radix-ui/react-tabs's Tab component, this component is for each tab in the TabContainer component. each of TabElement has one Trigger and one Content.\nElement (TAG_BOX_INPUT): The TagBoxInput component is a customizable tag box input built on top of MUI's AutoComplete component, this component is like of DropDown Element and used AutoComplete but in this component user can be select from a list or type a new tag and add it to the list of tags. .\nElement (TEXT_BOX): The TextBox component is a customizable text box built on top of MUI's TextField component, it can be used for input text in the form. .\nElement (TIME_PICKER): The TimePicker component is a customizable time picker built on top of @mui/x-date-pickers's TimePicker component, it can be used for select time in the application. .\nElement (TOOLTIP): The Tooltip component is a customizable tooltip built on top of MUI's Tooltip component, it can be used to show a tooltip when the user hovers over the element. .\nElement (TYPOGRAPHY): The Typography component is a customizable text component built on top of MUI's Typography component, this component used for any text in the application. .",
     "finalResult": {
         "title": "Header Component",
         "description": "A responsive header component with logo, title, navigation links, and a login button.",
+        "category": "UI",
+        "version": "1.0.0",
+        "isReusable": true,
         "states": [],
         "props": [
             {
@@ -11,437 +14,437 @@
                 "type": "STRING"
             },
             {
-                "name": "logoAlt",
+                "name": "websiteTitle",
                 "type": "STRING"
             },
             {
-                "name": "logoTitle",
-                "type": "STRING"
+                "name": "navLinks",
+                "type": "ARRAY"
             },
             {
-                "name": "shopLink",
-                "type": "STRING"
-            },
-            {
-                "name": "aboutLink",
-                "type": "STRING"
-            },
-            {
-                "name": "contactLink",
-                "type": "STRING"
-            },
-            {
-                "name": "loginTitle",
+                "name": "loginText",
                 "type": "STRING"
             }
         ],
         "functions": [],
-        "jsxCode": "<KdpaGrid container>\n <KdpaGrid item xs={12}>\n <KdpaGrid container justifyContent=\"space-between\" alignItems=\"center\">\n {/* Right Side: Logo and Title */}\n <KdpaGrid item>\n <KdImageBox\n src={logoSrc}\n alt={logoAlt}\n title={logoTitle}\n quality=\"HIGH\"\n loading=\"lazy\"\n />\n <KdTypography variant=\"h6\" title={logoTitle} />\n </KdpaGrid>\n\n {/* Left Side: Links and Login Button */}\n <KdpaGrid item>\n <KdpaGrid container spacing={2}>\n <KdpaGrid item>\n <Link href={shopLink} target=\"_blank\" title=\"فروشگاه\">\n <MdOutlineShopIcon color=\"black\" size={24} />\n <KdTypography variant=\"body1\" title=\"فروشگاه\" />\n </Link>\n </KdpaGrid>\n <KdpaGrid item>\n <Link href={aboutLink} target=\"_blank\" title=\"درباره ما\">\n <MdOutlineInfoIcon color=\"black\" size={24} />\n <KdTypography variant=\"body1\" title=\"درباره ما\" />\n </Link>\n </KdpaGrid>\n <KdpaGrid item>\n <Link href={contactLink} target=\"_blank\" title=\"تماس با ما\">\n <MdOutlineContactMailIcon color=\"black\" size={24} />\n <KdTypography variant=\"body1\" title=\"تماس با ما\" />\n </Link>\n </KdpaGrid>\n <KdpaGrid item>\n <KdpaPrimaryButton variant=\"contained\" title={loginTitle}>\n {loginTitle}\n </KdpaPrimaryButton>\n </KdpaGrid>\n </KdpaGrid>\n </KdpaGrid>\n </KdpaGrid>\n </KdpaGrid>\n</KdpaGrid>",
+        "jsxCode": "import React from 'react';\nimport { KdImageBox, KdTypography, KdpaGrid, KdpaPrimaryButton, KdHyperLink, KdIcon } from 'your-component-library';\n\nconst Header = ({ logoSrc, websiteTitle, navLinks, loginText }) => {\n return (\n <KdpaGrid container alignItems=\"center\" justifyContent=\"space-between\" style={{ padding: '10px', direction: 'rtl' }}>\n <KdpaGrid item xs={6} container alignItems=\"center\">\n <KdImageBox src={logoSrc} alt=\"لوگو\" quality=\"HIGH\" loading=\"lazy\" style={{ width: '50px', height: '50px' }} />\n <KdTypography variant=\"h4\" title={websiteTitle} style={{ marginRight: '10px' }}>\n {websiteTitle}\n </KdTypography>\n </KdpaGrid>\n <KdpaGrid item xs={6} container justifyContent=\"flex-end\" alignItems=\"center\">\n {navLinks.map((link, index) => (\n <KdHyperLink key={index} href={link.href} title={link.title} style={{ margin: '0 10px' }}>\n <KdIcon title={link.iconTitle} size={20} />\n <KdTypography variant=\"body1\">{link.text}</KdTypography>\n </KdHyperLink>\n ))}\n <KdpaPrimaryButton variant=\"contained\" title={loginText} style={{ marginLeft: '10px' }}>\n {loginText}\n </KdpaPrimaryButton>\n </KdpaGrid>\n </KdpaGrid>\n );\n};\n\nexport default Header;",
         "componentCode": "",
         "elementTypes": [
-            "LAYOUT",
-            "LAYOUT_ROW",
-            "LAYOUT_CELL",
-            "IMAGE_BOX",
-            "TYPOGRAPHY",
-            "HYPER_LINK",
-            "BUTTON",
-            "ICON"
+            "KdImageBox",
+            "KdTypography",
+            "KdpaGrid",
+            "KdpaPrimaryButton",
+            "KdHyperLink",
+            "KdIcon"
         ]
     },
     "config": {
-        "accessGenerate": [],
+        "accessGenerate": [
+            "FULL"
+        ],
         "language": "fa"
     },
     "jsxNodes": {
-        "elementType": "LAYOUT",
+        "elementType": "KdpaGrid",
         "attributes": [
             {
                 "name": "container",
                 "type": "STATIC",
                 "valueType": "BOOLEAN",
                 "content": true
+            },
+            {
+                "name": "alignItems",
+                "type": "STATIC",
+                "valueType": "STRING",
+                "content": "center"
+            },
+            {
+                "name": "justifyContent",
+                "type": "STATIC",
+                "valueType": "STRING",
+                "content": "space-between"
             }
         ],
-        "styles": [],
+        "styles": [
+            {
+                "name": "padding",
+                "content": "10px"
+            },
+            {
+                "name": "direction",
+                "content": "rtl"
+            }
+        ],
         "children": [
             {
-                "elementType": "LAYOUT_CELL",
+                "elementType": "KdpaGrid",
                 "attributes": [
+                    {
+                        "name": "item",
+                        "type": "STATIC",
+                        "valueType": "BOOLEAN",
+                        "content": true
+                    },
                     {
                         "name": "xs",
                         "type": "STATIC",
                         "valueType": "NUMBER",
-                        "content": 12
+                        "content": 6
+                    },
+                    {
+                        "name": "container",
+                        "type": "STATIC",
+                        "valueType": "BOOLEAN",
+                        "content": true
+                    },
+                    {
+                        "name": "alignItems",
+                        "type": "STATIC",
+                        "valueType": "STRING",
+                        "content": "center"
                     }
                 ],
                 "styles": [],
                 "children": [
                     {
-                        "elementType": "LAYOUT",
+                        "elementType": "KdImageBox",
                         "attributes": [
                             {
-                                "name": "container",
-                                "type": "STATIC",
-                                "valueType": "BOOLEAN",
-                                "content": true
-                            },
-                            {
-                                "name": "justifyContent",
+                                "name": "src",
                                 "type": "STATIC",
                                 "valueType": "STRING",
-                                "content": "space-between"
+                                "content": "path/to/logo.png"
                             },
                             {
-                                "name": "alignItems",
+                                "name": "alt",
                                 "type": "STATIC",
                                 "valueType": "STRING",
-                                "content": "center"
+                                "content": "لوگو"
+                            },
+                            {
+                                "name": "quality",
+                                "type": "STATIC",
+                                "valueType": "STRING",
+                                "content": "HIGH"
+                            },
+                            {
+                                "name": "loading",
+                                "type": "STATIC",
+                                "valueType": "STRING",
+                                "content": "lazy"
                             }
                         ],
-                        "styles": [],
-                        "children": [
+                        "styles": [
                             {
-                                "elementType": "LAYOUT_CELL",
-                                "attributes": [],
-                                "styles": [],
-                                "children": [
-                                    {
-                                        "elementType": "IMAGE_BOX",
-                                        "attributes": [
-                                            {
-                                                "name": "src",
-                                                "type": "STATIC",
-                                                "valueType": "STRING",
-                                                "content": "logo.png"
-                                            },
-                                            {
-                                                "name": "alt",
-                                                "type": "STATIC",
-                                                "valueType": "STRING",
-                                                "content": "لوگوی وب‌سایت"
-                                            },
-                                            {
-                                                "name": "title",
-                                                "type": "STATIC",
-                                                "valueType": "STRING",
-                                                "content": "وب‌سایت من"
-                                            },
-                                            {
-                                                "name": "quality",
-                                                "type": "STATIC",
-                                                "valueType": "STRING",
-                                                "content": "HIGH"
-                                            },
-                                            {
-                                                "name": "loading",
-                                                "type": "STATIC",
-                                                "valueType": "STRING",
-                                                "content": "lazy"
-                                            }
-                                        ],
-                                        "styles": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "elementType": "TYPOGRAPHY",
-                                        "attributes": [
-                                            {
-                                                "name": "variant",
-                                                "type": "STATIC",
-                                                "valueType": "STRING",
-                                                "content": "h6"
-                                            },
-                                            {
-                                                "name": "title",
-                                                "type": "STATIC",
-                                                "valueType": "STRING",
-                                                "content": "وب‌سایت من"
-                                            }
-                                        ],
-                                        "styles": [],
-                                        "children": []
-                                    }
-                                ]
+                                "name": "width",
+                                "content": "50px"
                             },
                             {
-                                "elementType": "LAYOUT_CELL",
+                                "name": "height",
+                                "content": "50px"
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "elementType": "KdTypography",
+                        "attributes": [
+                            {
+                                "name": "variant",
+                                "type": "STATIC",
+                                "valueType": "STRING",
+                                "content": "h4"
+                            },
+                            {
+                                "name": "title",
+                                "type": "DYNAMIC",
+                                "valueType": "STRING",
+                                "content": "عنوان وبسایت"
+                            }
+                        ],
+                        "styles": [
+                            {
+                                "name": "marginRight",
+                                "content": "10px"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "elementType": "TEXT",
                                 "attributes": [],
                                 "styles": [],
                                 "children": [
+                                    "عنوان وبسایت"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "elementType": "KdpaGrid",
+                "attributes": [
+                    {
+                        "name": "item",
+                        "type": "STATIC",
+                        "valueType": "BOOLEAN",
+                        "content": true
+                    },
+                    {
+                        "name": "xs",
+                        "type": "STATIC",
+                        "valueType": "NUMBER",
+                        "content": 6
+                    },
+                    {
+                        "name": "container",
+                        "type": "STATIC",
+                        "valueType": "BOOLEAN",
+                        "content": true
+                    },
+                    {
+                        "name": "justifyContent",
+                        "type": "STATIC",
+                        "valueType": "STRING",
+                        "content": "flex-end"
+                    },
+                    {
+                        "name": "alignItems",
+                        "type": "STATIC",
+                        "valueType": "STRING",
+                        "content": "center"
+                    }
+                ],
+                "styles": [],
+                "children": [
+                    {
+                        "elementType": "KdHyperLink",
+                        "attributes": [
+                            {
+                                "name": "href",
+                                "type": "STATIC",
+                                "valueType": "STRING",
+                                "content": "/shop"
+                            },
+                            {
+                                "name": "title",
+                                "type": "DYNAMIC",
+                                "valueType": "STRING",
+                                "content": "صفحه خرید"
+                            }
+                        ],
+                        "styles": [
+                            {
+                                "name": "margin",
+                                "content": "0 10px"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "elementType": "KdIcon",
+                                "attributes": [
                                     {
-                                        "elementType": "LAYOUT",
-                                        "attributes": [
-                                            {
-                                                "name": "container",
-                                                "type": "STATIC",
-                                                "valueType": "BOOLEAN",
-                                                "content": true
-                                            },
-                                            {
-                                                "name": "spacing",
-                                                "type": "STATIC",
-                                                "valueType": "NUMBER",
-                                                "content": 2
-                                            }
-                                        ],
+                                        "name": "title",
+                                        "type": "DYNAMIC",
+                                        "valueType": "STRING",
+                                        "content": "آیکون خرید"
+                                    },
+                                    {
+                                        "name": "size",
+                                        "type": "STATIC",
+                                        "valueType": "NUMBER",
+                                        "content": 20
+                                    }
+                                ],
+                                "styles": [],
+                                "children": []
+                            },
+                            {
+                                "elementType": "KdTypography",
+                                "attributes": [
+                                    {
+                                        "name": "variant",
+                                        "type": "STATIC",
+                                        "valueType": "STRING",
+                                        "content": "body1"
+                                    }
+                                ],
+                                "styles": [],
+                                "children": [
+                                    {
+                                        "elementType": "TEXT",
+                                        "attributes": [],
                                         "styles": [],
                                         "children": [
-                                            {
-                                                "elementType": "LAYOUT_CELL",
-                                                "attributes": [],
-                                                "styles": [],
-                                                "children": [
-                                                    {
-                                                        "elementType": "HYPER_LINK",
-                                                        "attributes": [
-                                                            {
-                                                                "name": "href",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "/shop"
-                                                            },
-                                                            {
-                                                                "name": "target",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "_blank"
-                                                            },
-                                                            {
-                                                                "name": "title",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "فروشگاه"
-                                                            }
-                                                        ],
-                                                        "styles": [],
-                                                        "children": [
-                                                            {
-                                                                "elementType": "ICON",
-                                                                "attributes": [
-                                                                    {
-                                                                        "name": "color",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "black"
-                                                                    },
-                                                                    {
-                                                                        "name": "size",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "NUMBER",
-                                                                        "content": 24
-                                                                    }
-                                                                ],
-                                                                "styles": [],
-                                                                "children": []
-                                                            },
-                                                            {
-                                                                "elementType": "TYPOGRAPHY",
-                                                                "attributes": [
-                                                                    {
-                                                                        "name": "variant",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "body1"
-                                                                    },
-                                                                    {
-                                                                        "name": "title",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "فروشگاه"
-                                                                    }
-                                                                ],
-                                                                "styles": [],
-                                                                "children": []
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "elementType": "LAYOUT_CELL",
-                                                "attributes": [],
-                                                "styles": [],
-                                                "children": [
-                                                    {
-                                                        "elementType": "HYPER_LINK",
-                                                        "attributes": [
-                                                            {
-                                                                "name": "href",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "/about"
-                                                            },
-                                                            {
-                                                                "name": "target",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "_blank"
-                                                            },
-                                                            {
-                                                                "name": "title",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "درباره ما"
-                                                            }
-                                                        ],
-                                                        "styles": [],
-                                                        "children": [
-                                                            {
-                                                                "elementType": "ICON",
-                                                                "attributes": [
-                                                                    {
-                                                                        "name": "color",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "black"
-                                                                    },
-                                                                    {
-                                                                        "name": "size",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "NUMBER",
-                                                                        "content": 24
-                                                                    }
-                                                                ],
-                                                                "styles": [],
-                                                                "children": []
-                                                            },
-                                                            {
-                                                                "elementType": "TYPOGRAPHY",
-                                                                "attributes": [
-                                                                    {
-                                                                        "name": "variant",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "body1"
-                                                                    },
-                                                                    {
-                                                                        "name": "title",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "درباره ما"
-                                                                    }
-                                                                ],
-                                                                "styles": [],
-                                                                "children": []
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "elementType": "LAYOUT_CELL",
-                                                "attributes": [],
-                                                "styles": [],
-                                                "children": [
-                                                    {
-                                                        "elementType": "HYPER_LINK",
-                                                        "attributes": [
-                                                            {
-                                                                "name": "href",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "/contact"
-                                                            },
-                                                            {
-                                                                "name": "target",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "_blank"
-                                                            },
-                                                            {
-                                                                "name": "title",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "تماس با ما"
-                                                            }
-                                                        ],
-                                                        "styles": [],
-                                                        "children": [
-                                                            {
-                                                                "elementType": "ICON",
-                                                                "attributes": [
-                                                                    {
-                                                                        "name": "color",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "black"
-                                                                    },
-                                                                    {
-                                                                        "name": "size",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "NUMBER",
-                                                                        "content": 24
-                                                                    }
-                                                                ],
-                                                                "styles": [],
-                                                                "children": []
-                                                            },
-                                                            {
-                                                                "elementType": "TYPOGRAPHY",
-                                                                "attributes": [
-                                                                    {
-                                                                        "name": "variant",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "body1"
-                                                                    },
-                                                                    {
-                                                                        "name": "title",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "تماس با ما"
-                                                                    }
-                                                                ],
-                                                                "styles": [],
-                                                                "children": []
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "elementType": "LAYOUT_CELL",
-                                                "attributes": [],
-                                                "styles": [],
-                                                "children": [
-                                                    {
-                                                        "elementType": "BUTTON",
-                                                        "attributes": [
-                                                            {
-                                                                "name": "variant",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "contained"
-                                                            },
-                                                            {
-                                                                "name": "title",
-                                                                "type": "STATIC",
-                                                                "valueType": "STRING",
-                                                                "content": "ورود"
-                                                            }
-                                                        ],
-                                                        "styles": [],
-                                                        "children": [
-                                                            {
-                                                                "elementType": "TYPOGRAPHY",
-                                                                "attributes": [
-                                                                    {
-                                                                        "name": "title",
-                                                                        "type": "STATIC",
-                                                                        "valueType": "STRING",
-                                                                        "content": "ورود"
-                                                                    }
-                                                                ],
-                                                                "styles": [],
-                                                                "children": []
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
+                                            "خرید"
                                         ]
                                     }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "KdHyperLink",
+                        "attributes": [
+                            {
+                                "name": "href",
+                                "type": "STATIC",
+                                "valueType": "STRING",
+                                "content": "/about"
+                            },
+                            {
+                                "name": "title",
+                                "type": "DYNAMIC",
+                                "valueType": "STRING",
+                                "content": "درباره ما"
+                            }
+                        ],
+                        "styles": [
+                            {
+                                "name": "margin",
+                                "content": "0 10px"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "elementType": "KdIcon",
+                                "attributes": [
+                                    {
+                                        "name": "title",
+                                        "type": "DYNAMIC",
+                                        "valueType": "STRING",
+                                        "content": "آیکون درباره ما"
+                                    },
+                                    {
+                                        "name": "size",
+                                        "type": "STATIC",
+                                        "valueType": "NUMBER",
+                                        "content": 20
+                                    }
+                                ],
+                                "styles": [],
+                                "children": []
+                            },
+                            {
+                                "elementType": "KdTypography",
+                                "attributes": [
+                                    {
+                                        "name": "variant",
+                                        "type": "STATIC",
+                                        "valueType": "STRING",
+                                        "content": "body1"
+                                    }
+                                ],
+                                "styles": [],
+                                "children": [
+                                    {
+                                        "elementType": "TEXT",
+                                        "attributes": [],
+                                        "styles": [],
+                                        "children": [
+                                            "درباره ما"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "KdHyperLink",
+                        "attributes": [
+                            {
+                                "name": "href",
+                                "type": "STATIC",
+                                "valueType": "STRING",
+                                "content": "/contact"
+                            },
+                            {
+                                "name": "title",
+                                "type": "DYNAMIC",
+                                "valueType": "STRING",
+                                "content": "تماس با ما"
+                            }
+                        ],
+                        "styles": [
+                            {
+                                "name": "margin",
+                                "content": "0 10px"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "elementType": "KdIcon",
+                                "attributes": [
+                                    {
+                                        "name": "title",
+                                        "type": "DYNAMIC",
+                                        "valueType": "STRING",
+                                        "content": "آیکون تماس"
+                                    },
+                                    {
+                                        "name": "size",
+                                        "type": "STATIC",
+                                        "valueType": "NUMBER",
+                                        "content": 20
+                                    }
+                                ],
+                                "styles": [],
+                                "children": []
+                            },
+                            {
+                                "elementType": "KdTypography",
+                                "attributes": [
+                                    {
+                                        "name": "variant",
+                                        "type": "STATIC",
+                                        "valueType": "STRING",
+                                        "content": "body1"
+                                    }
+                                ],
+                                "styles": [],
+                                "children": [
+                                    {
+                                        "elementType": "TEXT",
+                                        "attributes": [],
+                                        "styles": [],
+                                        "children": [
+                                            "تماس با ما"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "KdpaPrimaryButton",
+                        "attributes": [
+                            {
+                                "name": "variant",
+                                "type": "STATIC",
+                                "valueType": "STRING",
+                                "content": "contained"
+                            },
+                            {
+                                "name": "title",
+                                "type": "DYNAMIC",
+                                "valueType": "STRING",
+                                "content": "ورود"
+                            }
+                        ],
+                        "styles": [
+                            {
+                                "name": "marginLeft",
+                                "content": "10px"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "elementType": "TEXT",
+                                "attributes": [],
+                                "styles": [],
+                                "children": [
+                                    "ورود"
                                 ]
                             }
                         ]
@@ -456,31 +459,7 @@
             "additional_kwargs": {
                 "tool_calls": [
                     {
-                        "id": "call_OagFMMv150k0zL51IQvudduW",
-                        "function": {
-                            "arguments": "{\"elementType\": \"LAYOUT\"}",
-                            "name": "elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_JgsWHWYhKovyBsnIryax8llU",
-                        "function": {
-                            "arguments": "{\"elementType\": \"LAYOUT_ROW\"}",
-                            "name": "elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_8kNGRWPbxeKPdVAdBoFtpOLz",
-                        "function": {
-                            "arguments": "{\"elementType\": \"LAYOUT_CELL\"}",
-                            "name": "elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_h4NGUPAeLSf12wPxUKrnBPdD",
+                        "id": "call_OiW28sPfafluGQsYtw3Gnpzk",
                         "function": {
                             "arguments": "{\"elementType\": \"IMAGE_BOX\"}",
                             "name": "elementType_attribute"
@@ -488,23 +467,15 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_paRb6LMPha2tLYyNpCU3Dy2z",
+                        "id": "call_p2ev7qHbbWiDLomWGarVGEjD",
                         "function": {
-                            "arguments": "{\"elementType\": \"TYPOGRAPHY\"}",
+                            "arguments": "{\"elementType\": \"ICON\"}",
                             "name": "elementType_attribute"
                         },
                         "type": "function"
                     },
                     {
-                        "id": "call_2t4eLBIMp3hqSozmyvcr8ek5",
-                        "function": {
-                            "arguments": "{\"elementType\": \"HYPER_LINK\"}",
-                            "name": "elementType_attribute"
-                        },
-                        "type": "function"
-                    },
-                    {
-                        "id": "call_WgcXE7XfTDhaYadv2sEs1Bm5",
+                        "id": "call_KdtuqgjrzZlhXNJlZJJq3QWD",
                         "function": {
                             "arguments": "{\"elementType\": \"BUTTON\"}",
                             "name": "elementType_attribute"
@@ -512,9 +483,25 @@
                         "type": "function"
                     },
                     {
-                        "id": "call_U3ptz93k152B7CzpuRGuhw6U",
+                        "id": "call_0OO29pV4Zt1X2x7b7zVmIP8l",
                         "function": {
-                            "arguments": "{\"elementType\": \"ICON\"}",
+                            "arguments": "{\"elementType\": \"HYPER_LINK\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_SEMZn2FMOjFWJ1bvhASjbMS4",
+                        "function": {
+                            "arguments": "{\"elementType\": \"TYPOGRAPHY\"}",
+                            "name": "elementType_attribute"
+                        },
+                        "type": "function"
+                    },
+                    {
+                        "id": "call_cf5N7MRHN9pZJMfEFX8C82XI",
+                        "function": {
+                            "arguments": "{\"elementType\": \"DIV\"}",
                             "name": "elementType_attribute"
                         },
                         "type": "function"
@@ -524,9 +511,9 @@
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 156,
-                    "prompt_tokens": 2406,
-                    "total_tokens": 2562,
+                    "completion_tokens": 119,
+                    "prompt_tokens": 2424,
+                    "total_tokens": 2543,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -538,70 +525,22 @@
                         "cached_tokens": 0
                     }
                 },
-                "model_name": "gpt-4o-2024-11-20",
-                "system_fingerprint": "fp_ded0d14823",
+                "model_name": "gpt-4o-mini-2024-07-18",
+                "system_fingerprint": "fp_b8bc95a0ac",
                 "finish_reason": "tool_calls",
                 "logprobs": null
             },
             "type": "ai",
             "name": null,
-            "id": "run-9c9f8b4e-f729-4ccc-a07f-e4cba3c1816d-0",
+            "id": "run-e415bbce-c378-42c1-9182-2900af54dbd0-0",
             "example": false,
             "tool_calls": [
                 {
                     "name": "elementType_attribute",
                     "args": {
-                        "elementType": "LAYOUT"
-                    },
-                    "id": "call_OagFMMv150k0zL51IQvudduW",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "elementType_attribute",
-                    "args": {
-                        "elementType": "LAYOUT_ROW"
-                    },
-                    "id": "call_JgsWHWYhKovyBsnIryax8llU",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "elementType_attribute",
-                    "args": {
-                        "elementType": "LAYOUT_CELL"
-                    },
-                    "id": "call_8kNGRWPbxeKPdVAdBoFtpOLz",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "elementType_attribute",
-                    "args": {
                         "elementType": "IMAGE_BOX"
                     },
-                    "id": "call_h4NGUPAeLSf12wPxUKrnBPdD",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "elementType_attribute",
-                    "args": {
-                        "elementType": "TYPOGRAPHY"
-                    },
-                    "id": "call_paRb6LMPha2tLYyNpCU3Dy2z",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "elementType_attribute",
-                    "args": {
-                        "elementType": "HYPER_LINK"
-                    },
-                    "id": "call_2t4eLBIMp3hqSozmyvcr8ek5",
-                    "type": "tool_call"
-                },
-                {
-                    "name": "elementType_attribute",
-                    "args": {
-                        "elementType": "BUTTON"
-                    },
-                    "id": "call_WgcXE7XfTDhaYadv2sEs1Bm5",
+                    "id": "call_OiW28sPfafluGQsYtw3Gnpzk",
                     "type": "tool_call"
                 },
                 {
@@ -609,15 +548,47 @@
                     "args": {
                         "elementType": "ICON"
                     },
-                    "id": "call_U3ptz93k152B7CzpuRGuhw6U",
+                    "id": "call_p2ev7qHbbWiDLomWGarVGEjD",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "BUTTON"
+                    },
+                    "id": "call_KdtuqgjrzZlhXNJlZJJq3QWD",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "HYPER_LINK"
+                    },
+                    "id": "call_0OO29pV4Zt1X2x7b7zVmIP8l",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "TYPOGRAPHY"
+                    },
+                    "id": "call_SEMZn2FMOjFWJ1bvhASjbMS4",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "elementType_attribute",
+                    "args": {
+                        "elementType": "DIV"
+                    },
+                    "id": "call_cf5N7MRHN9pZJMfEFX8C82XI",
                     "type": "tool_call"
                 }
             ],
             "invalid_tool_calls": [],
             "usage_metadata": {
-                "input_tokens": 2406,
-                "output_tokens": 156,
-                "total_tokens": 2562,
+                "input_tokens": 2424,
+                "output_tokens": 119,
+                "total_tokens": 2543,
                 "input_token_details": {
                     "audio": 0,
                     "cache_read": 0
@@ -629,79 +600,13 @@
             }
         },
         {
-            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\", \"childrenElementTypes\": [\"LAYOUT_ROW\"]}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "elementType_attribute",
-            "id": "011f55be-e732-4712-b5b7-14b2eea61ce5",
-            "tool_call_id": "call_OagFMMv150k0zL51IQvudduW",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\", \"childrenElementTypes\": [\"LAYOUT_CELL\"]}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "elementType_attribute",
-            "id": "28bac955-7366-4f4c-b113-e8a9dc44d329",
-            "tool_call_id": "call_JgsWHWYhKovyBsnIryax8llU",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"xs\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"sm\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"md\", \"type\": \"number\", \"description\": \"\"}, {\"name\": \"lg\", \"type\": \"number\", \"description\": \"\"}], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\", \"childrenElementTypes\": \"ALL\"}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "elementType_attribute",
-            "id": "0ac1442d-bba9-4c55-8cb7-2be10e234ad2",
-            "tool_call_id": "call_8kNGRWPbxeKPdVAdBoFtpOLz",
-            "artifact": null,
-            "status": "success"
-        },
-        {
             "content": "{\"static_attrs\": [{\"name\": \"modal\", \"type\": \"boolean\", \"description\": \"\"}, {\"name\": \"alt\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"quality\", \"type\": \"string\", \"possibleValues\": [\"LOW\", \"HIGH\"], \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"string\", \"possibleValues\": [\"lazy\", \"eager\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"src\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"KdImageBox\", \"childrenElementTypes\": []}",
             "additional_kwargs": {},
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "cc102be8-472e-448b-a2b0-2023bbdd464d",
-            "tool_call_id": "call_h4NGUPAeLSf12wPxUKrnBPdD",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"subtitle1\", \"subtitle2\", \"body1\", \"body2\", \"caption\", \"button\", \"overline\", \"srOnly\", \"inherit\"], \"description\": \"\"}, {\"name\": \"type\", \"type\": \"string\", \"possibleValues\": [\"string\", \"number\", \"date\", \"time\", \"date-time\", \"html\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"data\", \"type\": \"string | number | ...\", \"description\": \"\"}], \"tagName\": \"KdTypography\", \"childrenElementTypes\": []}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "elementType_attribute",
-            "id": "935dfb9c-ed99-4d3c-b378-2752efa49bcc",
-            "tool_call_id": "call_paRb6LMPha2tLYyNpCU3Dy2z",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"target\", \"type\": \"string\", \"possibleValues\": [\"default\", \"_blank\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"href\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"Link\", \"childrenElementTypes\": \"ALL\"}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "elementType_attribute",
-            "id": "615224e0-346d-4730-ba32-6266181a0740",
-            "tool_call_id": "call_2t4eLBIMp3hqSozmyvcr8ek5",
-            "artifact": null,
-            "status": "success"
-        },
-        {
-            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"contained\", \"outlined\", \"text\"], \"description\": \"\"}, {\"name\": \"children\", \"type\": \"string\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"boolean\", \"description\": \"\"}], \"tagName\": \"KdpaPrimaryButton\", \"childrenElementTypes\": []}",
-            "additional_kwargs": {},
-            "response_metadata": {},
-            "type": "tool",
-            "name": "elementType_attribute",
-            "id": "f7e3bae7-1ec9-4947-b4da-624aad4e22f3",
-            "tool_call_id": "call_WgcXE7XfTDhaYadv2sEs1Bm5",
+            "id": "11d5d0fe-d5f2-4c7b-a467-085486992235",
+            "tool_call_id": "call_OiW28sPfafluGQsYtw3Gnpzk",
             "artifact": null,
             "status": "success"
         },
@@ -711,21 +616,65 @@
             "response_metadata": {},
             "type": "tool",
             "name": "elementType_attribute",
-            "id": "e724ce55-3776-4019-ac62-2dcbb1924442",
-            "tool_call_id": "call_U3ptz93k152B7CzpuRGuhw6U",
+            "id": "8f890eaa-b0d0-4a59-9c13-6d234a4a1203",
+            "tool_call_id": "call_p2ev7qHbbWiDLomWGarVGEjD",
             "artifact": null,
             "status": "success"
         },
         {
-            "content": "```jsx\n<KdpaGrid container>\n  <KdpaGrid item xs={12}>\n    <KdpaGrid container justifyContent=\"space-between\" alignItems=\"center\">\n      {/* Right Side: Logo and Title */}\n      <KdpaGrid item>\n        <KdImageBox\n          src=\"logo.png\"\n          alt=\"لوگوی وب‌سایت\"\n          title=\"وب‌سایت من\"\n          quality=\"HIGH\"\n          loading=\"lazy\"\n        />\n        <KdTypography variant=\"h6\" title=\"وب‌سایت من\" />\n      </KdpaGrid>\n\n      {/* Left Side: Links and Login Button */}\n      <KdpaGrid item>\n        <KdpaGrid container spacing={2}>\n          <KdpaGrid item>\n            <Link href=\"/shop\" target=\"_blank\" title=\"فروشگاه\">\n              <MdOutlineShopIcon color=\"black\" size={24} />\n              <KdTypography variant=\"body1\" title=\"فروشگاه\" />\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/about\" target=\"_blank\" title=\"درباره ما\">\n              <MdOutlineInfoIcon color=\"black\" size={24} />\n              <KdTypography variant=\"body1\" title=\"درباره ما\" />\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <Link href=\"/contact\" target=\"_blank\" title=\"تماس با ما\">\n              <MdOutlineContactMailIcon color=\"black\" size={24} />\n              <KdTypography variant=\"body1\" title=\"تماس با ما\" />\n            </Link>\n          </KdpaGrid>\n          <KdpaGrid item>\n            <KdpaPrimaryButton variant=\"contained\" title=\"ورود\">\n              ورود\n            </KdpaPrimaryButton>\n          </KdpaGrid>\n        </KdpaGrid>\n      </KdpaGrid>\n    </KdpaGrid>\n  </KdpaGrid>\n</KdpaGrid>\n```\n\nThis code creates a header layout with a logo and title on the right side and a series of links with icons and a login button on the left side. The layout is responsive and uses the MUI Grid system for alignment and spacing.",
+            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"contained\", \"outlined\", \"text\"], \"description\": \"\"}, {\"name\": \"children\", \"type\": \"string\", \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"loading\", \"type\": \"boolean\", \"description\": \"\"}], \"tagName\": \"KdpaPrimaryButton\", \"childrenElementTypes\": []}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "0a401af3-d45a-44df-b643-33699210d439",
+            "tool_call_id": "call_KdtuqgjrzZlhXNJlZJJq3QWD",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [{\"name\": \"target\", \"type\": \"string\", \"possibleValues\": [\"default\", \"_blank\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"href\", \"type\": \"string\", \"description\": \"\"}], \"tagName\": \"Link\", \"childrenElementTypes\": \"ALL\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "b7acfd18-48bc-412f-8cc6-55adc1fc498d",
+            "tool_call_id": "call_0OO29pV4Zt1X2x7b7zVmIP8l",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [{\"name\": \"variant\", \"type\": \"string\", \"possibleValues\": [\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"subtitle1\", \"subtitle2\", \"body1\", \"body2\", \"caption\", \"button\", \"overline\", \"srOnly\", \"inherit\"], \"description\": \"\"}, {\"name\": \"type\", \"type\": \"string\", \"possibleValues\": [\"string\", \"number\", \"date\", \"time\", \"date-time\", \"html\"], \"description\": \"\"}], \"dynamic_attrs\": [{\"name\": \"title\", \"type\": \"string\", \"description\": \"\"}, {\"name\": \"data\", \"type\": \"string | number | ...\", \"description\": \"\"}], \"tagName\": \"KdTypography\", \"childrenElementTypes\": []}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "a965e838-7165-4df5-bc6f-3617e62e9675",
+            "tool_call_id": "call_SEMZn2FMOjFWJ1bvhASjbMS4",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "{\"static_attrs\": [], \"dynamic_attrs\": [], \"tagName\": \"KdpaGrid\", \"childrenElementTypes\": \"ALL\"}",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "tool",
+            "name": "elementType_attribute",
+            "id": "3f54e43f-d157-4bf1-8a1b-f349abb9f1a7",
+            "tool_call_id": "call_cf5N7MRHN9pZJMfEFX8C82XI",
+            "artifact": null,
+            "status": "success"
+        },
+        {
+            "content": "Here's a beautifully structured header component in React, designed according to your specifications. The header includes a logo and title on the right, navigation links with icons on the left, and a login button at the end.\n\n```jsx\nimport React from 'react';\nimport { KdImageBox, KdTypography, KdpaGrid, KdpaPrimaryButton, KdHyperLink, KdIcon } from 'your-component-library'; // Import your components\n\nconst Header = () => {\n  return (\n    <KdpaGrid container alignItems=\"center\" justifyContent=\"space-between\" style={{ padding: '10px', direction: 'rtl' }}>\n      {/* Right Side: Logo and Title */}\n      <KdpaGrid item xs={6} container alignItems=\"center\">\n        <KdImageBox src=\"path/to/logo.png\" alt=\"لوگو\" quality=\"HIGH\" loading=\"lazy\" style={{ width: '50px', height: '50px' }} />\n        <KdTypography variant=\"h4\" title=\"عنوان وبسایت\" style={{ marginRight: '10px' }}>\n          عنوان وبسایت\n        </KdTypography>\n      </KdpaGrid>\n\n      {/* Left Side: Navigation Links */}\n      <KdpaGrid item xs={6} container justifyContent=\"flex-end\" alignItems=\"center\">\n        <KdHyperLink href=\"/shop\" title=\"صفحه خرید\" style={{ margin: '0 10px' }}>\n          <KdIcon title=\"آیکون خرید\" size={20} />\n          <KdTypography variant=\"body1\">خرید</KdTypography>\n        </KdHyperLink>\n        <KdHyperLink href=\"/about\" title=\"درباره ما\" style={{ margin: '0 10px' }}>\n          <KdIcon title=\"آیکون درباره ما\" size={20} />\n          <KdTypography variant=\"body1\">درباره ما</KdTypography>\n        </KdHyperLink>\n        <KdHyperLink href=\"/contact\" title=\"تماس با ما\" style={{ margin: '0 10px' }}>\n          <KdIcon title=\"آیکون تماس\" size={20} />\n          <KdTypography variant=\"body1\">تماس با ما</KdTypography>\n        </KdHyperLink>\n        \n        {/* Login Button */}\n        <KdpaPrimaryButton variant=\"contained\" title=\"ورود\" style={{ marginLeft: '10px' }}>\n          ورود\n        </KdpaPrimaryButton>\n      </KdpaGrid>\n    </KdpaGrid>\n  );\n};\n\nexport default Header;\n```\n\n### Explanation:\n- **Layout**: The header is structured using a grid layout to ensure proper alignment and spacing.\n- **Logo and Title**: The logo is displayed using the `KdImageBox` component, and the title is rendered with the `KdTypography` component.\n- **Navigation Links**: Each link is created using the `KdHyperLink` component, which includes an icon and text. Icons are represented by the `KdIcon` component.\n- **Login Button**: The login button is implemented using the `KdpaPrimaryButton` component.\n\nThis component is designed to be modular and easy to maintain, following best practices for React development.",
             "additional_kwargs": {
                 "refusal": null
             },
             "response_metadata": {
                 "token_usage": {
-                    "completion_tokens": 464,
-                    "prompt_tokens": 3332,
-                    "total_tokens": 3796,
+                    "completion_tokens": 665,
+                    "prompt_tokens": 3187,
+                    "total_tokens": 3852,
                     "completion_tokens_details": {
                         "accepted_prediction_tokens": 0,
                         "audio_tokens": 0,
@@ -737,21 +686,21 @@
                         "cached_tokens": 0
                     }
                 },
-                "model_name": "gpt-4o-2024-08-06",
-                "system_fingerprint": "fp_6ec83003ad",
+                "model_name": "gpt-4o-mini-2024-07-18",
+                "system_fingerprint": "fp_ded0d14823",
                 "finish_reason": "stop",
                 "logprobs": null
             },
             "type": "ai",
             "name": null,
-            "id": "run-ca852d8b-0375-4839-bcd7-cc8781304f98-0",
+            "id": "run-9907bfce-1a76-424c-bc7b-c133cd653317-0",
             "example": false,
             "tool_calls": [],
             "invalid_tool_calls": [],
             "usage_metadata": {
-                "input_tokens": 3332,
-                "output_tokens": 464,
-                "total_tokens": 3796,
+                "input_tokens": 3187,
+                "output_tokens": 665,
+                "total_tokens": 3852,
                 "input_token_details": {
                     "audio": 0,
                     "cache_read": 0

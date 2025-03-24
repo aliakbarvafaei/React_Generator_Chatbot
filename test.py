@@ -14,7 +14,7 @@ load_config()
 # model_endpoint = None
 
 server = "openai"
-model = "gpt-4o"
+model = "gpt-4o-mini"
 
 print("Creating graph and compiling workflow...")
 graph = create_graph(
@@ -31,7 +31,7 @@ initial_stateee = AgentGraphState(
                              in the left many item link that each of them have a icon and text.
                              like : link to shoppage, link to about us page, link to contact us page.
                              and at the end of left side a button for login.""",
-    # config=ConfigGenerate(accessGenerate=["FULL"]),
+    config=ConfigGenerate(accessGenerate=["FULL"]),
 )
 
 res = workflow.invoke(initial_stateee)
