@@ -14,7 +14,7 @@ load_config()
 # model_endpoint = None
 
 server = "openai"
-model = "gpt-4o-mini"
+model = "gpt-4o"
 
 print("Creating graph and compiling workflow...")
 graph = create_graph(

@@ -139,7 +139,8 @@ If you need more information about an element’s attributes or structure, use t
         response = llm_with_tools.invoke(
             sys_msgs + [HumanMessage(content=prompt)] + self.state.messages
         )
-        self.state.messages.append(response)
+
+        self.state.messages.extend(sys_msgs + [HumanMessage(content=prompt), response])
 
         return self.state
 

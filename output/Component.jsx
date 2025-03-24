@@ -1,24 +1,40 @@
 import React from 'react';
-import { KdImageBox, KdTypography, KdpaGrid, KdpaPrimaryButton, KdHyperLink, KdIcon } from 'your-component-library';
+import { KdpaGrid, KdImageBox, Link, KdpaPrimaryButton, KdTypography } from 'your-component-library';
+import { MdOutlineShoppingCart, MdInfoOutline, MdContactMail } from 'react-icons/md';
 
-const Header = ({ logoSrc, websiteTitle, navLinks, loginText }) => {
+const Header = () => {
     return (
-        <KdpaGrid container alignItems="center" justifyContent="space-between" style={{ padding: '10px', direction: 'rtl' }}>
-            <KdpaGrid item xs={6} container alignItems="center">
-                <KdImageBox src={logoSrc} alt="لوگو" quality="HIGH" loading="lazy" style={{ width: '50px', height: '50px' }} />
-                <KdTypography variant="h4" title={websiteTitle} style={{ marginRight: '10px' }}>
-                    {websiteTitle}
+        <KdpaGrid container>
+            {/* Right Side: Logo and Title */}
+            <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+                <KdImageBox src="/path/to/logo.png" alt="لوگو" title="لوگوی سایت" quality="HIGH" loading="lazy" />
+                <KdTypography variant="h6" title="عنوان سایت" style={{ marginRight: '10px' }}>
+                    عنوان سایت
                 </KdTypography>
             </KdpaGrid>
-            <KdpaGrid item xs={6} container justifyContent="flex-end" alignItems="center">
-                {navLinks.map((link, index) => (
-                    <KdHyperLink key={index} href={link.href} title={link.title} style={{ margin: '0 10px' }}>
-                        <KdIcon title={link.iconTitle} size={20} />
-                        <KdTypography variant="body1">{link.text}</KdTypography>
-                    </KdHyperLink>
-                ))}
-                <KdpaPrimaryButton variant="contained" title={loginText} style={{ marginLeft: '10px' }}>
-                    {loginText}
+
+            {/* Left Side: Links and Login Button */}
+            <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
+                <Link href="/shop" title="فروشگاه" style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
+                    <MdOutlineShoppingCart size={24} color="#000" />
+                    <KdTypography variant="body1" title="فروشگاه" style={{ marginLeft: '5px' }}>
+                        فروشگاه
+                    </KdTypography>
+                </Link>
+                <Link href="/about" title="درباره ما" style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
+                    <MdInfoOutline size={24} color="#000" />
+                    <KdTypography variant="body1" title="درباره ما" style={{ marginLeft: '5px' }}>
+                        درباره ما
+                    </KdTypography>
+                </Link>
+                <Link href="/contact" title="تماس با ما" style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
+                    <MdContactMail size={24} color="#000" />
+                    <KdTypography variant="body1" title="تماس با ما" style={{ marginLeft: '5px' }}>
+                        تماس با ما
+                    </KdTypography>
+                </Link>
+                <KdpaPrimaryButton variant="contained" title="ورود" style={{ marginLeft: '20px' }}>
+                    ورود
                 </KdpaPrimaryButton>
             </KdpaGrid>
         </KdpaGrid>
