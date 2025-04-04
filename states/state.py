@@ -68,7 +68,7 @@ class ComponentDefinition(BaseModel):
     props: List[PropDefinition] = Field([], title="Props used in Component")
     functions: List[FunctionDefinition] = Field([], title="Functions used in Component")
     jsxCode: str = Field("", title="jsx code of Component")
-    componentCode: str = Field("", title="complete code of Component")
+    componentCode: str = Field("", title="React Functional Component")
     elementTypes: List[str] = Field([], title="Element Types used in Component")
 
 
@@ -80,6 +80,49 @@ class AttributeDefinition(BaseModel):
     )
     content: Union[str, int, bool, dict, list, None] = Field(
         None, title="Value of Attribute"
+    )
+
+
+class EventParametersDefinition(BaseModel):
+    name: str = Field(..., title="Parameter Name")
+    type: Literal["STATIC", "DYNAMIC"] = Field(..., title="Type of Parameter")
+    valueType: Literal["STRING", "NUMBER", "BOOLEAN", "OBJECT", "ARRAY", "FUNCTION"] = (
+        Field(..., title="Type of Parameter")
+    )
+    content: Union[str, int, bool, dict, list, None] = Field(
+        None, title="Value of Parameter"
+    )
+
+
+class EventItemDefinition(BaseModel):
+    name: str = Field(..., title="Event item Name")
+    type: Literal[
+        "SET_STATE",
+        "FUNCTION_CALL",
+        "PROP_CALL",
+        "SHOW_TOAST",
+        "NAVIGATE",
+    ] = Field(..., title="Type of Event item")
+    stateName: str = Field("", title="State name for SET_STATE")
+    functionName: str = Field("", title="function name for FUNCTION_CALL")
+    propName: str = Field("", title="prop name for PROP_CALL")
+    paramterList: List[EventParametersDefinition] = Field(
+        [], title="List of parameter value for event"
+    )
+
+
+class EventDefinition(BaseModel):
+    name: str = Field(..., title="Event Name")
+    type: Literal[
+        "ON_CHANGE",
+        "ON_FOCUS",
+        "ON_BLUR",
+        "ON_CLICK",
+    ] = Field(..., title="Type of Event")
+    eventItems: List[EventItemDefinition] = Field(
+        [],
+        title="Event item of Element",
+        description="Defines Event item for the element.",
     )
 
 
@@ -113,6 +156,11 @@ class JsxNode(BaseModel):
         [],
         title="Style of Element",
         description="Defines styles for the element.",
+    )
+    events: List[EventDefinition] = Field(
+        [],
+        title="Event of Element",
+        description="Defines Event for the element.",
     )
     children: List[Union["JsxNode", Any]] = Field(
         [],

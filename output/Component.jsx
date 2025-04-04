@@ -1,44 +1,46 @@
-import React from 'react';
-import { KdpaGrid, KdImageBox, Link, KdpaPrimaryButton, KdTypography } from 'your-component-library';
-import { MdOutlineShoppingCart, MdInfoOutline, MdContactMail } from 'react-icons/md';
-
-const Header = () => {
-    return (
-        <KdpaGrid container>
-            {/* Right Side: Logo and Title */}
-            <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                <KdImageBox src="/path/to/logo.png" alt="لوگو" title="لوگوی سایت" quality="HIGH" loading="lazy" />
-                <KdTypography variant="h6" title="عنوان سایت" style={{ marginRight: '10px' }}>
-                    عنوان سایت
-                </KdTypography>
-            </KdpaGrid>
-
-            {/* Left Side: Links and Login Button */}
-            <KdpaGrid item xs={6} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
-                <Link href="/shop" title="فروشگاه" style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
-                    <MdOutlineShoppingCart size={24} color="#000" />
-                    <KdTypography variant="body1" title="فروشگاه" style={{ marginLeft: '5px' }}>
-                        فروشگاه
-                    </KdTypography>
-                </Link>
-                <Link href="/about" title="درباره ما" style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
-                    <MdInfoOutline size={24} color="#000" />
-                    <KdTypography variant="body1" title="درباره ما" style={{ marginLeft: '5px' }}>
-                        درباره ما
-                    </KdTypography>
-                </Link>
-                <Link href="/contact" title="تماس با ما" style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
-                    <MdContactMail size={24} color="#000" />
-                    <KdTypography variant="body1" title="تماس با ما" style={{ marginLeft: '5px' }}>
-                        تماس با ما
-                    </KdTypography>
-                </Link>
-                <KdpaPrimaryButton variant="contained" title="ورود" style={{ marginLeft: '20px' }}>
-                    ورود
-                </KdpaPrimaryButton>
-            </KdpaGrid>
-        </KdpaGrid>
-    );
-};
-
-export default Header;
+<FORM_LOADER>
+  <LAYOUT>
+    <LAYOUT_ROW>
+      <LAYOUT_CELL>
+        <TYPOGRAPHY variant="h5" align="center">
+          ورود به حساب کاربری
+        </TYPOGRAPHY>
+      </LAYOUT_CELL>
+    </LAYOUT_ROW>
+    <LAYOUT_ROW>
+      <LAYOUT_CELL>
+        <TEXT_BOX
+          label="نام کاربری"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          fullWidth
+        />
+      </LAYOUT_CELL>
+    </LAYOUT_ROW>
+    <LAYOUT_ROW>
+      <LAYOUT_CELL>
+        <TEXT_BOX
+          label="رمز عبور"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          fullWidth
+        />
+      </LAYOUT_CELL>
+    </LAYOUT_ROW>
+    <LAYOUT_ROW>
+      <LAYOUT_CELL>
+        <BUTTON onClick={handleLogin} fullWidth>
+          ورود
+        </BUTTON>
+      </LAYOUT_CELL>
+    </LAYOUT_ROW>
+    <LAYOUT_ROW>
+      <LAYOUT_CELL>
+        <HYPER_LINK href="/forgot-password" align="center">
+          فراموشی رمز عبور؟
+        </HYPER_LINK>
+      </LAYOUT_CELL>
+    </LAYOUT_ROW>
+  </LAYOUT>
+</FORM_LOADER>

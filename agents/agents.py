@@ -26,7 +26,7 @@ from tools.jsx_to_kdl_element import jsx_to_kdl_element
 
 from utils.mongoClient import mongoClientCollection
 
-time_sleep = 60
+time_sleep = 0
 
 
 class Agent:
@@ -92,26 +92,20 @@ class RetrievalElementDetailsAgent(Agent):
 class ComponentGeneratorAgent(Agent):
     def invoke(self):
         """Generate JSX code based on user query while strictly using allowed tags and elements."""
-        prompt = f"""🔹 **User Request:** {self.state.query}
-🔹 **Programming Language:** {self.state.config.language}
-🔹 **Access Level:** {self.state.config.accessGenerate}
-    - **"FULL"**: You can use all attributes, props, state, and events.  
-    - **"STATE"**: You can only use `useState` and state-based attributes.  
-    - **"PROP"**: You can define and use `props` for components but not state.  
-    - **"EVENT"**: You can define and use event handlers but not state or props.  
-    - **Empty Access Level**: You can only use static data and cannot use state, props, or events.
-🔹 **Allowed Elements & Tags:**  
-Only use the elements and tags that are mentioned in the context below. Do NOT use any external or arbitrary elements.  
-If you need more information about an element’s attributes or structure, use the provided tools.  
+        prompt = f"""
+        🔹 **User Request:** {self.state.query}
+        🔹 **Programming Language:** {self.state.config.language}
+        🔹 **Access Level:** {self.state.config.accessGenerate}
+            - "FULL": You can use all attributes, props, state, and events.  
+            - "STATE": You can only use `useState` and state-based attributes.  
+            - "PROP": You can define and use `props` but not state.  
+            - "EVENT": You can define event handlers but not state or props.  
+            - Empty: Only static content is allowed.
 
-🔹 **Context Information:**  
-{self.state.context}  
-
-⚠️ **IMPORTANT:**  
-- 🚫 You CANNOT use any elements or tags that are not explicitly defined in the context.  
-- 🔍 If you need further details on an element, query `elementType_sample_code` or `elementType_attribute` instead of making assumptions.  
-- ✅ Ensure that the JSX follows best practices and maintains a modular, readable structure.
-"""
+        🔹 **Allowed Elements & Tags:**  
+        Only use the elements listed below. Do NOT use any external or unlisted tags.  
+        {self.state.context}
+        """
 
         llm_with_tools = self.get_llm().bind_tools(
             [elementType_sample_code, elementType_attribute]
@@ -119,20 +113,18 @@ If you need more information about an element’s attributes or structure, use t
 
         sys_msgs = [
             SystemMessage(
-                content="💡 You are a skilled React developer. Your task is to generate clean, modular, and well-structured components."
+                content="💡 You are a skilled React developer. Generate clean, modular, and optimized React components."
             ),
             SystemMessage(
-                content="⚙️ Strictly adhere to the list of allowed elements provided in the context. Do NOT use any other tags."
+                content="🧱 You MUST only use elements and tags explicitly defined in the provided context."
             ),
             SystemMessage(
-                content="🔍 If an element’s attributes or structure are unclear, use the available tools to fetch additional details."
+                content="⚙️ Based on the provided access level, limit your use of state, props, and events accordingly."
             ),
             SystemMessage(
-                content="🚀 Ensure the JSX is optimized, follows React best practices, and is easy to maintain."
+                content=f"🌐 Output must be in `{self.state.config.language}`. If it's `fa`, use Persian text and support RTL layout."
             ),
-            SystemMessage(
-                content=f"🌍 **Language**: The generated code should be in the language `{self.state.config.language}`. If the language is `fa` (Persian),ensure text is persian and ensure components are properly adjusted for right-to-left (RTL) rendering."
-            ),
+            SystemMessage(content="⚙️ Follow React best practices in all outputs."),
         ]
 
         time.sleep(time_sleep)
@@ -140,7 +132,7 @@ If you need more information about an element’s attributes or structure, use t
             sys_msgs + [HumanMessage(content=prompt)] + self.state.messages
         )
 
-        self.state.messages.extend(sys_msgs + [HumanMessage(content=prompt), response])
+        self.state.messages = self.state.messages + [response]
 
         return self.state
 
