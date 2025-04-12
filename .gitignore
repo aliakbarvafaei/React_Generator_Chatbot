@@ -11,6 +11,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 config/config.yaml
+output/
 build/
 develop-eggs/
 dist/
