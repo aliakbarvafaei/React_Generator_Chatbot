@@ -1,46 +1,49 @@
-<FORM_LOADER>
-  <LAYOUT>
-    <LAYOUT_ROW>
-      <LAYOUT_CELL>
-        <TYPOGRAPHY variant="h5" align="center">
-          ورود به حساب کاربری
-        </TYPOGRAPHY>
-      </LAYOUT_CELL>
-    </LAYOUT_ROW>
-    <LAYOUT_ROW>
-      <LAYOUT_CELL>
-        <TEXT_BOX
-          label="نام کاربری"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          fullWidth
+import React from 'react';
+import { KdpaGrid, KdImageBox, KdTypography, Link, KdpaPrimaryButton } from 'your-component-library';
+import { MdShoppingCart, MdInfo, MdContactMail } from 'react-icons/md';
+
+const Header = () => {
+  return (
+    <KdpaGrid container>
+      <KdpaGrid item xs={12} sm={6} md={4} lg={3}>
+        <KdImageBox
+          src="logo.png"
+          alt="لوگوی وب‌سایت"
+          title="لوگوی وب‌سایت"
+          quality="HIGH"
+          loading="lazy"
         />
-      </LAYOUT_CELL>
-    </LAYOUT_ROW>
-    <LAYOUT_ROW>
-      <LAYOUT_CELL>
-        <TEXT_BOX
-          label="رمز عبور"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          fullWidth
-        />
-      </LAYOUT_CELL>
-    </LAYOUT_ROW>
-    <LAYOUT_ROW>
-      <LAYOUT_CELL>
-        <BUTTON onClick={handleLogin} fullWidth>
-          ورود
-        </BUTTON>
-      </LAYOUT_CELL>
-    </LAYOUT_ROW>
-    <LAYOUT_ROW>
-      <LAYOUT_CELL>
-        <HYPER_LINK href="/forgot-password" align="center">
-          فراموشی رمز عبور؟
-        </HYPER_LINK>
-      </LAYOUT_CELL>
-    </LAYOUT_ROW>
-  </LAYOUT>
-</FORM_LOADER>
+        <KdTypography variant="h5" title="عنوان وب‌سایت" />
+      </KdpaGrid>
+      <KdpaGrid item xs={12} sm={6} md={8} lg={9}>
+        <KdpaGrid container justifyContent="flex-end" alignItems="center">
+          <KdpaGrid item>
+            <Link href="/shop" title="صفحه خرید">
+              <MdShoppingCart size={24} />
+              <KdTypography variant="body1" title="خرید" />
+            </Link>
+          </KdpaGrid>
+          <KdpaGrid item>
+            <Link href="/about" title="درباره ما">
+              <MdInfo size={24} />
+              <KdTypography variant="body1" title="درباره ما" />
+            </Link>
+          </KdpaGrid>
+          <KdpaGrid item>
+            <Link href="/contact" title="تماس با ما">
+              <MdContactMail size={24} />
+              <KdTypography variant="body1" title="تماس با ما" />
+            </Link>
+          </KdpaGrid>
+          <KdpaGrid item>
+            <KdpaPrimaryButton variant="contained" title="ورود">
+              ورود
+            </KdpaPrimaryButton>
+          </KdpaGrid>
+        </KdpaGrid>
+      </KdpaGrid>
+    </KdpaGrid>
+  );
+};
+
+export default Header;
