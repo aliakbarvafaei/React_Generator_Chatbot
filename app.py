@@ -1,9 +1,16 @@
+import logging
+from dotenv import load_dotenv
+
 from fastapi import FastAPI
 from pydantic import BaseModel
-from workflowRunner import run_workflow
+
 from states.state import AgentGraphState
+from workflows.workflowComponent import runWorkflowComponent
+
+logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 
 app = FastAPI()
+load_dotenv(override=True)
 
 
 class AgentRequest(BaseModel):
@@ -13,5 +20,5 @@ class AgentRequest(BaseModel):
 
 @app.post("/generate", response_model=AgentGraphState)
 def generate_component(request: AgentRequest):
-    result = run_workflow(request.query, request.accessGenerate)
+    result = runWorkflowComponent(request.query, request.accessGenerate)
     return result

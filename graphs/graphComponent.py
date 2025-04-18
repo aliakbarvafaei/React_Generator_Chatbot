@@ -2,24 +2,22 @@ import logging
 from langgraph.graph import StateGraph, END, START
 from langgraph.prebuilt import tools_condition, ToolNode
 from states.state import AgentGraphState
-from agents.agents import (
+from agents.agentsComponent import (
     RetrievalElementDetailsAgent,
     ComponentGeneratorAgent,
     SaveComponentPartsAgent,
-    ConvertJsxCodeToJsxNodeAgent,
 )
 from tools.elementType_attribute import elementType_attribute
 from tools.elementType_sample_code import elementType_sample_code
 
 
-def create_graph(server=None, model=None, temperature=0):
+def createGraphComponent(server=None, model=None, temperature=0):
     graph = StateGraph(AgentGraphState)
 
     agents = {
         "retrieval element details": RetrievalElementDetailsAgent,
         "component generator": ComponentGeneratorAgent,
         "save component parts": SaveComponentPartsAgent,
-        "Convert JsxCode To JsxNode": ConvertJsxCodeToJsxNodeAgent,
     }
 
     for name, agent in agents.items():
@@ -31,7 +29,8 @@ def create_graph(server=None, model=None, temperature=0):
         )
 
     graph.add_node(
-        "tools generator", ToolNode([elementType_sample_code, elementType_attribute])
+        "tools generator",
+        ToolNode([elementType_sample_code, elementType_attribute]),
     )
 
     graph.add_edge(START, "retrieval element details")
@@ -44,13 +43,16 @@ def create_graph(server=None, model=None, temperature=0):
         {"tools": "tools generator", "__end__": "save component parts"},
     )
 
-    graph.add_edge("save component parts", "Convert JsxCode To JsxNode")
-    graph.add_edge("Convert JsxCode To JsxNode", END)
+    graph.add_edge("save component parts", END)
+
+    logging.info("🔹 Graph component created.")
 
     return graph
 
 
-def compile_workflow(graph):
+def compileWorkflowComponent(graph):
     workflow = graph.compile()
-    # workflow.get_graph().draw_mermaid_png(output_file_path="diagram.png")
+    workflow.get_graph().draw_mermaid_png(output_file_path="diagram.png")
+
+    logging.info("🔹 Graph component compiled.")
     return workflow

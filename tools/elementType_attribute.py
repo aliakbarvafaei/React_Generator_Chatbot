@@ -1,7 +1,9 @@
 import logging
 from utils.mongoClient import mongoClientCollection
+from langchain_core.tools import tool
 
 
+@tool
 def elementType_attribute(elementType: str):
     """get information of element of this system like attribute , tagName , childrenElementTypes.
     Args:
@@ -29,7 +31,7 @@ def elementType_attribute(elementType: str):
     collection = mongoClientCollection(collectionName="elements")
     documents = collection.find({"elementType": elementType}).to_list()
 
-    logging.info(f"-----------Attribute Tool ({elementType})----------")
+    logging.info(f"-----Call Attribute Tool: ({elementType})")
 
     return {
         "static_attrs": documents[0]["static_attrs"],

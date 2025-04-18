@@ -3,15 +3,15 @@ import json
 import yaml
 import chainlit as cl
 from chainlit.input_widget import TextInput, Slider, Select, NumberInput
-from agent_graph.graph import create_graph, compile_workflow
-from config.config import load_config
+from graphs.graphComponent import createGraphComponent, compileWorkflowComponent
 import logging
+from dotenv import load_dotenv
 
 logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 
 
 def update_config():
-    load_config()
+    load_dotenv(override=True)
     logging.info(f"Configuration updated successfully.")
 
 
@@ -21,12 +21,12 @@ class ChatWorkflow:
         self.recursion_limit = 40
 
     def build_workflow(self, server, model, temperature, recursion_limit=40):
-        graph = create_graph(
+        graph = createGraphComponent(
             server=server,
             model=model,
             temperature=temperature,
         )
-        self.workflow = compile_workflow(graph)
+        self.workflow = compileWorkflowComponent(graph)
         self.recursion_limit = recursion_limit
 
     def invoke_workflow(self, message):
